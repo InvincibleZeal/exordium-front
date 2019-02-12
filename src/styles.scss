@@ -14,10 +14,11 @@
     align-items: center;
 }
 
-.full-screen,
-body,
-html {
-    min-height: 100vh;
+.full-screen {
+    height: 100vh;
+}
+
+body {
     width: 100vw;
     overflow-x: hidden;
 }
