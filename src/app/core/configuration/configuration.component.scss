@@ -1,0 +1,29 @@
+label:not(.form-check-label) {
+    margin-top: 10px;
+    text-transform: uppercase;
+    font-weight: 500 !important;
+    font-size: .6rem;
+}
+
+label.form-check-label {
+    font-size: .8rem;
+}
+
+.section-configuration {
+    select {
+        cursor: pointer;
+
+        option {
+            color: black;
+            cursor: pointer;
+            font-size: .9rem;
+            font-weight: 600 !important;
+        }
+    }
+
+    input,
+    select {
+        font-weight: 500 !important;
+    }
+
+}

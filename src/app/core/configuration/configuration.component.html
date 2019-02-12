@@ -1,0 +1,130 @@
+<div class="section section-configuration" data-background-color="black">
+    <div class="container">
+        <div class="row">
+            <div class="col-10 offset-1">
+                <form (ngSubmit)="onSubmit()">
+                    <div class="form-group form-group-no-border form-group-lg">
+                        <label for="loader">Loader</label>
+                        <select name="loader" id="loader" class="form-control" placeholder="Loader..." [(ngModel)]="config.loader">
+                            <option value="ball-bounce">ball-bounce</option>
+                            <option value="ball-ellipsis">ball-ellipsis</option>
+                            <option value="ball-fading-shrink">ball-fading-shrink</option>
+                            <option value="ball-fading">ball-fading</option>
+                            <option value="ball-fountain-fading">ball-fountain-fading</option>
+                            <option value="ball-fountain">ball-fountain</option>
+                            <option value="ball-interwind">ball-interwind</option>
+                            <option value="ball-line">ball-line</option>
+                            <option value="ball-mini">ball-mini</option>
+                            <option value="ball-planets">ball-planets</option>
+                            <option value="ball-spinner-double">ball-spinner-double</option>
+                            <option value="ball-spinner">ball-spinner</option>
+                            <option value="ball-triangle">ball-triangle</option>
+                            <option value="bars-music">bars-music</option>
+                            <option value="bars-trespassing">bars-trespassing</option>
+                            <option value="bars">bars</option>
+                            <option value="circles-spinner">circles-spinner</option>
+                            <option value="circles">circles</option>
+                            <option value="clock">clock</option>
+                            <option value="dots-triple">dots-triple</option>
+                            <option value="drops-fading">drops-fading</option>
+                            <option value="eclipse">eclipse</option>
+                            <option value="flickr">flickr</option>
+                            <option value="gear">gear</option>
+                            <option value="grid">grid</option>
+                            <option value="oval">oval</option>
+                            <option value="pendulum">pendulum</option>
+                            <option value="ring-broken">ring-broken</option>
+                            <option value="ring-double">ring-double</option>
+                            <option value="ring-dual">ring-dual</option>
+                            <option value="ripple-inbound">ripple-inbound</option>
+                            <option value="ripple">ripple</option>
+                            <option value="rolling-short">rolling-short</option>
+                            <option value="rolling">rolling</option>
+                            <option value="segments">segments</option>
+                            <option value="snake-chasing">snake-chasing</option>
+                            <option value="snake-full">snake-full</option>
+                            <option value="snake-solid">snake-solid</option>
+                            <option value="tail-spin">tail-spin</option>
+                            <option value="triangle-spin-triple">triangle-spin-triple</option>
+                            <option value="twirl">twirl</option>
+                            <option value="typing">typing</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group form-group-no-border">
+                        <label for="color">Color</label>
+                        <input type="text" name="color" id="color" class="form-control" [(colorPicker)]="config.color"
+                            cpPosition="bottom" [value]="config.color">
+                    </div>
+
+                    <div class="form-group form-group-no-border">
+                        <label for="background">Background</label>
+                        <input type="text" name="background" id="background" class="form-control" [(colorPicker)]="config.background"
+                            cpPosition="bottom" [value]="config.background">
+                    </div>
+
+                    <label for="position">Position</label>
+                    <div class="row">
+                        <div class="col">
+                            <div class="form-check form-check-radio">
+                                <label class="form-check-label">
+                                    <input class="form-check-input" type="radio" name="position" id="position" value="left"
+                                        [(ngModel)]="config.position">
+                                    <span class="form-check-sign"></span>
+                                    Left
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="form-check form-check-radio">
+                                <label class="form-check-label">
+                                    <input class="form-check-input" type="radio" name="position" id="position" value="center"
+                                        [(ngModel)]="config.position">
+                                    <span class="form-check-sign"></span>
+                                    Center
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="form-check form-check-radio">
+                                <label class="form-check-label">
+                                    <input class="form-check-input" type="radio" name="position" id="position" value="right"
+                                        [(ngModel)]="config.position">
+                                    <span class="form-check-sign"></span>
+                                    Right
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group form-group-no-border input-lg">
+                        <label for="opacity">Opacity</label>
+                        <nouislider name="opacity" class="slider" [min]="0.05" [max]="1" [step]="0.05" [(ngModel)]="config.opacity"
+                            [tooltips]="true"></nouislider>
+                    </div>
+
+                    <div class="form-group form-group-no-border input-lg">
+                        <label for="speed">Speed</label>
+                        <nouislider name="speed" class="slider" [min]="200" [max]="2000" [step]="200" [(ngModel)]="config.speed"
+                            [tooltips]="true"></nouislider>
+                    </div>
+
+                    <div class="form-group form-group-no-border input-lg">
+                        <label for="height">Height</label>
+                        <nouislider name="height" class="slider" [min]="0.05" [max]="3" [step]="0.05" [(ngModel)]="config.height"
+                            [tooltips]="true"></nouislider>
+                    </div>
+
+                    <div class="form-group form-group-no-border input-lg">
+                        <label for="padding">Padding</label>
+                        <nouislider name="padding" class="slider" [min]="0" [max]="50" [step]="1" [(ngModel)]="config.padding"
+                            [tooltips]="true"></nouislider>
+                    </div>
+
+                    <div class="form-group form-group-no-border input-lg text-center">
+                        <input type="submit" value="RUN" class="btn btn-success btn-lg btn-round">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

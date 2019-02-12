@@ -1,0 +1,61 @@
+<div class="section section-showcase gradient">
+    <div class="container">
+        <div class="row mb-5">
+            <div class="col text-center">
+                <p class="category text-white">Toggle Loader</p>
+                <bSwitch [(ngModel)]="loader"></bSwitch>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-10 offset-1">
+                <div class="row">
+                    <div class="col-4">
+                        <div class="form-group form-group-no-border">
+                            <input type="text" class="form-control" [ngxInputLoader]="loader" [ngxInputLoaderConfig]="config">
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="form-group form-group-no-border">
+                            <input type="text" class="form-control" [ngxInputLoader]="loader" [ngxInputLoaderConfig]="config">
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="form-group form-group-no-border">
+                            <input type="text" class="form-control" [ngxInputLoader]="loader" [ngxInputLoaderConfig]="config">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-6">
+                        <div class="form-group form-group-no-border input-lg">
+                            <input type="text" class="form-control" [ngxInputLoader]="loader" [ngxInputLoaderConfig]="config">
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="form-group form-group-no-border input-lg">
+                            <input type="text" class="form-control" [ngxInputLoader]="loader" [ngxInputLoaderConfig]="config">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col">
+                        <div class="form-group form-group-no-border input-lg">
+                            <input type="text" class="form-control" [ngxInputLoader]="loader" [ngxInputLoaderConfig]="config"
+                                style="padding: 20px 0px;">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-4 offset-lg-4 col-md-6 offset-md-3 col-8 offset-2 text-center">
+                        <div class="form-group input-lg">
+                            <input type="submit" value="" class="btn btn-success btn-round btn-lg text-white"
+                                [ngxInputLoader]="loader" [ngxInputLoaderConfig]="configBtn" style="width: 100%;">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
