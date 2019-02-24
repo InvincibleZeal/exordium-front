@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import * as Rellax from 'rellax';
 
 @Component({
     selector: 'app-register',
@@ -13,6 +14,7 @@ export class RegisterComponent implements OnInit {
     constructor() { }
 
     ngOnInit() {
+        var rellaxHeader = new Rellax('.rellax-header');
     }
 
 }

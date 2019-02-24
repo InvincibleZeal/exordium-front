@@ -1,7 +1,7 @@
-.slide span {
+.footer .slide span {
     transition: 300ms;
 }
 
-.slide:hover span {
+.footer:hover .slide span {
     transform: translateY(-15px);
 }

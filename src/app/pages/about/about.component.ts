@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import * as Rellax from 'rellax';
 import { DataService } from 'app/core/data.service';
 
 @Component({
@@ -12,6 +13,7 @@ export class AboutComponent implements OnInit {
     constructor(private dataService: DataService) { }
 
     ngOnInit() {
+        var rellaxHeader = new Rellax('.rellax-header');
         this.teams = this.dataService.getTeams();
     }
 

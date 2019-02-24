@@ -246,13 +246,13 @@ body {
 .page-header[filter-color="dark"] {
     background: rgba(44, 44, 44, 0.2);
     /* For browsers that do not support gradients */
-    background: -webkit-linear-gradient(90deg, rgba(1, 1, 1, 0.9), rgba(1, 1, 1, 0.4));
+    background: -webkit-linear-gradient(90deg, #090909, rgba(9, 9, 9, 0.4));
     /* For Safari 5.1 to 6.0 */
-    background: -o-linear-gradient(90deg, rgba(1, 1, 1, 0.9), rgba(1, 1, 1, 0.4));
+    background: -o-linear-gradient(90deg, #090909, rgba(9, 9, 9, 0.4));
     /* For Opera 11.1 to 12.0 */
-    background: -moz-linear-gradient(90deg, rgba(1, 1, 1, 0.9), rgba(1, 1, 1, 0.4));
+    background: -moz-linear-gradient(90deg, #090909, rgba(9, 9, 9, 0.4));
     /* For Firefox 3.6 to 15 */
-    background: linear-gradient(0deg, rgba(1, 1, 1, 0.9), rgba(1, 1, 1, 0.4));
+    background: linear-gradient(0deg, #090909, rgba(9, 9, 9, 0.4));
     /* Standard syntax */
 }
 
@@ -264,8 +264,8 @@ body {
 */
 
 .h1-seo {
-    letter-spacing: 25px;
-    white-space: nowrap;
+    letter-spacing: 25px !important;
+    white-space: nowrap !important;
 }
 
 .h1-seo>span {
@@ -280,4 +280,28 @@ body {
 
 .h1-seo:hover>span.full {
     transform: rotateX(360deg) !important;
+}
+
+/**
+|--------------------------------------------------
+| MEDIA QUERIES
+|--------------------------------------------------
+*/
+
+
+@media screen and (min-width: 768px) {}
+
+
+@media screen and (min-width: 576px) and (max-width: 768px) {
+    .h1-seo {
+        letter-spacing: 15px !important;
+        font-size: 1.6rem !important;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .h1-seo {
+        letter-spacing: 10px !important;
+        font-size: 1.2rem !important;
+    }
 }
