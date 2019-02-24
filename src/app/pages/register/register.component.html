@@ -1,3 +1,62 @@
-<p>
-  register works!
-</p>
+<div class="wrapper">
+    <div class="page-header page-header-small" filter-color="dark">
+        <div class="page-header-image rellax-header" data-rellax-speed="-8" style="background-image: url('assets/img/bg11.jpg');">
+        </div>
+        <div class="container">
+            <div class="content-center brand">
+                <h1 class="h1-seo typograph" style="letter-spacing: 15px;">
+                    <span class="full">R</span>
+                    <span>E</span>
+                    <span class="full">G</span>
+                    <span>I</span>
+                    <span class="full">S</span>
+                    <span class="full">T</span>
+                    <span>E</span>
+                    <span class="full">R</span>
+                </h1>
+            </div>
+        </div>
+    </div>
+    <div class="section section-contact-us text-center" data-background-color="black">
+        <div class="container">
+            <h2 class="title">Register</h2>
+            <p class="description metropolis">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora,
+                molestiae.</p>
+            <div class="row">
+                <div class="col-lg-6 text-center col-md-8 ml-auto mr-auto">
+                    <div class="input-group input-lg my-4" [ngClass]="{'input-group-focus':focus===true}">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">
+                                <i class="now-ui-icons users_circle-08"></i>
+                            </span>
+                        </div>
+                        <input type="text" class="form-control" placeholder="Name" (focus)="focus=true" (blur)="focus=false">
+                    </div>
+
+                    <div class="input-group input-lg my-4" [ngClass]="{'input-group-focus':focus1===true}">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">
+                                <i class="now-ui-icons users_circle-08"></i>
+                            </span>
+                        </div>
+                        <input type="text" class="form-control" placeholder="Email" (focus)="focus1=true" (blur)="focus1=false">
+                    </div>
+
+                    <div class="input-group input-lg my-4" [ngClass]="{'input-group-focus':focus2===true}">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">
+                                <i class="now-ui-icons users_circle-08"></i>
+                            </span>
+                        </div>
+                        <input type="text" class="form-control" placeholder="Something Else" (focus)="focus2=true"
+                            (blur)="focus2=false">
+                    </div>
+
+                    <div class="send-button my-4">
+                        <a href="#pablo" class="btn btn-primary btn-round btn-block btn-lg gradient-primary">REGISTER</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

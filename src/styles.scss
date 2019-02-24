@@ -14,25 +14,25 @@
 
 @font-face {
     font-family: Typograph;
-    src: url('./assets/fonts/TYPOGRAPH\ PRO\ Light.ttf') format("opentype");
+    src: url('./assets/fonts/TYPOGRAPH\ PRO\ Light.ttf') format("truetype");
     font-weight: 200;
 }
 
 @font-face {
     font-family: Typograph;
-    src: url('./assets/fonts/TYPOGRAPH\ PRO\ Extra\ Bold.ttf') format("opentype");
+    src: url('./assets/fonts/TYPOGRAPH\ PRO\ Extra\ Bold.ttf') format("truetype");
     font-weight: 700;
 }
 
 @font-face {
     font-family: Typograph;
-    src: url('./assets/fonts/TYPOGRAPH\ PRO\ Ultra\ Light.ttf') format("opentype");
+    src: url('./assets/fonts/TYPOGRAPH\ PRO\ Ultra\ Light.ttf') format("truetype");
     font-weight: 100;
 }
 
 @font-face {
     font-family: Typograph;
-    src: url('./assets/fonts/TYPOGRAPH\ PRO\ Semi\ Bold.ttf') format("opentype");
+    src: url('./assets/fonts/TYPOGRAPH\ PRO\ Semi\ Bold.ttf') format("truetype");
     font-weight: 400;
 }
 
@@ -149,16 +149,11 @@
     font-weight: 300;
 }
 
-::-webkit-scrollbar {
-    width: 0px;
-    background: transparent;
-}
-
-
-.no-padding {
-    padding: 0 !important;
-    margin: 0 !important;
-}
+/**
+|--------------------------------------------------
+| BACKGROUND PALETTES
+|--------------------------------------------------
+*/
 
 .bg-dark {
     background-color: #000 !important;
@@ -168,6 +163,13 @@
 [data-background-color="black"] {
     background-color: #090909 !important;
 }
+
+
+/**
+|--------------------------------------------------
+| PRIMARY GRADIENTS
+|--------------------------------------------------
+*/
 
 .gradient-blue {
     background: linear-gradient(150deg, #5433FF 40%, #20BDFF 80%);
@@ -184,36 +186,98 @@
     color: white !important;
 }
 
-.gradient-primary-hover:hover {
+.gradient-primary:hover {
     background: #fe4644 !important;
     transition: 300ms !important;
 }
 
-
+// .gradient-primary-hover:hover {
+//     background: #fe4644 !important;
+//     transition: 300ms !important;
+// }
 
 .gradient-purple {
     background: linear-gradient(to right, #8e2de2, #4a00e0);
 }
 
-.page-header[filter-color="dark"] {
-    background: rgba(44, 44, 44, 0.2);
-    /* For browsers that do not support gradients */
-    background: -webkit-linear-gradient(90deg, rgba(1, 1, 1, 1), rgba(1, 1, 1, 0.4));
-    /* For Safari 5.1 to 6.0 */
-    background: -o-linear-gradient(90deg, rgba(1, 1, 1, 1), rgba(1, 1, 1, 0.4));
-    /* For Opera 11.1 to 12.0 */
-    background: -moz-linear-gradient(90deg, rgba(1, 1, 1, 1), rgba(1, 1, 1, 0.4));
-    /* For Firefox 3.6 to 15 */
-    background: linear-gradient(0deg, rgba(1, 1, 1, 1), rgba(1, 1, 1, 0.4));
-    /* Standard syntax */
-}
+
+/**
+|--------------------------------------------------
+| BODY CONFIGURATION
+|--------------------------------------------------
+*/
 
 body {
     width: 100vw;
     overflow-x: hidden;
 }
 
+::-webkit-scrollbar {
+    width: 0px;
+    background: transparent;
+}
+
+.no-padding {
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+/**
+|--------------------------------------------------
+| TEASER MODAL
+|--------------------------------------------------
+*/
+
 .xlModal>.modal-dialog {
     max-width: initial !important;
     width: 95% !important;
+}
+
+.xlModal .modal-content {
+    background: transparent !important;
+}
+
+/**
+|--------------------------------------------------
+| HEADER FILTER
+|--------------------------------------------------
+*/
+
+.page-header[filter-color="dark"] {
+    background: rgba(44, 44, 44, 0.2);
+    /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(90deg, rgba(1, 1, 1, 0.9), rgba(1, 1, 1, 0.4));
+    /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(90deg, rgba(1, 1, 1, 0.9), rgba(1, 1, 1, 0.4));
+    /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(90deg, rgba(1, 1, 1, 0.9), rgba(1, 1, 1, 0.4));
+    /* For Firefox 3.6 to 15 */
+    background: linear-gradient(0deg, rgba(1, 1, 1, 0.9), rgba(1, 1, 1, 0.4));
+    /* Standard syntax */
+}
+
+
+/**
+|--------------------------------------------------
+| HEADER ANIMATION
+|--------------------------------------------------
+*/
+
+.h1-seo {
+    letter-spacing: 25px;
+    white-space: nowrap;
+}
+
+.h1-seo>span {
+    transition: transform 500ms;
+    transform-origin: center;
+    display: inline-block;
+}
+
+.h1-seo:hover>span {
+    transform: rotateX(180deg);
+}
+
+.h1-seo:hover>span.full {
+    transform: rotateX(360deg) !important;
 }

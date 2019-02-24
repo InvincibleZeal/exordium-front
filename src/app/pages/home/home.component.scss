@@ -4,20 +4,6 @@ iframe {
     height: calc(90vw/1.77);
 }
 
-.h1-seo>span {
-    transition: 500ms;
-    transform-origin: center;
-    display: inline-block;
-}
-
-.h1-seo:hover>span {
-    transform: rotateX(180deg);
-}
-
-.h1-seo:hover>span.full {
-    transform: rotateX(360deg) !important;
-}
-
 $transition: 500ms;
 $translate: 40px;
 

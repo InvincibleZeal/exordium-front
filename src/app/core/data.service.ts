@@ -26,6 +26,30 @@ export class DataService {
 
     private members = [
         {
+            avatar: 'assets/img/members/ryan.jpg',
+            name: 'Name',
+            designation: 'Designation',
+            description: 'Some Description Here',
+            socials: [
+                {
+                    media: 'github',
+                    url: 'https://github.com/dfdfdf'
+                },
+                {
+                    media: 'instagram',
+                    url: 'https://instagram.com/dfdfdf'
+                },
+                {
+                    media: 'facebook',
+                    url: 'https://www.facebook.com/dfdfdf',
+                },
+                {
+                    media: 'linkedin',
+                    url: 'https://www.linkedin.com/in/dfdfdf',
+                },
+            ]
+        },
+        {
             avatar: 'assets/img/employee/ritesh.jpeg',
             name: 'Ritesh Ganjewala',
             designation: 'Full Stack Developer',
@@ -52,12 +76,24 @@ export class DataService {
         }
     ]
 
-    private teams = [{
-        name: 'Management',
-        members: [
-            this.getMember('Ritesh')
-        ]
-    }]
+    private teams = [
+        {
+            name: 'Web Development',
+            members: [
+                this.getMember('Name'),
+                this.getMember('Name'),
+                this.getMember('Name'),
+            ]
+        },
+        {
+            name: 'Management',
+            members: [
+                this.getMember('Name'),
+                this.getMember('Name'),
+                this.getMember('Name'),
+            ]
+        }
+    ]
 
     private socials = [
         {

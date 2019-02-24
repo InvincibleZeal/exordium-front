@@ -5,7 +5,7 @@
         </div>
         <div class="container">
             <div class="content-center brand">
-                <h1 class="h1-seo typograph" style="letter-spacing: 25px;">
+                <h1 class="h1-seo typograph">
                     <span>E</span>
                     <span>X</span>
                     <span>O</span>
@@ -15,7 +15,7 @@
                     <span class="full">U</span>
                     <span class="full">M</span>
                 </h1>
-                <button class="btn btn-lg btn-round btn-primary gradient-primary gradient-primary-hover" (click)="open(classic,'' , '')">
+                <button class="btn btn-lg btn-round btn-primary gradient-primary" (click)="open(classic,'' , '')">
                     VIEW TEASER
                 </button>
             </div>
@@ -37,7 +37,7 @@
                 <div class="section-story-overview">
                     <div class="row">
                         <div class="col-md-6">
-                            <div class="image-container image-left" style="background-image: url('assets/img/login.jpg')">
+                            <div class="image-container image-left" style="background-image: url('assets/img/background/8.jpg')">
                                 <!-- First image on the left side -->
                                 <p class="blockquote blockquote-primary">"Over the span of the satellite record, Arctic
                                     sea ice has been declining significantly, while sea ice in the Antarctichas
@@ -52,7 +52,7 @@
                         </div>
                         <div class="col-md-5">
                             <!-- First image on the right side, above the article -->
-                            <div class="image-container image-right" style="background-image: url('assets/img/bg1.jpg')"></div>
+                            <div class="image-container image-right" style="background-image: url('assets/img/background/13.jpg')"></div>
                             <h3>HEADING 1</h3>
                             <p>The Arctic Ocean freezes every winter and much of the sea-ice then thaws every summer,
                                 and that process will continue whatever happens with climate change. Even if the Arctic
@@ -70,7 +70,7 @@
 
 <ng-template #classic let-c="close" let-d="dismiss">
     <iframe frameborder="0" allowfullscreen="1" id="ytplayer" src="https://www.youtube.com/embed/id?autoplay=1&rel=0"></iframe>
-    <button type="button" class="btn btn-primary gradient-primary gradient-primary-hover m-0" (click)="c('Close click')">
+    <button type="button" class="btn btn-primary gradient-primary m-0" (click)="c('Close click')">
         GO BACK
     </button>
 </ng-template>
