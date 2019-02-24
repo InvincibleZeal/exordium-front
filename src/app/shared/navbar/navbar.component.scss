@@ -1,5 +1,10 @@
 @media screen and (max-width: 991px) {
-    .navbar-collapse[data-color="orange"]:before {
-        background: linear-gradient(to top, #ff00cc, #333399);
+    .navbar-collapse[data-color="gradient-blue"]:before {
+        // background: linear-gradient(to top, #ff00cc, #333399);
+        // background: linear-gradient(150deg, #5b247a, #1bcedf);
+        // background: linear-gradient(-30deg, #17ead9 0%, #6078ea);
+        // background: linear-gradient(to left, #00d2ff, #3a7bd5);
+        // background: linear-gradient(150deg, #5433FF 30%, #20BDFF 70%);
+        background: linear-gradient(150deg, #ff0b6d, #fe4644, #fb9411);
     }
 }

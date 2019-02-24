@@ -1,9 +1,7 @@
-<nav class="navbar navbar-expand-lg bg-dark fixed-top text-white">
+<nav class="navbar navbar-expand-lg bg-dark fixed-top text-white navbar-transparent">
     <div class="container">
         <div class="navbar-translate">
-            <a href="https://github.com/invinciblezeal/ngx-input-loader-demo" target="_blank" style="font-weight: 500;">
-                Ngx Input Loader Demo
-            </a>
+            <a [routerLink]="['/', 'home']">EXORDIUM</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler"
                 aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation" (click)="sidebarToggle()">
                 <span class="navbar-toggler-bar bar1"></span>
@@ -11,18 +9,12 @@
                 <span class="navbar-toggler-bar bar3"></span>
             </button>
         </div>
-        <div class="collapse navbar-collapse" data-nav-image="assets/img/blurred-image-1.jpg" data-color="orange">
+        <div class="collapse navbar-collapse" data-nav-image="assets/img/blurred-image-1.jpg" data-color="gradient-blue">
             <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="https://www.npmjs.com/package/ngx-input-loader" target="_blank">
-                        <img height="20px" width="40px" src="assets/img/npm-brands.svg" alt="">
-                        <p class="d-sm-inline d-md-none">NPM Package</p>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="https://github.com/extremebi/ngx-input-loader" target="_blank">
-                        <img height="20px" width="40px" src="assets/img/github-brands.svg" alt="">
-                        <p class="d-sm-inline d-md-none">Github Repository</p>
+                <li class="nav-item" *ngFor="let page of pages" routerLinkActive="active">
+                    <a class="nav-link" [routerLink]="page.url">
+                        <i class={{page.icon}} *ngIf="page.icon"></i>
+                        <p *ngIf="page.name">{{ page.name | uppercase }}</p>
                     </a>
                 </li>
             </ul>

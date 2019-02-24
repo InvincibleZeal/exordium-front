@@ -7,9 +7,7 @@ import { JWBootstrapSwitchModule } from 'jw-bootstrap-switch-ng2';
 import { NgModule } from '@angular/core';
 import { ColorPickerModule } from 'ngx-color-picker';
 
-import { ConfigurationComponent } from './configuration/configuration.component';
-import { ShowcaseComponent } from './showcase/showcase.component';
-import { ConfigurationService } from './configuration.service';
+import { DataService } from './data.service';
 
 @NgModule({
     imports: [
@@ -22,14 +20,10 @@ import { ConfigurationService } from './configuration.service';
         ColorPickerModule
     ],
     declarations: [
-        ConfigurationComponent,
-        ShowcaseComponent
     ],
     exports: [
         NgbModule,
-        ConfigurationComponent,
-        ShowcaseComponent,
     ],
-    providers: [ConfigurationService]
+    providers: [DataService]
 })
 export class CoreModule { }

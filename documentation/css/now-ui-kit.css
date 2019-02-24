@@ -984,35 +984,44 @@
     .section-isometricGrids .codrops-header {
         width: 80%;
     }
+
     .section-isometricGrids .codrops-header h1 {
         font-size: 2em;
     }
+
     .section-isometricGrids .codrops-header p {
         font-size: 0.85em;
     }
+
     .section-isometricGrids .interval {
         padding: 1.5em;
     }
+
     .section-isometricGrids .interval__text {
         font-size: 1.25em;
         padding: 0 0 3em 0;
     }
+
     .section-isometricGrids .section__heading {
         font-size: 2.5em;
     }
+
     .section-isometricGrids .section__subtitle {
         display: none;
     }
+
     .section-isometricGrids .codrops-demos {
         margin: 0.5em 0;
         font-size: 0.75em;
     }
+
     .section-isometricGrids .button-menu {
         top: 0.75em;
         right: 0.75em;
         width: 30px;
         height: 20px;
     }
+
     .section-isometricGrids .demo-1 .pater {
         width: 100%;
         padding: 1em;
@@ -1021,22 +1030,28 @@
         -webkit-transform: translateZ(200px);
         transform: translateZ(200px);
     }
+
     .section-isometricGrids .demo-1 .pater__title::before {
         left: 0;
     }
+
     .section-isometricGrids .demo-1 .pater__title img {
         width: 150px;
         margin-top: 0.25em;
     }
+
     .section-isometricGrids .demo-1 .pater::before {
         display: none;
     }
+
     .section-isometricGrids .demo-1 .pater__desc {
         font-size: 0.65em;
     }
+
     .section-isometricGrids .isolayer.isolayer--scroll1 {
         top: -38vh;
     }
+
     .section-isometricGrids .demo-2 .pater {
         position: relative;
         display: block;
@@ -6327,6 +6342,7 @@ Created using IcoMoon - icomoon.io
     0% {
         -webkit-transform: rotate(0deg);
     }
+
     100% {
         -webkit-transform: rotate(360deg);
     }
@@ -6336,6 +6352,7 @@ Created using IcoMoon - icomoon.io
     0% {
         -moz-transform: rotate(0deg);
     }
+
     100% {
         -moz-transform: rotate(360deg);
     }
@@ -6349,6 +6366,7 @@ Created using IcoMoon - icomoon.io
         -o-transform: rotate(0deg);
         transform: rotate(0deg);
     }
+
     100% {
         -webkit-transform: rotate(360deg);
         -moz-transform: rotate(360deg);
@@ -7184,7 +7202,7 @@ Created using IcoMoon - icomoon.io
 }
 
 .modal-backdrop {
-    background: rgba(0, 0, 0, 0.3);
+    background: rgba(0, 0, 0, 1);
 }
 
 .modal .modal-login {
@@ -9648,6 +9666,14 @@ Created using IcoMoon - icomoon.io
     background-color: rgba(0, 0, 0, 0.3);
 }
 
+/* .page-header[filter-color="orange"] {
+    background: rgba(44, 44, 44, 0.2);
+    background: -webkit-linear-gradient(90deg, rgba(44, 44, 44, 0.2), rgba(224, 23, 3, 0.6));
+    background: -o-linear-gradient(90deg, rgba(44, 44, 44, 0.2), rgba(224, 23, 3, 0.6));
+    background: -moz-linear-gradient(90deg, rgba(44, 44, 44, 0.2), rgba(224, 23, 3, 0.6));
+    background: linear-gradient(0deg, rgba(44, 44, 44, 0.2), rgba(224, 23, 3, 0.6));
+} */
+
 .page-header[filter-color="orange"] {
     background: rgba(44, 44, 44, 0.2);
     /* For browsers that do not support gradients */
@@ -10811,6 +10837,7 @@ Created using IcoMoon - icomoon.io
         -ms-transition: all 0.5s cubic-bezier(0.685, 0.0473, 0.346, 1);
         transition: all 0.5s cubic-bezier(0.685, 0.0473, 0.346, 1);
     }
+
     .navbar-collapse:after {
         background: #888888;
         background: -webkit-linear-gradient(#888888 0%, #000 80%);
@@ -10828,6 +10855,7 @@ Created using IcoMoon - icomoon.io
         left: 0;
         z-index: -1;
     }
+
     .navbar-collapse[data-color="blue"]:after {
         background: #2CA8FF;
         background: -webkit-linear-gradient(#2CA8FF 0%, #000 80%);
@@ -10835,6 +10863,7 @@ Created using IcoMoon - icomoon.io
         background: -moz-linear-gradient(#2CA8FF 0%, #000 80%);
         background: linear-gradient(#2CA8FF 0%, #000 80%);
     }
+
     .navbar-collapse[data-color="green"]:after {
         background: #18ce0f;
         background: -webkit-linear-gradient(#18ce0f 0%, #000 80%);
@@ -10842,6 +10871,7 @@ Created using IcoMoon - icomoon.io
         background: -moz-linear-gradient(#18ce0f 0%, #000 80%);
         background: linear-gradient(#18ce0f 0%, #000 80%);
     }
+
     .navbar-collapse[data-color="orange"]:after {
         background: #f96332;
         background: -webkit-linear-gradient(#f96332 0%, #000 80%);
@@ -10849,6 +10879,7 @@ Created using IcoMoon - icomoon.io
         background: -moz-linear-gradient(#f96332 0%, #000 80%);
         background: linear-gradient(#f96332 0%, #000 80%);
     }
+
     .navbar-collapse[data-color="red"]:after {
         background: #FF3636;
         background: -webkit-linear-gradient(#FF3636 0%, #000 80%);
@@ -10856,6 +10887,7 @@ Created using IcoMoon - icomoon.io
         background: -moz-linear-gradient(#FF3636 0%, #000 80%);
         background: linear-gradient(#FF3636 0%, #000 80%);
     }
+
     .navbar-collapse[data-color="yellow"]:after {
         background: #FFB236;
         background: -webkit-linear-gradient(#FFB236 0%, #000 80%);
@@ -10863,6 +10895,7 @@ Created using IcoMoon - icomoon.io
         background: -moz-linear-gradient(#FFB236 0%, #000 80%);
         background: linear-gradient(#FFB236 0%, #000 80%);
     }
+
     .nav-open .navbar-collapse {
         -webkit-transform: translate3d(0px, 0, 0);
         -moz-transform: translate3d(0px, 0, 0);
@@ -10870,16 +10903,20 @@ Created using IcoMoon - icomoon.io
         -ms-transform: translate3d(0px, 0, 0);
         transform: translate3d(0px, 0, 0);
     }
+
     .navbar-collapse .navbar-nav:not(.navbar-logo) .nav-link {
         margin: 0 1rem;
         margin-top: 0.3125rem;
     }
+
     .navbar-collapse .navbar-nav:not(.navbar-logo) .nav-link:not(.btn) {
         color: #FFFFFF !important;
     }
+
     .navbar-collapse .dropdown-menu .dropdown-item {
         color: #FFFFFF;
     }
+
     .menu-on-left .navbar-collapse {
         right: auto;
         left: 0;
@@ -10889,22 +10926,27 @@ Created using IcoMoon - icomoon.io
         -ms-transform: translate3d(-300px, 0, 0);
         transform: translate3d(-300px, 0, 0);
     }
+
     .menu-on-left .navbar-brand {
         float: right;
         margin-right: 0;
         margin-left: 1rem;
     }
+
     .navbar .navbar-brand {
         padding-top: .5rem;
         padding-bottom: .5rem;
     }
+
     .navbar .navbar-nav {
         margin-top: 53px;
     }
+
     .navbar .navbar-nav.navbar-logo {
         top: 0;
         height: 53px;
     }
+
     .navbar .dropdown.show .dropdown-menu,
     .navbar .dropdown .dropdown-menu {
         background-color: transparent;
@@ -10920,24 +10962,30 @@ Created using IcoMoon - icomoon.io
         height: 300px;
         overflow-y: scroll;
     }
+
     .navbar .dropdown.show .dropdown-menu:before,
     .navbar .dropdown .dropdown-menu:before {
         display: none;
     }
+
     .navbar .dropdown .dropdown-item {
         padding-left: 2.5rem;
     }
+
     .navbar .dropdown .dropdown-menu {
         display: none;
     }
+
     .navbar .dropdown.show .dropdown-menu {
         display: block;
     }
+
     .navbar .dropdown-menu .dropdown-item:focus,
     .navbar .dropdown-menu .dropdown-item:hover {
         color: #FFFFFF;
         border-radius: 0.1875rem;
     }
+
     .navbar .navbar-translate {
         width: 100%;
         position: relative;
@@ -10952,6 +11000,7 @@ Created using IcoMoon - icomoon.io
         -ms-transition: all 0.5s cubic-bezier(0.685, 0.0473, 0.346, 1);
         transition: all 0.5s cubic-bezier(0.685, 0.0473, 0.346, 1);
     }
+
     .navbar .navbar-toggler-bar {
         display: block;
         position: relative;
@@ -10960,26 +11009,33 @@ Created using IcoMoon - icomoon.io
         border-radius: 1px;
         background: #FFFFFF;
     }
+
     .navbar .navbar-toggler-bar+.navbar-toggler-bar {
         margin-top: 7px;
     }
+
     .navbar .navbar-toggler-bar.bar2 {
         width: 17px;
         transition: width .2s linear;
     }
+
     .navbar.bg-white:not(.navbar-transparent) .navbar-toggler-bar {
         background: #888888;
     }
+
     .navbar .toggled .navbar-toggler-bar {
         width: 24px;
     }
+
     .navbar .toggled .navbar-toggler-bar+.navbar-toggler-bar {
         margin-top: 5px;
     }
+
     .navbar .nav-link i.fa,
     .navbar .nav-link i.now-ui-icons {
         opacity: .5;
     }
+
     .nav-open .wrapper {
         -webkit-transform: translate3d(-150px, 0, 0);
         -moz-transform: translate3d(-150px, 0, 0);
@@ -10987,6 +11043,7 @@ Created using IcoMoon - icomoon.io
         -ms-transform: translate3d(-150px, 0, 0);
         transform: translate3d(-150px, 0, 0);
     }
+
     .nav-open .navbar-translate {
         -webkit-transform: translate3d(-300px, 0, 0);
         -moz-transform: translate3d(-300px, 0, 0);
@@ -10994,6 +11051,7 @@ Created using IcoMoon - icomoon.io
         -ms-transform: translate3d(-300px, 0, 0);
         transform: translate3d(-300px, 0, 0);
     }
+
     .nav-open .menu-on-left .navbar-collapse {
         -webkit-transform: translate3d(0px, 0, 0);
         -moz-transform: translate3d(0px, 0, 0);
@@ -11001,6 +11059,7 @@ Created using IcoMoon - icomoon.io
         -ms-transform: translate3d(0px, 0, 0);
         transform: translate3d(0px, 0, 0);
     }
+
     .nav-open .menu-on-left .navbar-translate {
         -webkit-transform: translate3d(300px, 0, 0);
         -moz-transform: translate3d(300px, 0, 0);
@@ -11008,6 +11067,7 @@ Created using IcoMoon - icomoon.io
         -ms-transform: translate3d(300px, 0, 0);
         transform: translate3d(300px, 0, 0);
     }
+
     .nav-open .menu-on-left .wrapper {
         -webkit-transform: translate3d(150px, 0, 0);
         -moz-transform: translate3d(150px, 0, 0);
@@ -11015,10 +11075,12 @@ Created using IcoMoon - icomoon.io
         -ms-transform: translate3d(150px, 0, 0);
         transform: translate3d(150px, 0, 0);
     }
+
     .nav-open .menu-on-left #bodyClick {
         right: auto;
         left: 300px;
     }
+
     .wrapper {
         -webkit-transition: all 0.5s cubic-bezier(0.685, 0.0473, 0.346, 1);
         -moz-transition: all 0.5s cubic-bezier(0.685, 0.0473, 0.346, 1);
@@ -11026,11 +11088,13 @@ Created using IcoMoon - icomoon.io
         -ms-transition: all 0.5s cubic-bezier(0.685, 0.0473, 0.346, 1);
         transition: all 0.5s cubic-bezier(0.685, 0.0473, 0.346, 1);
     }
+
     .bar1,
     .bar2,
     .bar3 {
         outline: 1px solid transparent;
     }
+
     .bar1 {
         top: 0px;
         -webkit-animation: topbar-back 500ms linear 0s;
@@ -11040,9 +11104,11 @@ Created using IcoMoon - icomoon.io
         -moz-animation-fill-mode: forwards;
         animation-fill-mode: forwards;
     }
+
     .bar2 {
         opacity: 1;
     }
+
     .bar3 {
         bottom: 0px;
         -webkit-animation: bottombar-back 500ms linear 0s;
@@ -11052,6 +11118,7 @@ Created using IcoMoon - icomoon.io
         -moz-animation-fill-mode: forwards;
         animation-fill-mode: forwards;
     }
+
     .toggled .bar1 {
         top: 6px;
         -webkit-animation: topbar-x 500ms linear 0s;
@@ -11061,9 +11128,11 @@ Created using IcoMoon - icomoon.io
         -moz-animation-fill-mode: forwards;
         animation-fill-mode: forwards;
     }
+
     .toggled .bar2 {
         opacity: 0;
     }
+
     .toggled .bar3 {
         bottom: 6px;
         -webkit-animation: bottombar-x 500ms linear 0s;
@@ -11073,222 +11142,277 @@ Created using IcoMoon - icomoon.io
         -moz-animation-fill-mode: forwards;
         animation-fill-mode: forwards;
     }
+
     @keyframes topbar-x {
         0% {
             top: 0px;
             transform: rotate(0deg);
         }
+
         45% {
             top: 6px;
             transform: rotate(145deg);
         }
+
         75% {
             transform: rotate(130deg);
         }
+
         100% {
             transform: rotate(135deg);
         }
     }
+
     @-webkit-keyframes topbar-x {
         0% {
             top: 0px;
             -webkit-transform: rotate(0deg);
         }
+
         45% {
             top: 6px;
             -webkit-transform: rotate(145deg);
         }
+
         75% {
             -webkit-transform: rotate(130deg);
         }
+
         100% {
             -webkit-transform: rotate(135deg);
         }
     }
+
     @-moz-keyframes topbar-x {
         0% {
             top: 0px;
             -moz-transform: rotate(0deg);
         }
+
         45% {
             top: 6px;
             -moz-transform: rotate(145deg);
         }
+
         75% {
             -moz-transform: rotate(130deg);
         }
+
         100% {
             -moz-transform: rotate(135deg);
         }
     }
+
     @keyframes topbar-back {
         0% {
             top: 6px;
             transform: rotate(135deg);
         }
+
         45% {
             transform: rotate(-10deg);
         }
+
         75% {
             transform: rotate(5deg);
         }
+
         100% {
             top: 0px;
             transform: rotate(0);
         }
     }
+
     @-webkit-keyframes topbar-back {
         0% {
             top: 6px;
             -webkit-transform: rotate(135deg);
         }
+
         45% {
             -webkit-transform: rotate(-10deg);
         }
+
         75% {
             -webkit-transform: rotate(5deg);
         }
+
         100% {
             top: 0px;
             -webkit-transform: rotate(0);
         }
     }
+
     @-moz-keyframes topbar-back {
         0% {
             top: 6px;
             -moz-transform: rotate(135deg);
         }
+
         45% {
             -moz-transform: rotate(-10deg);
         }
+
         75% {
             -moz-transform: rotate(5deg);
         }
+
         100% {
             top: 0px;
             -moz-transform: rotate(0);
         }
     }
+
     @keyframes bottombar-x {
         0% {
             bottom: 0px;
             transform: rotate(0deg);
         }
+
         45% {
             bottom: 6px;
             transform: rotate(-145deg);
         }
+
         75% {
             transform: rotate(-130deg);
         }
+
         100% {
             transform: rotate(-135deg);
         }
     }
+
     @-webkit-keyframes bottombar-x {
         0% {
             bottom: 0px;
             -webkit-transform: rotate(0deg);
         }
+
         45% {
             bottom: 6px;
             -webkit-transform: rotate(-145deg);
         }
+
         75% {
             -webkit-transform: rotate(-130deg);
         }
+
         100% {
             -webkit-transform: rotate(-135deg);
         }
     }
+
     @-moz-keyframes bottombar-x {
         0% {
             bottom: 0px;
             -moz-transform: rotate(0deg);
         }
+
         45% {
             bottom: 6px;
             -moz-transform: rotate(-145deg);
         }
+
         75% {
             -moz-transform: rotate(-130deg);
         }
+
         100% {
             -moz-transform: rotate(-135deg);
         }
     }
+
     @keyframes bottombar-back {
         0% {
             bottom: 6px;
             transform: rotate(-135deg);
         }
+
         45% {
             transform: rotate(10deg);
         }
+
         75% {
             transform: rotate(-5deg);
         }
+
         100% {
             bottom: 0px;
             transform: rotate(0);
         }
     }
+
     @-webkit-keyframes bottombar-back {
         0% {
             bottom: 6px;
             -webkit-transform: rotate(-135deg);
         }
+
         45% {
             -webkit-transform: rotate(10deg);
         }
+
         75% {
             -webkit-transform: rotate(-5deg);
         }
+
         100% {
             bottom: 0px;
             -webkit-transform: rotate(0);
         }
     }
+
     @-moz-keyframes bottombar-back {
         0% {
             bottom: 6px;
             -moz-transform: rotate(-135deg);
         }
+
         45% {
             -moz-transform: rotate(10deg);
         }
+
         75% {
             -moz-transform: rotate(-5deg);
         }
+
         100% {
             bottom: 0px;
             -moz-transform: rotate(0);
         }
     }
+
     @-webkit-keyframes fadeIn {
         0% {
             opacity: 0;
         }
+
         100% {
             opacity: 1;
         }
     }
+
     @-moz-keyframes fadeIn {
         0% {
             opacity: 0;
         }
+
         100% {
             opacity: 1;
         }
     }
+
     @keyframes fadeIn {
         0% {
             opacity: 0;
         }
+
         100% {
             opacity: 1;
         }
     }
+
     #bodyClick {
         height: 100%;
         width: 100%;
@@ -11307,36 +11431,46 @@ Created using IcoMoon - icomoon.io
         -ms-transition: all 0.5s cubic-bezier(0.685, 0.0473, 0.346, 1);
         transition: all 0.5s cubic-bezier(0.685, 0.0473, 0.346, 1);
     }
+
     .profile-photo .profile-photo-small {
         margin-left: -2px;
     }
+
     [class*="navbar-toggleable-"] .navbar-collapse {
         width: 300px;
     }
+
     .button-dropdown {
         display: none;
     }
+
     .section-nucleo-icons .container .row>[class*="col-"]:first-child {
         text-align: center;
     }
+
     .footer .copyright {
         text-align: right;
     }
+
     .section-nucleo-icons .icons-container {
         margin-top: 65px;
     }
+
     .section-images {
         height: 500px;
         max-height: 500px;
     }
+
     .section-images .hero-images-container {
         max-width: 500px;
     }
+
     .section-images .hero-images-container-1 {
         right: 10%;
         top: 68%;
         max-width: 269px;
     }
+
     .section-images .hero-images-container-2 {
         right: 5%;
         max-width: 135px;
@@ -11349,16 +11483,20 @@ Created using IcoMoon - icomoon.io
         padding: 0;
         margin: 7px 0.7rem;
     }
+
     .navbar-nav .nav-link.btn:not(.btn-sm) {
         margin: 0;
     }
+
     .navbar-nav .nav-item:not(:last-child) {
         margin-right: 5px;
     }
+
     .card.card-form-horizontal [class*="col-sm-"]:not(:last-child),
     .card.card-form-horizontal [class*="col-md-"]:not(:last-child) {
         padding-right: 0;
     }
+
     .burger-menu .navbar-collapse {
         position: fixed;
         display: block;
@@ -11384,6 +11522,7 @@ Created using IcoMoon - icomoon.io
         -ms-transition: all 0.5s cubic-bezier(0.685, 0.0473, 0.346, 1);
         transition: all 0.5s cubic-bezier(0.685, 0.0473, 0.346, 1);
     }
+
     .burger-menu .navbar-collapse:after {
         background: #888888;
         background: -webkit-linear-gradient(#888888 0%, #000 80%);
@@ -11401,6 +11540,7 @@ Created using IcoMoon - icomoon.io
         left: 0;
         z-index: -1;
     }
+
     .burger-menu .navbar-collapse[data-color="blue"]:after {
         background: #2CA8FF;
         background: -webkit-linear-gradient(#2CA8FF 0%, #000 80%);
@@ -11408,6 +11548,7 @@ Created using IcoMoon - icomoon.io
         background: -moz-linear-gradient(#2CA8FF 0%, #000 80%);
         background: linear-gradient(#2CA8FF 0%, #000 80%);
     }
+
     .burger-menu .navbar-collapse[data-color="green"]:after {
         background: #18ce0f;
         background: -webkit-linear-gradient(#18ce0f 0%, #000 80%);
@@ -11415,6 +11556,7 @@ Created using IcoMoon - icomoon.io
         background: -moz-linear-gradient(#18ce0f 0%, #000 80%);
         background: linear-gradient(#18ce0f 0%, #000 80%);
     }
+
     .burger-menu .navbar-collapse[data-color="orange"]:after {
         background: #f96332;
         background: -webkit-linear-gradient(#f96332 0%, #000 80%);
@@ -11422,6 +11564,7 @@ Created using IcoMoon - icomoon.io
         background: -moz-linear-gradient(#f96332 0%, #000 80%);
         background: linear-gradient(#f96332 0%, #000 80%);
     }
+
     .burger-menu .navbar-collapse[data-color="red"]:after {
         background: #FF3636;
         background: -webkit-linear-gradient(#FF3636 0%, #000 80%);
@@ -11429,6 +11572,7 @@ Created using IcoMoon - icomoon.io
         background: -moz-linear-gradient(#FF3636 0%, #000 80%);
         background: linear-gradient(#FF3636 0%, #000 80%);
     }
+
     .burger-menu .navbar-collapse[data-color="yellow"]:after {
         background: #FFB236;
         background: -webkit-linear-gradient(#FFB236 0%, #000 80%);
@@ -11436,6 +11580,7 @@ Created using IcoMoon - icomoon.io
         background: -moz-linear-gradient(#FFB236 0%, #000 80%);
         background: linear-gradient(#FFB236 0%, #000 80%);
     }
+
     .nav-open .burger-menu .navbar-collapse {
         -webkit-transform: translate3d(0px, 0, 0);
         -moz-transform: translate3d(0px, 0, 0);
@@ -11443,16 +11588,20 @@ Created using IcoMoon - icomoon.io
         -ms-transform: translate3d(0px, 0, 0);
         transform: translate3d(0px, 0, 0);
     }
+
     .burger-menu .navbar-collapse .navbar-nav:not(.navbar-logo) .nav-link {
         margin: 0 1rem;
         margin-top: 0.3125rem;
     }
+
     .burger-menu .navbar-collapse .navbar-nav:not(.navbar-logo) .nav-link:not(.btn) {
         color: #FFFFFF !important;
     }
+
     .burger-menu .navbar-collapse .dropdown-menu .dropdown-item {
         color: #FFFFFF;
     }
+
     .menu-on-left .burger-menu .navbar-collapse {
         right: auto;
         left: 0;
@@ -11462,22 +11611,27 @@ Created using IcoMoon - icomoon.io
         -ms-transform: translate3d(-300px, 0, 0);
         transform: translate3d(-300px, 0, 0);
     }
+
     .burger-menu .menu-on-left .navbar-brand {
         float: right;
         margin-right: 0;
         margin-left: 1rem;
     }
+
     .burger-menu .navbar .navbar-brand {
         padding-top: .5rem;
         padding-bottom: .5rem;
     }
+
     .burger-menu .navbar .navbar-nav {
         margin-top: 53px;
     }
+
     .burger-menu .navbar .navbar-nav.navbar-logo {
         top: 0;
         height: 53px;
     }
+
     .burger-menu .navbar .dropdown.show .dropdown-menu,
     .burger-menu .navbar .dropdown .dropdown-menu {
         background-color: transparent;
@@ -11493,24 +11647,30 @@ Created using IcoMoon - icomoon.io
         height: 300px;
         overflow-y: scroll;
     }
+
     .burger-menu .navbar .dropdown.show .dropdown-menu:before,
     .burger-menu .navbar .dropdown .dropdown-menu:before {
         display: none;
     }
+
     .burger-menu .navbar .dropdown .dropdown-item {
         padding-left: 2.5rem;
     }
+
     .burger-menu .navbar .dropdown .dropdown-menu {
         display: none;
     }
+
     .burger-menu .navbar .dropdown.show .dropdown-menu {
         display: block;
     }
+
     .burger-menu .navbar .dropdown-menu .dropdown-item:focus,
     .burger-menu .navbar .dropdown-menu .dropdown-item:hover {
         color: #FFFFFF;
         border-radius: 0.1875rem;
     }
+
     .burger-menu .navbar .navbar-translate {
         width: 100%;
         position: relative;
@@ -11525,6 +11685,7 @@ Created using IcoMoon - icomoon.io
         -ms-transition: all 0.5s cubic-bezier(0.685, 0.0473, 0.346, 1);
         transition: all 0.5s cubic-bezier(0.685, 0.0473, 0.346, 1);
     }
+
     .burger-menu .navbar .navbar-toggler-bar {
         display: block;
         position: relative;
@@ -11533,26 +11694,33 @@ Created using IcoMoon - icomoon.io
         border-radius: 1px;
         background: #FFFFFF;
     }
+
     .burger-menu .navbar .navbar-toggler-bar+.navbar-toggler-bar {
         margin-top: 7px;
     }
+
     .burger-menu .navbar .navbar-toggler-bar.bar2 {
         width: 17px;
         transition: width .2s linear;
     }
+
     .burger-menu .navbar.bg-white:not(.navbar-transparent) .navbar-toggler-bar {
         background: #888888;
     }
+
     .burger-menu .navbar .toggled .navbar-toggler-bar {
         width: 24px;
     }
+
     .burger-menu .navbar .toggled .navbar-toggler-bar+.navbar-toggler-bar {
         margin-top: 5px;
     }
+
     .burger-menu .navbar .nav-link i.fa,
     .burger-menu .navbar .nav-link i.now-ui-icons {
         opacity: .5;
     }
+
     .burger-menu .nav-open .wrapper {
         -webkit-transform: translate3d(-150px, 0, 0);
         -moz-transform: translate3d(-150px, 0, 0);
@@ -11560,6 +11728,7 @@ Created using IcoMoon - icomoon.io
         -ms-transform: translate3d(-150px, 0, 0);
         transform: translate3d(-150px, 0, 0);
     }
+
     .burger-menu .nav-open .navbar-translate {
         -webkit-transform: translate3d(-300px, 0, 0);
         -moz-transform: translate3d(-300px, 0, 0);
@@ -11567,6 +11736,7 @@ Created using IcoMoon - icomoon.io
         -ms-transform: translate3d(-300px, 0, 0);
         transform: translate3d(-300px, 0, 0);
     }
+
     .burger-menu .nav-open .menu-on-left .navbar-collapse {
         -webkit-transform: translate3d(0px, 0, 0);
         -moz-transform: translate3d(0px, 0, 0);
@@ -11574,6 +11744,7 @@ Created using IcoMoon - icomoon.io
         -ms-transform: translate3d(0px, 0, 0);
         transform: translate3d(0px, 0, 0);
     }
+
     .burger-menu .nav-open .menu-on-left .navbar-translate {
         -webkit-transform: translate3d(300px, 0, 0);
         -moz-transform: translate3d(300px, 0, 0);
@@ -11581,6 +11752,7 @@ Created using IcoMoon - icomoon.io
         -ms-transform: translate3d(300px, 0, 0);
         transform: translate3d(300px, 0, 0);
     }
+
     .burger-menu .nav-open .menu-on-left .wrapper {
         -webkit-transform: translate3d(150px, 0, 0);
         -moz-transform: translate3d(150px, 0, 0);
@@ -11588,10 +11760,12 @@ Created using IcoMoon - icomoon.io
         -ms-transform: translate3d(150px, 0, 0);
         transform: translate3d(150px, 0, 0);
     }
+
     .burger-menu .nav-open .menu-on-left #bodyClick {
         right: auto;
         left: 300px;
     }
+
     .burger-menu .wrapper {
         -webkit-transition: all 0.5s cubic-bezier(0.685, 0.0473, 0.346, 1);
         -moz-transition: all 0.5s cubic-bezier(0.685, 0.0473, 0.346, 1);
@@ -11599,11 +11773,13 @@ Created using IcoMoon - icomoon.io
         -ms-transition: all 0.5s cubic-bezier(0.685, 0.0473, 0.346, 1);
         transition: all 0.5s cubic-bezier(0.685, 0.0473, 0.346, 1);
     }
+
     .burger-menu .bar1,
     .burger-menu .bar2,
     .burger-menu .bar3 {
         outline: 1px solid transparent;
     }
+
     .burger-menu .bar1 {
         top: 0px;
         -webkit-animation: topbar-back 500ms linear 0s;
@@ -11613,9 +11789,11 @@ Created using IcoMoon - icomoon.io
         -moz-animation-fill-mode: forwards;
         animation-fill-mode: forwards;
     }
+
     .burger-menu .bar2 {
         opacity: 1;
     }
+
     .burger-menu .bar3 {
         bottom: 0px;
         -webkit-animation: bottombar-back 500ms linear 0s;
@@ -11625,6 +11803,7 @@ Created using IcoMoon - icomoon.io
         -moz-animation-fill-mode: forwards;
         animation-fill-mode: forwards;
     }
+
     .burger-menu .toggled .bar1 {
         top: 6px;
         -webkit-animation: topbar-x 500ms linear 0s;
@@ -11634,9 +11813,11 @@ Created using IcoMoon - icomoon.io
         -moz-animation-fill-mode: forwards;
         animation-fill-mode: forwards;
     }
+
     .burger-menu .toggled .bar2 {
         opacity: 0;
     }
+
     .burger-menu .toggled .bar3 {
         bottom: 6px;
         -webkit-animation: bottombar-x 500ms linear 0s;
@@ -11646,222 +11827,277 @@ Created using IcoMoon - icomoon.io
         -moz-animation-fill-mode: forwards;
         animation-fill-mode: forwards;
     }
+
     @keyframes topbar-x {
         0% {
             top: 0px;
             transform: rotate(0deg);
         }
+
         45% {
             top: 6px;
             transform: rotate(145deg);
         }
+
         75% {
             transform: rotate(130deg);
         }
+
         100% {
             transform: rotate(135deg);
         }
     }
+
     @-webkit-keyframes topbar-x {
         0% {
             top: 0px;
             -webkit-transform: rotate(0deg);
         }
+
         45% {
             top: 6px;
             -webkit-transform: rotate(145deg);
         }
+
         75% {
             -webkit-transform: rotate(130deg);
         }
+
         100% {
             -webkit-transform: rotate(135deg);
         }
     }
+
     @-moz-keyframes topbar-x {
         0% {
             top: 0px;
             -moz-transform: rotate(0deg);
         }
+
         45% {
             top: 6px;
             -moz-transform: rotate(145deg);
         }
+
         75% {
             -moz-transform: rotate(130deg);
         }
+
         100% {
             -moz-transform: rotate(135deg);
         }
     }
+
     @keyframes topbar-back {
         0% {
             top: 6px;
             transform: rotate(135deg);
         }
+
         45% {
             transform: rotate(-10deg);
         }
+
         75% {
             transform: rotate(5deg);
         }
+
         100% {
             top: 0px;
             transform: rotate(0);
         }
     }
+
     @-webkit-keyframes topbar-back {
         0% {
             top: 6px;
             -webkit-transform: rotate(135deg);
         }
+
         45% {
             -webkit-transform: rotate(-10deg);
         }
+
         75% {
             -webkit-transform: rotate(5deg);
         }
+
         100% {
             top: 0px;
             -webkit-transform: rotate(0);
         }
     }
+
     @-moz-keyframes topbar-back {
         0% {
             top: 6px;
             -moz-transform: rotate(135deg);
         }
+
         45% {
             -moz-transform: rotate(-10deg);
         }
+
         75% {
             -moz-transform: rotate(5deg);
         }
+
         100% {
             top: 0px;
             -moz-transform: rotate(0);
         }
     }
+
     @keyframes bottombar-x {
         0% {
             bottom: 0px;
             transform: rotate(0deg);
         }
+
         45% {
             bottom: 6px;
             transform: rotate(-145deg);
         }
+
         75% {
             transform: rotate(-130deg);
         }
+
         100% {
             transform: rotate(-135deg);
         }
     }
+
     @-webkit-keyframes bottombar-x {
         0% {
             bottom: 0px;
             -webkit-transform: rotate(0deg);
         }
+
         45% {
             bottom: 6px;
             -webkit-transform: rotate(-145deg);
         }
+
         75% {
             -webkit-transform: rotate(-130deg);
         }
+
         100% {
             -webkit-transform: rotate(-135deg);
         }
     }
+
     @-moz-keyframes bottombar-x {
         0% {
             bottom: 0px;
             -moz-transform: rotate(0deg);
         }
+
         45% {
             bottom: 6px;
             -moz-transform: rotate(-145deg);
         }
+
         75% {
             -moz-transform: rotate(-130deg);
         }
+
         100% {
             -moz-transform: rotate(-135deg);
         }
     }
+
     @keyframes bottombar-back {
         0% {
             bottom: 6px;
             transform: rotate(-135deg);
         }
+
         45% {
             transform: rotate(10deg);
         }
+
         75% {
             transform: rotate(-5deg);
         }
+
         100% {
             bottom: 0px;
             transform: rotate(0);
         }
     }
+
     @-webkit-keyframes bottombar-back {
         0% {
             bottom: 6px;
             -webkit-transform: rotate(-135deg);
         }
+
         45% {
             -webkit-transform: rotate(10deg);
         }
+
         75% {
             -webkit-transform: rotate(-5deg);
         }
+
         100% {
             bottom: 0px;
             -webkit-transform: rotate(0);
         }
     }
+
     @-moz-keyframes bottombar-back {
         0% {
             bottom: 6px;
             -moz-transform: rotate(-135deg);
         }
+
         45% {
             -moz-transform: rotate(10deg);
         }
+
         75% {
             -moz-transform: rotate(-5deg);
         }
+
         100% {
             bottom: 0px;
             -moz-transform: rotate(0);
         }
     }
+
     @-webkit-keyframes fadeIn {
         0% {
             opacity: 0;
         }
+
         100% {
             opacity: 1;
         }
     }
+
     @-moz-keyframes fadeIn {
         0% {
             opacity: 0;
         }
+
         100% {
             opacity: 1;
         }
     }
+
     @keyframes fadeIn {
         0% {
             opacity: 0;
         }
+
         100% {
             opacity: 1;
         }
     }
+
     .burger-menu #bodyClick {
         height: 100%;
         width: 100%;
@@ -11880,9 +12116,11 @@ Created using IcoMoon - icomoon.io
         -ms-transition: all 0.5s cubic-bezier(0.685, 0.0473, 0.346, 1);
         transition: all 0.5s cubic-bezier(0.685, 0.0473, 0.346, 1);
     }
+
     .burger-menu .navbar-collapse {
         display: block !important;
     }
+
     .burger-menu .navbar-collapse .navbar-nav {
         margin-top: 53px;
         height: 100%;
@@ -11898,9 +12136,11 @@ Created using IcoMoon - icomoon.io
         -ms-flex-direction: column;
         flex-direction: column;
     }
+
     .burger-menu .navbar-collapse .navbar-nav .nav-item {
         margin: 0;
     }
+
     .burger-menu.menu-on-left .navbar-collapse {
         right: auto;
         left: 0;
@@ -11910,13 +12150,16 @@ Created using IcoMoon - icomoon.io
         -ms-transform: translate3d(-300px, 0, 0);
         transform: translate3d(-300px, 0, 0);
     }
+
     .burger-menu .navbar-toggleable-md .navbar-nav .dropdown-menu {
         position: static;
         float: none;
     }
+
     .burger-menu .navbar-toggleable-md .navbar-toggler {
         display: inline-block;
     }
+
     .nav-open .burger-menu.menu-on-left .navbar .navbar-translate {
         -webkit-transform: translate3d(300px, 0, 0);
         -moz-transform: translate3d(300px, 0, 0);
@@ -11924,6 +12167,7 @@ Created using IcoMoon - icomoon.io
         -ms-transform: translate3d(300px, 0, 0);
         transform: translate3d(300px, 0, 0);
     }
+
     .nav-open .burger-menu .navbar .navbar-translate {
         -webkit-transform: translate3d(-300px, 0, 0);
         -moz-transform: translate3d(-300px, 0, 0);
@@ -11931,6 +12175,7 @@ Created using IcoMoon - icomoon.io
         -ms-transform: translate3d(-300px, 0, 0);
         transform: translate3d(-300px, 0, 0);
     }
+
     .nav-open .burger-menu.menu-on-left .navbar-collapse {
         -webkit-transform: translate3d(0px, 0, 0);
         -moz-transform: translate3d(0px, 0, 0);
@@ -11938,18 +12183,22 @@ Created using IcoMoon - icomoon.io
         -ms-transform: translate3d(0px, 0, 0);
         transform: translate3d(0px, 0, 0);
     }
+
     .nav-open .burger-menu.menu-on-left #bodyClick {
         right: auto;
         left: 300px;
     }
+
     .burger-menu.menu-on-left .navbar-brand {
         float: right;
         margin-right: 0;
         margin-left: 1rem;
     }
+
     .section-nucleo-icons .icons-container {
         margin: 0 0 0 auto;
     }
+
     .footer:not(.footer-big) .copyright {
         float: right;
     }
@@ -11961,6 +12210,7 @@ Created using IcoMoon - icomoon.io
         margin-left: -100px;
         margin-bottom: 130px;
     }
+
     .image-container.image-left {
         margin-right: -100px;
     }
@@ -11970,23 +12220,28 @@ Created using IcoMoon - icomoon.io
     .image-container.image-left {
         margin-bottom: 260px;
     }
+
     .image-container.image-left p.blockquote {
         margin: 0 auto;
         position: relative;
         right: 0;
     }
+
     .header-2 .card-form-horizontal .input-group,
     .header-2 .card-form-horizontal .form-group {
         margin-bottom: 10px;
     }
+
     .contactus-2 .card-contact {
         max-width: inherit;
         margin: 0;
         margin-top: 15px;
     }
+
     .section-story-overview .image-container+.category {
         padding-top: 50px;
     }
+
     .features-7 .image-container img {
         left: 0px;
         top: 0;
@@ -11995,9 +12250,11 @@ Created using IcoMoon - icomoon.io
         height: auto;
         position: relative;
     }
+
     .footer.footer-big .social-feed i {
         padding-bottom: 10px;
     }
+
     .nav-tabs {
         display: inline-block;
         width: 100%;
@@ -12005,9 +12262,11 @@ Created using IcoMoon - icomoon.io
         padding-right: 100px;
         text-align: center;
     }
+
     .nav-tabs .nav-item>.nav-link {
         margin-bottom: 5px;
     }
+
     .landing-page .section-story-overview .image-container:nth-child(2) {
         margin-left: 0;
         margin-bottom: 30px;
@@ -12028,46 +12287,59 @@ Created using IcoMoon - icomoon.io
         margin-left: 0;
         margin-right: 0;
     }
+
     .typography-line span {
         margin-left: 0;
     }
+
     .footer .copyright {
         text-align: center;
     }
+
     .projects-1 .nav-pills {
         display: block;
     }
+
     .projects-1 .nav-pills .nav-item .nav-link {
         margin: 0 auto;
         margin-bottom: 15px;
     }
+
     .subscribe-line .card-form-horizontal .btn {
         margin-top: 10px;
     }
+
     .modal .modal-dialog .modal-header button.close {
         font-size: 18px;
         right: 12px;
         top: 10px;
     }
+
     .header-3 .btn {
         margin-bottom: 10px;
     }
+
     .card.card-fashion:not(.card-background):before {
         display: none;
     }
+
     .profile-page .content-center {
         margin: 10px 0 0;
     }
+
     .profile-page .content-center .content .social-description {
         width: 105px;
         max-width: 105px;
     }
+
     .section-nucleo-icons .icons-container i {
         font-size: 30px;
     }
+
     .section-nucleo-icons .icons-container i:nth-child(6) {
         font-size: 48px;
     }
+
     .page-header .container h6.category-absolute {
         width: 90%;
     }
@@ -12078,6 +12350,7 @@ Created using IcoMoon - icomoon.io
         right: 9%;
         max-width: 370px;
     }
+
     .section-images .hero-images-container-2 {
         right: 2%;
         max-width: 216px;
@@ -12089,23 +12362,28 @@ Created using IcoMoon - icomoon.io
         height: 300px;
         max-height: 300px;
     }
+
     .section-images .hero-images-container {
         max-width: 380px;
     }
+
     .section-images .hero-images-container-1 {
         right: 7%;
         top: 87%;
         max-width: 210px;
     }
+
     .section-images .hero-images-container-2 {
         right: 1%;
         max-width: 133px;
         top: 99%;
     }
+
     .footer nav {
         display: block;
         float: none;
     }
+
     #social-buttons>.row .col-md-1:nth-child(2) p,
     #social-buttons>.row .col-md-1:nth-child(3) p,
     #social-buttons>.row .col-md-3 p {
@@ -12124,6 +12402,7 @@ Created using IcoMoon - icomoon.io
         top: 51%;
         right: 21%;
     }
+
     .section-images .hero-images-container-2 {
         top: 66%;
         right: 14%;

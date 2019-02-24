@@ -32,10 +32,10 @@ export class AppComponent implements OnInit {
                 _location = _location.split('/')[2];
 
                 if (number > 150 || window.pageYOffset > 150) {
-                    // navbar.classList.remove('navbar-transparent');
+                    navbar.classList.remove('navbar-transparent');
                 } else if (_location !== 'login' && this.location.path() !== '/nucleoicons') {
                     // remove logic
-                    // navbar.classList.add('navbar-transparent');
+                    navbar.classList.add('navbar-transparent');
                 }
             });
         });

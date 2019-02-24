@@ -1,0 +1,28 @@
+.section-teaser {
+    height: 100vh;
+    width: 100vw;
+    z-index: 1100;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 0;
+}
+
+h1 {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+}
+
+.container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+iframe {
+    width: 80vw;
+    height: calc(80vw/1.77);
+}

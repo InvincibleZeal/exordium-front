@@ -1,0 +1,76 @@
+<div class="wrapper">
+    <div class="page-header clear-filter" filter-color="dark">
+        <div class="page-header-image rellax-header" data-rellax-speed="-7" style="background-image: url('assets/img/background/6.jpg'); background-color: #090909;">
+
+        </div>
+        <div class="container">
+            <div class="content-center brand">
+                <h1 class="h1-seo typograph" style="letter-spacing: 25px;">
+                    <span>E</span>
+                    <span>X</span>
+                    <span>O</span>
+                    <span class="full">R</span>
+                    <span>D</span>
+                    <span>I</span>
+                    <span class="full">U</span>
+                    <span class="full">M</span>
+                </h1>
+                <button class="btn btn-lg btn-round btn-primary gradient-primary gradient-primary-hover" (click)="open(classic,'' , '')">
+                    VIEW TEASER
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="main">
+        <div class="section" data-background-color="black">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 ml-auto mr-auto text-center">
+                        <h2 class="title">What is Exordium?</h2>
+                        <h5 class="description">Something about us Something about usSomething about usSomething about
+                            usSomething about usSomething about usSomething about usSomething about usSomething about
+                            usSomething about usSomething about usSomething about usSomething about usSomething about
+                            usSomething about us</h5>
+                    </div>
+                </div>
+                <div class="separator separator-primary"></div>
+                <div class="section-story-overview">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="image-container image-left" style="background-image: url('assets/img/login.jpg')">
+                                <!-- First image on the left side -->
+                                <p class="blockquote blockquote-primary">"Over the span of the satellite record, Arctic
+                                    sea ice has been declining significantly, while sea ice in the Antarctichas
+                                    increased very slightly"
+                                    <br>
+                                    <br>
+                                    <small>-NOAA</small>
+                                </p>
+                            </div>
+                            <!-- Second image on the left side of the article -->
+                            <!-- <div class="image-container" style="background-image: url('assets/img/bg3.jpg')"></div> -->
+                        </div>
+                        <div class="col-md-5">
+                            <!-- First image on the right side, above the article -->
+                            <div class="image-container image-right" style="background-image: url('assets/img/bg1.jpg')"></div>
+                            <h3>HEADING 1</h3>
+                            <p>The Arctic Ocean freezes every winter and much of the sea-ice then thaws every summer,
+                                and that process will continue whatever happens with climate change. Even if the Arctic
+                                continues to be one of the fastest-warming regions of the world, it will always be
+                                plunged into bitterly cold polar dark every winter. And year-by-year, for all kinds of
+                                natural reasons, there’s huge variety of the state of the ice.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<ng-template #classic let-c="close" let-d="dismiss">
+    <iframe frameborder="0" allowfullscreen="1" id="ytplayer" src="https://www.youtube.com/embed/id?autoplay=1&rel=0"></iframe>
+    <button type="button" class="btn btn-primary gradient-primary gradient-primary-hover m-0" (click)="c('Close click')">
+        GO BACK
+    </button>
+</ng-template>
