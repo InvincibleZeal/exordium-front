@@ -13,6 +13,10 @@ export class DataService {
             url: ['/', 'home']
         },
         {
+            name: 'events',
+            url: ['/', 'events']
+        },
+        {
             name: 'About',
             url: ['/', 'about']
         },

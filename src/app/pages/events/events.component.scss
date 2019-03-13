@@ -1,0 +1,49 @@
+// $text-dark: #343a40;
+
+// .card {
+//     transition: 600ms transform;
+
+//     &:hover {
+//         transform: translateY(-10px);
+//         transition: 400ms transform;
+//     }
+
+//     .card-footer a {
+//         transition: 300ms;
+
+//         & * {
+//             transition: 500ms;
+//         }
+
+//         .arrow {
+//             display: none;
+//         }
+
+//         &:hover {
+//             .arrow {
+//                 display: initial !important;
+//             }
+//         }
+//     }
+
+// }
+
+
+.nav-tabs-navigation .card {
+    cursor: pointer;
+    filter: brightness(0.8);
+    transition: 500ms;
+
+    .card-header,
+    .card-footer {
+        background: rgba(0, 0, 0, 0.3) !important;
+    }
+
+    &:hover {
+        background-size: initial !important;
+        background-position: center !important;
+        filter: brightness(1);
+        transition: 300ms filter;
+        transition: 10s background-position;
+    }
+}

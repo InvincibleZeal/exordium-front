@@ -270,16 +270,8 @@ body {
 
 .h1-seo>span {
     transition: transform 500ms;
-    transform-origin: center;
+    // transform-origin: 50% 50%;
     display: inline-block;
-}
-
-.h1-seo:hover>span {
-    transform: rotateX(180deg);
-}
-
-.h1-seo:hover>span.full {
-    transform: rotateX(360deg) !important;
 }
 
 /**
@@ -289,7 +281,15 @@ body {
 */
 
 
-@media screen and (min-width: 768px) {}
+@media screen and (min-width: 768px) {
+    .h1-seo:hover>span {
+        transform: rotateX(180deg);
+    }
+
+    .h1-seo:hover>span.full {
+        transform: rotateX(360deg) !important;
+    }
+}
 
 
 @media screen and (min-width: 576px) and (max-width: 768px) {
