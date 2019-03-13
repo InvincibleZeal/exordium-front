@@ -1,15 +1,17 @@
 import { Component, OnInit } from '@angular/core';
+import { DataService } from 'app/core/data.service';
 
 @Component({
-  selector: 'app-events',
-  templateUrl: './events.component.html',
-  styleUrls: ['./events.component.scss']
+    selector: 'app-events',
+    templateUrl: './events.component.html',
+    styleUrls: ['./events.component.scss']
 })
 export class EventsComponent implements OnInit {
+    events = []
+    constructor(private dataService: DataService) { }
 
-  constructor() { }
-
-  ngOnInit() {
-  }
+    ngOnInit() {
+        this.events = this.dataService.getEvents();
+    }
 
 }

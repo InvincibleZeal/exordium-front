@@ -14,7 +14,7 @@ import { TeaserComponent } from './shared/teaser/teaser.component';
         AppComponent,
         NavbarComponent,
         FooterComponent,
-        TeaserComponent
+        TeaserComponent,
     ],
     imports: [
         BrowserAnimationsModule,

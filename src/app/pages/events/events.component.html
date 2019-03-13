@@ -1,6 +1,6 @@
 <div class="wrapper">
     <div class="page-header page-header-small" filter-color="dark">
-        <div class="page-header-image rellax-header" data-rellax-speed="-8" style="background-image: url('assets/img/bg11.jpg');">
+        <div class="page-header-image rellax-header" data-rellax-speed="-8" style="background-image: url('assets/img/background/6.jpg');">
         </div>
         <div class="container">
             <div class="content-center brand">
@@ -20,109 +20,40 @@
             <div class="row justify-content-center">
                 <div class="col-sm-6 col-lg-6">
                     <div class="form-group">
-                        <input type="text" placeholder="Search..." class="form-control input-lg text-center" />
+                        <input type="text" placeholder="Search..." class="form-control input-lg text-center"
+                            [(ngModel)]="search" />
                     </div>
                 </div>
             </div>
             <div class="nav-tabs-navigation">
                 <div class="nav-tabs-wrapper">
                     <ngb-tabset [justify]="'center'" class="text-center">
-                        <ngb-tab title="Home">
+                        <ngb-tab title="All">
                             <ng-template ngbTabContent>
                                 <div class="separator"></div>
                                 <div class="row">
-                                    <div class="col-md-4">
-                                        <div class="card" data-background-color="black">
+                                    <div class="col-md-4" *ngFor="let event of events | eventFilter:search:'title'">
+                                        <div class="card" style="background: url('assets/img/background/6.jpg'); background-size: cover;">
                                             <div class="card-header">
-                                                <div class="card-title">HELLO</div>
-                                            </div>
-                                            <div class="card-body">
-                                                <p>I think that’s a responsibility that I have, to
-                                                    push possibilities, to show people, this is the level that things
-                                                    could be at. So when you get something that has the name Kanye West
-                                                    on it, it’s supposed to be pushing the furthest possibilities. I
-                                                    will be the leader of a company that ends up being worth billions
-                                                    of dollars, because I got the answers. I understand culture. I am
-                                                    the nucleus.</p>
-                                            </div>
-                                            <div class="card-footer">
-                                                SOMETHING HERE
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4">
-                                        <div class="card" style="background: url('assets/img/background/14.jpg'); background-size: cover;">
-                                            <div class="card-header">
-                                                <div class="card-title">HELLO</div>
+                                                <div class="card-title">{{event.title}}</div>
                                             </div>
                                             <div class="card-body text-justify">
-                                                <p>I think that’s a responsibility that I have, to
-                                                    push possibilities,
-                                                    to
-                                                    show people, this is the level that things could be at. So when you
-                                                    get
-                                                    something that has the name Kanye West on it, it’s supposed to be
-                                                    pushing the furthest possibilities. I will be the leader of a
-                                                    company
-                                                    that ends up being worth billions of dollars, because I got the
-                                                    answers. I understand culture. <a [routerLink]="['/', 'event']"></a></p>
+                                                <p>{{event.description}}</p>
+                                                <p><a [routerLink]="['/', 'event', event.url]">
+                                                        Read More...</a></p>
                                             </div>
                                             <div class="card-footer">
-                                                <a [routerLink]="" class="btn btn-round btn-primray gradient-primary">
+                                                <a [routerLink]="['/', 'event', event.url]" class="btn btn-round btn-primray gradient-primary">
                                                     <span>REGISTER </span>
                                                     <span><i class="now-ui-icons arrows-1_minimal-right"></i></span>
                                                 </a>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-md-4">
-                                        <div class="card" data-background-color="black">
-                                            <div class="card-header">
-                                                <div class="card-title">HELLO</div>
-                                            </div>
-                                            <div class="card-body">
-                                                <p>I think that’s a responsibility that I have, to
-                                                    push possibilities,
-                                                    to
-                                                    show people, this is the level that things could be at. So when you
-                                                    get
-                                                    something that has the name Kanye West on it, it’s supposed to be
-                                                    pushing the furthest possibilities. I will be the leader of a
-                                                    company
-                                                    that ends up being worth billions of dollars, because I got the
-                                                    answers. I understand culture. I am the nucleus.</p>
-                                            </div>
-                                            <div class="card-footer">
-                                                SOMETHING HERE
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4">
-                                        <div class="card" data-background-color="black">
-                                            <div class="card-header">
-                                                <div class="card-title">HELLO</div>
-                                            </div>
-                                            <div class="card-body">
-                                                <p>I think that’s a responsibility that I have, to
-                                                    push possibilities,
-                                                    to
-                                                    show people, this is the level that things could be at. So when you
-                                                    get
-                                                    something that has the name Kanye West on it, it’s supposed to be
-                                                    pushing the furthest possibilities. I will be the leader of a
-                                                    company
-                                                    that ends up being worth billions of dollars, because I got the
-                                                    answers. I understand culture. I am the nucleus.</p>
-                                            </div>
-                                            <div class="card-footer">
-                                                SOMETHING HERE
-                                            </div>
-                                        </div>
-                                    </div>
                                 </div>
                             </ng-template>
                         </ngb-tab>
-                        <ngb-tab title="Profile">
+                        <ngb-tab title="Technical">
                             <ng-template ngbTabContent>
                                 <p> I will be the leader of a company that ends up being worth billions of
                                     dollars, because I got the answers. I understand culture. I am the
@@ -132,7 +63,7 @@
                                     to show people, this is the level that things could be at. </p>
                             </ng-template>
                         </ngb-tab>
-                        <ngb-tab title="Messages">
+                        <ngb-tab title="Non-technical">
                             <ng-template ngbTabContent>
                                 <p>I think that’s a responsibility that I have, to push possibilities, to
                                     show people, this is the level that things could be at. So when you get
@@ -142,7 +73,7 @@
                                     answers. I understand culture. I am the nucleus.</p>
                             </ng-template>
                         </ngb-tab>
-                        <ngb-tab title="Settings">
+                        <ngb-tab title="Fun">
                             <ng-template ngbTabContent>
                                 <p>
                                     "I will be the leader of a company that ends up being worth billions of

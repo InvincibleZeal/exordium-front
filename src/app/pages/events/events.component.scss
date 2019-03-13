@@ -44,6 +44,6 @@
         background-position: center !important;
         filter: brightness(1);
         transition: 300ms filter;
-        transition: 10s background-position;
+        transition: 10s background-position cubic-bezier(0.165, 0.84, 0.44, 1);
     }
 }

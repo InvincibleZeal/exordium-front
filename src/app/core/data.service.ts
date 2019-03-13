@@ -1,11 +1,23 @@
-export class DataService {
+import { environment } from './../../environments/environment';
+import { OnInit, Injectable } from "@angular/core";
+import { Http } from "@angular/http";
+
+@Injectable()
+export class DataService implements OnInit {
 
     getTeams = () => this.teams;
     getPages = () => this.pages;
+    getEvents = () => this.events;
     getMember = (name: string) => this.members.filter(member => member.name.includes(name))[0];
     getMembers = () => this.teams
+    private api = environment.url;
+    constructor(private http: Http) {
+        http.get(`${this.api}/events`).subscribe(res => console.log(res));
+    }
 
-    constructor() { }
+    ngOnInit() {
+        this.http.get(`${this.api}/users`).subscribe((res) => console.log(res));
+    }
 
     private pages = [
         {
@@ -117,5 +129,36 @@ export class DataService {
         //     url: '#',
         // },
     ];
-
+    private events = [
+        {
+            title: 'Technolix',
+            description: 'I think that’s a responsibility that I have, to push possibilities, to show people, this is the level that things could be at. So when you get something',
+            url: 'technolix',
+        },
+        {
+            title: 'heriuy',
+            description: 'I think that’s a responsibility that I have, to push possibilities, to show people, this is the level that things could be at. So when you get something',
+            url: 'heriuy',
+        },
+        {
+            title: 'itrur',
+            description: 'I think that’s a responsibility that I have, to push possibilities, to show people, this is the level that things could be at. So when you get something',
+            url: 'itrur',
+        },
+        {
+            title: 'treih',
+            description: 'I think that’s a responsibility that I have, to push possibilities, to show people, this is the level that things could be at. So when you get something',
+            url: 'treih',
+        },
+        {
+            title: 'bjdjr',
+            description: 'I think that’s a responsibility that I have, to push possibilities, to show people, this is the level that things could be at. So when you get something',
+            url: 'bjdjr',
+        },
+        {
+            title: 'poeru',
+            description: 'I think that’s a responsibility that I have, to push possibilities, to show people, this is the level that things could be at. So when you get something',
+            url: 'poeru',
+        }
+    ]
 }
