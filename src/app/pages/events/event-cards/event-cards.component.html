@@ -1,0 +1,19 @@
+<div class="separator"></div>
+<div class="row">
+    <div class="col-md-4" *ngFor="let event of events | eventFilter:tag:search:'title'">
+        <div class="card" style="background: url('assets/img/background/14.jpg'); background-size: cover;">
+            <div class="card-header">
+                <div class="card-title">{{event.title}}</div>
+            </div>
+            <div class="card-body text-justify">
+                <p>{{event.description}}</p>
+            </div>
+            <div class="card-footer">
+                <a [routerLink]="['/', 'event', event.url]" class="btn btn-round btn-primray gradient-primary">
+                    <span>Read More </span>
+                    <span><i class="now-ui-icons arrows-1_minimal-right"></i></span>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
