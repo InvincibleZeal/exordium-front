@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import * as Rellax from 'rellax';
 import { DataService } from 'app/core/services/data.service';
 
 @Component({
@@ -13,9 +14,12 @@ export class EventComponent implements OnInit {
     constructor(private route: ActivatedRoute, private dataService: DataService, private router: Router) { }
 
     ngOnInit() {
+        var rellaxHeader = new Rellax('.rellax-header');
         this.url = this.route.snapshot.params['id'];
-        this.event = this.dataService.getEvent(this.url);
-        if (!this.event) this.router.navigate(['/events']);
-        console.log(this.event);
+        this.dataService.getEvent(this.url).subscribe(event => {
+            this.event = event;
+            console.log('EEHE', this.event);
+            if (!this.event) this.router.navigate(['/events'])
+        });
     }
 }

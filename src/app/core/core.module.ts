@@ -7,10 +7,10 @@ import { JWBootstrapSwitchModule } from 'jw-bootstrap-switch-ng2';
 import { RouterModule } from '@angular/router';
 import { HttpModule } from '@angular/http';
 
-
 import { EventFilterPipe } from './pipes/event-filter.pipe';
 import { DataService } from './services/data.service';
 import { AuthService } from './services/auth.service';
+import { Ng2IzitoastService } from 'ng2-izitoast';
 
 const MODULES = [
     CommonModule,
@@ -29,6 +29,6 @@ const COMPONENTS = [
     imports: [...MODULES],
     declarations: [...COMPONENTS],
     exports: [...COMPONENTS, ...MODULES],
-    providers: []
+    providers: [Ng2IzitoastService]
 })
 export class CoreModule { }

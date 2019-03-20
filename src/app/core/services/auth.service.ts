@@ -5,8 +5,6 @@ import { Observable } from 'rxjs/Rx';
 import 'rxjs/Rx'
 import { catchError } from 'rxjs/operators';
 
-import { Ng2IzitoastService } from 'ng2-izitoast';
-
 @Injectable()
 export class AuthService {
     constructor(private http: Http) { }
@@ -21,16 +19,8 @@ export class AuthService {
         } else {
             console.log(
                 `Backend returned code ${error.status}, ` +
-                `body was: ${error.error}`);
+                `body was: ${error.message}`);
         }
-
-        // this.iziToast.show({
-        //     title: "Something bad happened",
-        //     progressBarColor: "red",
-        //     onOpened: () => {
-        //         console.log("opened");
-        //     }
-        // })
 
         return Observable.throw(
             'Something bad happened; please try again later.');

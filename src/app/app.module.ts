@@ -10,6 +10,7 @@ import { AppComponent } from './app.component';
 
 import { DataService } from './core/services/data.service';
 import { AuthService } from './core/services/auth.service';
+import { Ng2IzitoastService } from 'ng2-izitoast';
 
 
 @NgModule({
@@ -24,7 +25,7 @@ import { AuthService } from './core/services/auth.service';
         PagesModule,
         NgbModule.forRoot(),
     ],
-    providers: [DataService, AuthService],
+    providers: [DataService, AuthService, Ng2IzitoastService],
     bootstrap: [AppComponent]
 })
 export class AppModule { }

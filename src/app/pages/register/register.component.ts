@@ -1,3 +1,4 @@
+import { catchError } from 'rxjs/operators';
 import { Component, OnInit, ViewChild } from '@angular/core';
 import * as Rellax from 'rellax';
 
@@ -40,6 +41,7 @@ export class RegisterComponent implements OnInit {
         console.log('hi')
         this.disabledBtn = true;
         this.authService.register(this.data).subscribe((user: any) => {
+            console.log(user);
             if (!user) {
                 console.log(user);
                 this.open(this.failureModal, 'modal_mini', 'sm', 'danger');
