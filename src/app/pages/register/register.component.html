@@ -20,43 +20,103 @@
     <div class="section section-contact-us text-center" data-background-color="black">
         <div class="container">
             <h2 class="title">Register Here</h2>
-            <p class="description metropolis">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora,
-                molestiae.</p>
+            <p class="description metropolis">Lorem ipsum dolor sit amet consectetur adipisicing elit. Some Descriptive
+                line here</p>
             <div class="row">
-                <div class="col-lg-6 text-center col-md-8 ml-auto mr-auto">
-                    <div class="input-group input-lg my-4" [ngClass]="{'input-group-focus':focus===true}">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text">
-                                <i class="now-ui-icons users_circle-08"></i>
-                            </span>
+                <form (ngSubmit)="onSubmit()">
+                    <div class="col-lg-6 col-md-8 ml-auto mr-auto">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="input-group input-lg my-2" [ngClass]="{'input-group-focus':focus===true}">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">
+                                            <i class="now-ui-icons users_single-02"></i>
+                                        </span>
+                                    </div>
+                                    <input type="text" class="form-control" name="name" [(ngModel)]="data.name"
+                                        placeholder="Name" (focus)="focus=true" (blur)="focus=false" required>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="input-group input-lg my-2" [ngClass]="{'input-group-focus':focus1===true}">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">
+                                            <i class="now-ui-icons ui-1_email-85"></i>
+                                        </span>
+                                    </div>
+                                    <input type="email" class="form-control" name="email" [(ngModel)]="data.email"
+                                        placeholder="Email" (focus)="focus1=true" (blur)="focus1=false" required>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="input-group input-lg my-2" [ngClass]="{'input-group-focus':focus2===true}">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">
+                                            <i class="now-ui-icons tech_mobile"></i>
+                                        </span>
+                                    </div>
+                                    <input type="text" class="form-control" name="phone" [(ngModel)]="data.phone"
+                                        placeholder="Phone" (focus)="focus2=true" (blur)="focus2=false" required>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="input-group input-lg my-2" [ngClass]="{'input-group-focus':focus3===true}">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">
+                                            <i class="now-ui-icons business_badge"></i>
+                                        </span>
+                                    </div>
+                                    <input type="text" class="form-control" name="semester" [(ngModel)]="data.semester"
+                                        placeholder="Semester" (focus)="focus3=true" (blur)="focus3=false" required>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="input-group input-lg my-2" [ngClass]="{'input-group-focus':focus4===true}">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">
+                                            <i class="now-ui-icons education_glasses"></i>
+                                        </span>
+                                    </div>
+                                    <input type="text" class="form-control" name="college" [(ngModel)]="data.college"
+                                        placeholder="College" (focus)="focus4=true" (blur)="focus4=false" required>
+                                </div>
+                            </div>
                         </div>
-                        <input type="text" class="form-control" placeholder="Name" (focus)="focus=true" (blur)="focus=false">
-                    </div>
-
-                    <div class="input-group input-lg my-4" [ngClass]="{'input-group-focus':focus1===true}">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text">
-                                <i class="now-ui-icons users_circle-08"></i>
-                            </span>
+                        <div class="send-button my-3">
+                            <input type="submit" value="REGISTER" class="btn btn-primary btn-round btn-block btn-lg gradient-primary"
+                                ng-class="{'disabled': disabledBtn}">
                         </div>
-                        <input type="text" class="form-control" placeholder="Email" (focus)="focus1=true" (blur)="focus1=false">
                     </div>
-
-                    <div class="input-group input-lg my-4" [ngClass]="{'input-group-focus':focus2===true}">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text">
-                                <i class="now-ui-icons users_circle-08"></i>
-                            </span>
-                        </div>
-                        <input type="text" class="form-control" placeholder="Something Else" (focus)="focus2=true"
-                            (blur)="focus2=false">
-                    </div>
-
-                    <div class="send-button my-4">
-                        <a href="#pablo" class="btn btn-primary btn-round btn-block btn-lg gradient-primary">REGISTER</a>
-                    </div>
-                </div>
+                </form>
             </div>
         </div>
     </div>
 </div>
+<ng-template #success let-c="close" let-d="dismiss">
+    <div class="modal-header justify-content-center">
+        <div class="modal-profile">
+            <i class="now-ui-icons users_single-02"></i>
+        </div>
+    </div>
+    <div class="modal-body">
+        <p>Thank you for registration, {{user.name}}</p>
+        <p>Please check your Exordium-ID on, {{user.email}}</p>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-link btn-neutral ml-auto mx-auto" (click)="c('Close click')">Close</button>
+    </div>
+</ng-template>
+
+<ng-template #failure let-c="close" let-d="dismiss">
+    <div class="modal-header justify-content-center">
+        <div class="modal-profile">
+            <i class="now-ui-icons users_circle-08"></i>
+        </div>
+    </div>
+    <div class="modal-body">
+        <p>Registration Failed. Please try later.</p>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-link btn-neutral ml-auto mx-auto" (click)="c('Close click')">Close</button>
+    </div>
+</ng-template>

@@ -27,23 +27,3 @@
 //     }
 
 // }
-
-
-.nav-tabs-navigation .card {
-    cursor: pointer;
-    filter: brightness(0.8);
-    transition: 500ms;
-
-    .card-header,
-    .card-footer {
-        background: rgba(0, 0, 0, 0.3) !important;
-    }
-
-    &:hover {
-        background-size: initial !important;
-        background-position: center !important;
-        filter: brightness(1);
-        transition: 300ms filter;
-        transition: 10s background-position cubic-bezier(0.165, 0.84, 0.44, 1);
-    }
-}

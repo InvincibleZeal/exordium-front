@@ -5,5 +5,6 @@
 
 export const environment = {
     production: false,
-    url: 'localhost:3000',
+    api: 'https://exordium-api.herokuapp.com',
+    // api: 'localhost:3000',
 };

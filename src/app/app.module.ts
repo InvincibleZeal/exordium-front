@@ -3,26 +3,28 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app.routing';
 import { CoreModule } from './core/core.module';
 import { PagesModule } from './pages/pages.module';
+import { SharedModule } from './shared/shared.module';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { AppComponent } from './app.component';
-import { NavbarComponent } from './shared/navbar/navbar.component';
-import { FooterComponent } from './shared/footer/footer.component';
-import { TeaserComponent } from './shared/teaser/teaser.component';
+
+import { DataService } from './core/services/data.service';
+import { AuthService } from './core/services/auth.service';
+
 
 @NgModule({
     declarations: [
         AppComponent,
-        NavbarComponent,
-        FooterComponent,
-        TeaserComponent,
     ],
     imports: [
         BrowserAnimationsModule,
         AppRoutingModule,
         CoreModule,
-        PagesModule
+        SharedModule,
+        PagesModule,
+        NgbModule.forRoot()
     ],
-    providers: [],
+    providers: [DataService, AuthService],
     bootstrap: [AppComponent]
 })
 export class AppModule { }

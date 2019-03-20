@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import * as Rellax from 'rellax';
-import { DataService } from 'app/core/data.service';
+import { DataService } from 'app/core/services/data.service';
 
 @Component({
     selector: 'app-about',

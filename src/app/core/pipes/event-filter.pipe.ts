@@ -5,15 +5,14 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class EventFilterPipe implements PipeTransform {
 
-    transform(events: any, search: any, prop: any): any {
-        if (!events || !search || search === '') return events;
+    transform(events: any, tag: any, search: any, prop: any): any {
+        if (!events) return events;
+        let filteredEvents = [];
 
-        let filteredEvents = []
-        for (let event of events) {
-            if (event[prop].toLowerCase().includes(search.toLowerCase()))
-                filteredEvents.push(event);
-        }
-        return filteredEvents;
+        if (tag === 'All') filteredEvents = events;
+        else filteredEvents = events.filter(event => event.tags.includes(tag));
+
+        if (!search) return filteredEvents;
+        else return filteredEvents.filter(event => event[prop].toLowerCase().includes(search.toLowerCase()));
     }
-
 }

@@ -8,8 +8,11 @@ import { NavbarComponent } from './shared/navbar/navbar.component';
 
 @Component({
     selector: 'app-root',
-    templateUrl: './app.component.html',
-    styleUrls: ['./app.component.scss']
+    template: `
+        <app-navbar></app-navbar>
+        <router-outlet></router-outlet>
+        <app-footer></app-footer>
+    `,
 })
 export class AppComponent implements OnInit {
     private _router: Subscription;

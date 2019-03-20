@@ -1,6 +1,6 @@
 import { Component, OnInit, ElementRef } from '@angular/core';
 import { Location, LocationStrategy, PathLocationStrategy } from '@angular/common';
-import { DataService } from 'app/core/data.service';
+import { DataService } from 'app/core/services/data.service';
 
 @Component({
     selector: 'app-navbar',

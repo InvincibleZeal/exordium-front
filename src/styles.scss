@@ -237,6 +237,16 @@ body {
     background: transparent !important;
 }
 
+.registerModal>.modal-dialog {
+    max-width: initial !important;
+    width: 300px !important;
+}
+
+.registerModal .modal-content {
+    background: linear-gradient(150deg, #ff0b6d, #fe4644, #fb9411) !important;
+}
+
+
 /**
 |--------------------------------------------------
 | HEADER FILTER
