@@ -234,10 +234,12 @@ body {
 }
 
 .xlModal .modal-content {
-    background: transparent !important;
+    background: #000 !important;
 }
 
 .registerModal>.modal-dialog {
+    top: 50%;
+    transform: translateY(50%);
     max-width: initial !important;
     width: 300px !important;
 }

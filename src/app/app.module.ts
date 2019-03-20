@@ -5,7 +5,6 @@ import { CoreModule } from './core/core.module';
 import { PagesModule } from './pages/pages.module';
 import { SharedModule } from './shared/shared.module';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { Ng2IziToastModule, Ng2IzitoastService } from 'ng2-izitoast';
 
 import { AppComponent } from './app.component';
 
@@ -24,7 +23,6 @@ import { AuthService } from './core/services/auth.service';
         SharedModule,
         PagesModule,
         NgbModule.forRoot(),
-        Ng2IziToastModule,
     ],
     providers: [DataService, AuthService],
     bootstrap: [AppComponent]
