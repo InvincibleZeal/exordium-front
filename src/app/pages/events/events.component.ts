@@ -7,7 +7,8 @@ import { DataService } from 'app/core/services/data.service';
     styleUrls: ['./events.component.scss']
 })
 export class EventsComponent implements OnInit {
-    events = []
+    public search: string;
+    public events: any[] = [];
     constructor(private dataService: DataService) { }
 
     ngOnInit() {
