@@ -9,7 +9,7 @@ import { Ng2IzitoastService } from 'ng2-izitoast';
 
 @Injectable()
 export class AuthService {
-    constructor(private http: Http, public iziToast: Ng2IzitoastService) { }
+    constructor(private http: Http) { }
 
     register(data: any) {
         return this.http.post(`${environment.api}/participants`, data).map((res: Response) => res.json()).pipe(catchError(this.handleError))
@@ -24,13 +24,13 @@ export class AuthService {
                 `body was: ${error.error}`);
         }
 
-        this.iziToast.show({
-            title: "Something bad happened",
-            progressBarColor: "red",
-            onOpened: () => {
-                console.log("opened");
-            }
-        })
+        // this.iziToast.show({
+        //     title: "Something bad happened",
+        //     progressBarColor: "red",
+        //     onOpened: () => {
+        //         console.log("opened");
+        //     }
+        // })
 
         return Observable.throw(
             'Something bad happened; please try again later.');
