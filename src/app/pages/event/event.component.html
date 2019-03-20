@@ -1,3 +1,103 @@
-<p>
-  event works!
-</p>
+<div class="wrapper">
+    <div class="page-header page-header-small" filter-color="dark">
+        <div class="page-header-image rellax-header" data-rellax-speed="-8" style="background-image: url('assets/img/background/6.jpg');">
+        </div>
+        <div class="container">
+            <div class="content-center brand">
+                <h1 class="h1-seo typograph" style="letter-spacing: 15px;">
+                    <span>E</span>
+                    <span class="full">V</span>
+                    <span>E</span>
+                    <span class="full">N</span>
+                    <span class="full">T</span>
+                </h1>
+                <a class="btn btn-lg btn-round btn-primary gradient-primary" [routerLink]="['/', 'events']">
+                    <i class="now-ui-icons arrows-1_minimal-left"></i>
+                    All Events
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="section section-tabs" data-background-color="black">
+        <div class="container">
+            <h1 class="title text-center">{{event?.name}}</h1>
+            <div class="row text-center">
+                <div class="col-md-4">
+                    <p>Date: {{event.timings.date}}</p>
+                </div>
+                <div class="col-md-4">
+                    <p>Time: {{event.timings.time}}</p>
+                </div>
+                <div class="col-md-4">
+                    <p>Venue: {{event.venue}}</p>
+                </div>
+            </div>
+            <hr>
+            <div class="row">
+                <div class="col-md-4">
+                    <img class="rounded img-raised my-3" src="assets/img/background/6.jpg" alt={{event?.title}}>
+                </div>
+                <div class="col-md-8">
+                    <div class="nav-tabs-navigation">
+                        <div class="nav-tabs-wrapper">
+                            <ngb-tabset [justify]="'center'" class="text-center">
+                                <ngb-tab title="Description">
+                                    <ng-template ngbTabContent>
+                                        <h3>Description</h3>
+                                        <div class="content text-justify">
+                                            <div class="separator"></div>
+                                            <p>{{event?.description}}</p>
+                                        </div>
+                                    </ng-template>
+                                </ngb-tab>
+                                <ngb-tab title="Requirements">
+                                    <ng-template ngbTabContent>
+                                        <h3>Requirements</h3>
+                                        <div class="content text-justify">
+                                            <div class="separator"></div>
+                                            <ul>
+                                                <li *ngFor="let requirement of event?.requirements">{{requirement}}</li>
+                                            </ul>
+                                        </div>
+                                    </ng-template>
+                                </ngb-tab>
+                                <ngb-tab title="Rules">
+                                    <ng-template ngbTabContent>
+                                        <h3>Rules</h3>
+                                        <div class="content text-justify">
+                                            <div class="separator"></div>
+                                            <ul>
+                                                <li *ngFor="let rule of event?.rules">{{rule}}</li>
+                                            </ul>
+                                        </div>
+                                    </ng-template>
+                                </ngb-tab>
+                                <ngb-tab title="Details">
+                                    <ng-template ngbTabContent>
+                                        <h3>Details</h3>
+                                        <div class="content text-justify">
+                                            <div class="separator"></div>
+                                            <p>Date: {{event?.timings?.date}}</p>
+                                            <p>Time: {{event?.timings?.time}}</p>
+                                            <p>Venue: {{event?.venue}}</p>
+                                        </div>
+                                    </ng-template>
+                                </ngb-tab>
+                                <ngb-tab title="Contact">
+                                    <ng-template ngbTabContent>
+                                        <h3>Contact</h3>
+                                        <div class="content text-justify">
+                                            <div class="separator"></div>
+                                            <p>Organizer: {{event?.contact}}</p>
+                                            <p>Contact: {{event?.organizer}}</p>
+                                        </div>
+                                    </ng-template>
+                                </ngb-tab>
+                            </ngb-tabset>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

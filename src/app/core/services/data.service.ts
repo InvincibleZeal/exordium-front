@@ -1,5 +1,5 @@
 import { environment } from '../../../environments/environment';
-import { OnInit, Injectable } from "@angular/core";
+import { Injectable } from "@angular/core";
 import { Http } from '@angular/http';
 
 @Injectable()
@@ -7,7 +7,14 @@ export class DataService {
 
     getTeams = () => this.teams;
     getPages = () => this.pages;
-    getEvents = () => this.events;
+    getEvents = () => {
+        this.events.forEach((event: any) => {
+            event.url = event.name.split(' ').map(x => x.toLowerCase()).join('-');
+        });
+        console.log(this.events);
+        return this.events;
+    };
+    getEvent = (url: string) => this.events.filter((event: any) => event.url === url)[0]
     getMember = (name: string) => this.members.filter(member => member.name.includes(name))[0];
     getMembers = () => this.teams
     private api = environment.api;
@@ -129,39 +136,99 @@ export class DataService {
     ];
     private events = [
         {
-            title: 'Technolix',
+            name: 'Technolix DHhh dhdh',
             description: 'I think that’s a responsibility that I have, to push possibilities, to show people, this is the level that things could be at. So when you get something',
-            url: 'technolix',
-            tags: ['Technical', 'Fun']
+            rules: ['Take a shower first', 'Dont come high'],
+            requirements: ['Brain'],
+            contact: 879766879704,
+            organizer: 'Ritesh Ganjewala',
+            date: 1554265800000,
+            duration: 2,
+            timings: {
+                date: "April 4, 2019",
+                time: "10:00 AM"
+            },
+            venue: "Hi-Tech 2",
+            tags: ['Technical', 'Fun'],
         },
         {
-            title: 'heriuy',
+            name: 'heriuy',
             description: 'I think that’s a responsibility that I have, to push possibilities, to show people, this is the level that things could be at. So when you get something',
-            url: 'heriuy',
+            rules: ['Take a shower first', 'Dont come high'],
+            requirements: ['Brain'],
+            contact: 879766879704,
+            organizer: 'Ritesh Ganjewala',
+            date: 1554265800000,
+            duration: 2,
+            timings: {
+                date: "April 4, 2019",
+                time: "10:00 AM"
+            },
+            venue: "Hi-Tech 2",
             tags: ['Non-Technical', 'Fun']
         },
         {
-            title: 'itrur',
+            name: 'itrur',
             description: 'I think that’s a responsibility that I have, to push possibilities, to show people, this is the level that things could be at. So when you get something',
-            url: 'itrur',
+            rules: ['Take a shower first', 'Dont come high'],
+            requirements: ['Brain'],
+            contact: 879766879704,
+            organizer: 'Ritesh Ganjewala',
+            date: 1554265800000,
+            duration: 2,
+            timings: {
+                date: "April 4, 2019",
+                time: "10:00 AM"
+            },
+            venue: "Hi-Tech 2",
             tags: ['Fun']
         },
         {
-            title: 'treih',
+            name: 'treih',
             description: 'I think that’s a responsibility that I have, to push possibilities, to show people, this is the level that things could be at. So when you get something',
-            url: 'treih',
+            rules: ['Take a shower first', 'Dont come high'],
+            requirements: ['Brain'],
+            contact: 879766879704,
+            organizer: 'Ritesh Ganjewala',
+            date: 1554265800000,
+            duration: 2,
+            timings: {
+                date: "April 4, 2019",
+                time: "10:00 AM"
+            },
+            venue: "Hi-Tech 2",
             tags: ['Non-Technical']
         },
         {
-            title: 'bjdjr',
+            name: 'bjdjr',
             description: 'I think that’s a responsibility that I have, to push possibilities, to show people, this is the level that things could be at. So when you get something',
-            url: 'bjdjr',
+            rules: ['Take a shower first', 'Dont come high'],
+            requirements: ['Brain'],
+            contact: 879766879704,
+            organizer: 'Ritesh Ganjewala',
+            date: 1554265800000,
+            duration: 2,
+            timings: {
+                date: "April 4, 2019",
+                time: "10:00 AM"
+            },
+            venue: "Hi-Tech 2",
             tags: ['Technical']
         },
         {
-            title: 'poeru',
+            name: 'poeru',
             description: 'I think that’s a responsibility that I have, to push possibilities, to show people, this is the level that things could be at. So when you get something',
-            url: 'poeru',
+            rules: ['Take a shower first', 'Dont come high'],
+            requirements: ['Brain'],
+            contact: 879766879704,
+            organizer: 'Ritesh Ganjewala',
+            date: 1554265800000,
+            duration: 2,
+            timings: {
+                date: "April 4, 2019",
+                time: "10:00 AM"
+            },
+            venue: "Hi-Tech 2",
             tags: ['Non-Technical', 'Fun']
         }
     ]

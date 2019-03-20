@@ -15,7 +15,8 @@ const routes: Routes = [
     { path: 'about', component: AboutComponent },
     { path: 'events', component: EventsComponent },
     { path: 'register', component: RegisterComponent },
-    { path: 'event', component: EventComponent },
+    { path: 'event', redirectTo: 'events', pathMatch: 'full' },
+    { path: 'event/:id', component: EventComponent },
     { path: '**', redirectTo: 'home' },
 ];
 

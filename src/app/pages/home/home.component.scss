@@ -27,3 +27,32 @@ $translate: 40px;
         }
     }
 }
+
+// @media screen and (max-width: 768px) {
+//     .page-header-image {
+//         // animation: rotate 10s infinite linear !important;
+//         transform: rotateZ(90deg);
+//     }
+// }
+
+// @keyframes rotate {
+//     0% {
+//         transform: rotateZ(0deg) scale(1) !important;
+//     }
+
+//     25% {
+//         transform: rotateZ(90deg) scale(1.5) !important;
+//     }
+
+//     50% {
+//         transform: rotateZ(180deg) scale(1) !important;
+//     }
+
+//     75% {
+//         transform: rotateZ(270deg) scale(1.5) !important;
+//     }
+
+//     100% {
+//         transform: rotateZ(360deg) scale(1) !important;
+//     }
+// }

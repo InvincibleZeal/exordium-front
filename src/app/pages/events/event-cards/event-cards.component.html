@@ -3,7 +3,8 @@
     <div class="col-md-4" *ngFor="let event of events | eventFilter:tag:search:'title'">
         <div class="card" style="background: url('assets/img/background/14.jpg'); background-size: cover;">
             <div class="card-header">
-                <div class="card-title">{{event.title}}</div>
+                <h3 class="card-title">{{event.name}}</h3>
+                <!-- <div class="card-title">{{event.name}}</div> -->
             </div>
             <div class="card-body text-justify">
                 <p>{{event.description}}</p>
