@@ -1,6 +1,7 @@
 <div class="wrapper">
     <div class="page-header page-header-small" filter-color="dark">
-        <div class="page-header-image rellax-header" data-rellax-speed="-8" style="background-image: url('assets/img/background/6.jpg');">
+        <div class="page-header-image rellax-header" data-rellax-speed="-8"
+            style="background-image: url('assets/img/background/6.jpg');">
         </div>
         <div class="container">
             <div class="content-center brand">
@@ -20,74 +21,81 @@
     <div class="section section-contact-us text-center" data-background-color="black">
         <div class="container">
             <h2 class="title">Register Here</h2>
-            <p class="description metropolis">Lorem ipsum dolor sit amet consectetur adipisicing elit. Some Descriptive
-                line here</p>
             <div class="row">
-                <form (ngSubmit)="onSubmit()">
-                    <div class="col-lg-6 col-md-8 ml-auto mr-auto">
+                <div class="col-lg-6 col-md-8 ml-auto mr-auto">
+                    <form (ngSubmit)="onSubmit()" #f="ngForm">
                         <div class="row">
                             <div class="col-12">
-                                <div class="input-group input-lg my-2" [ngClass]="{'input-group-focus':focus===true}">
+                                <div class="input-group input-lg my-2"
+                                    [ngClass]="{'input-group-focus':focus===true, 'has-success': f.controls.name?.valid}">
                                     <div class="input-group-prepend">
                                         <span class="input-group-text">
                                             <i class="now-ui-icons users_single-02"></i>
                                         </span>
                                     </div>
-                                    <input type="text" class="form-control" name="name" [(ngModel)]="data.name"
-                                        placeholder="Name" (focus)="focus=true" (blur)="focus=false" required>
+                                    <input ngModel required minlength="2" type="text" class="form-control" name="name"
+                                        placeholder="Name" (focus)="focus=true" (blur)="focus=false">
                                 </div>
                             </div>
                             <div class="col-12">
-                                <div class="input-group input-lg my-2" [ngClass]="{'input-group-focus':focus1===true}">
+                                <div class="input-group input-lg my-2"
+                                    [ngClass]="{'input-group-focus':focus1===true, 'has-success': f.controls.email?.valid}">
                                     <div class="input-group-prepend">
                                         <span class="input-group-text">
                                             <i class="now-ui-icons ui-1_email-85"></i>
                                         </span>
                                     </div>
-                                    <input type="email" class="form-control" name="email" [(ngModel)]="data.email"
-                                        placeholder="Email" (focus)="focus1=true" (blur)="focus1=false" required>
+                                    <input ngModel required pattern="[^ @]*@[^ @]*" type="email" class="form-control"
+                                        name="email" placeholder="Email" (focus)="focus1=true" (blur)="focus1=false">
                                 </div>
                             </div>
                             <div class="col-6">
-                                <div class="input-group input-lg my-2" [ngClass]="{'input-group-focus':focus2===true}">
+                                <div class="input-group input-lg my-2"
+                                    [ngClass]="{'input-group-focus':focus2===true, 'has-success': f.controls.phone?.valid}">
                                     <div class="input-group-prepend">
                                         <span class="input-group-text">
                                             <i class="now-ui-icons tech_mobile"></i>
                                         </span>
                                     </div>
-                                    <input type="text" class="form-control" name="phone" [(ngModel)]="data.phone"
-                                        placeholder="Phone" (focus)="focus2=true" (blur)="focus2=false" required>
+                                    <input ngModel required minlength="10" type="text" class="form-control" name="phone"
+                                        placeholder="Phone" (focus)="focus2=true" (blur)="focus2=false">
                                 </div>
                             </div>
                             <div class="col-6">
-                                <div class="input-group input-lg my-2" [ngClass]="{'input-group-focus':focus3===true}">
+                                <div class="input-group input-lg my-2"
+                                    [ngClass]="{'input-group-focus':focus3===true, 'has-success': f.controls.semester?.valid}">
                                     <div class="input-group-prepend">
                                         <span class="input-group-text">
                                             <i class="now-ui-icons business_badge"></i>
                                         </span>
                                     </div>
-                                    <input type="text" class="form-control" name="semester" [(ngModel)]="data.semester"
-                                        placeholder="Semester" (focus)="focus3=true" (blur)="focus3=false" required>
+                                    <input ngModel required min="1" max="8" type="number" class="form-control"
+                                        name="semester" placeholder="Semester" (focus)="focus3=true"
+                                        (blur)="focus3=false">
                                 </div>
                             </div>
                             <div class="col-12">
-                                <div class="input-group input-lg my-2" [ngClass]="{'input-group-focus':focus4===true}">
+                                <div class="input-group input-lg my-2"
+                                    [ngClass]="{'input-group-focus':focus4===true, 'has-success': f.controls.college?.valid}">
                                     <div class="input-group-prepend">
                                         <span class="input-group-text">
                                             <i class="now-ui-icons education_glasses"></i>
                                         </span>
                                     </div>
-                                    <input type="text" class="form-control" name="college" [(ngModel)]="data.college"
-                                        placeholder="College" (focus)="focus4=true" (blur)="focus4=false" required>
+                                    <input ngModel required minlength="3" type="text" class="form-control"
+                                        name="college" placeholder="College" (focus)="focus4=true"
+                                        (blur)="focus4=false">
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="send-button my-3">
+                                    <input required [disabled]="!f.valid || disable" type="submit" value="REGISTER"
+                                        class="btn btn-primary btn-round btn-block btn-lg gradient-primary">
                                 </div>
                             </div>
                         </div>
-                        <div class="send-button my-3">
-                            <input type="submit" value="REGISTER" class="btn btn-primary btn-round btn-block btn-lg gradient-primary"
-                                ng-class="{'disabled': disabledBtn}">
-                        </div>
-                    </div>
-                </form>
+                    </form>
+                </div>
             </div>
         </div>
     </div>
@@ -99,24 +107,32 @@
         </div>
     </div>
     <div class="modal-body">
-        <p>Thank you for registration, {{user.name}}</p>
-        <p>Please check your Exordium-ID on, {{user.email}}</p>
+        <p>Thank you for registration, <br> {{user.name}}</p>
+        <p>Please check your <br> Exordium-ID on <br> {{user.email}}</p>
     </div>
     <div class="modal-footer">
         <button type="button" class="btn btn-link btn-neutral ml-auto mx-auto" (click)="c('Close click')">Close</button>
     </div>
 </ng-template>
 
-<ng-template #failure let-c="close" let-d="dismiss">
-    <div class="modal-header justify-content-center">
-        <div class="modal-profile">
-            <i class="now-ui-icons users_circle-08"></i>
+<div *ngFor="let alert of alerts">
+    <ngb-alert [type]="alert.type" [dismissible]="false">
+        <div class="container">
+            <div class="alert-wrapper">
+                <button type="button" name="button" class="close" (click)="closeAlert(alert)">
+                    <span aria-hidden="true">
+                        <i class="now-ui-icons ui-1_simple-remove"></i>
+                    </span>
+                </button>
+                <div class="message">
+                    <ng-container *ngIf="alert.icon">
+                        <div class="alert-icon">
+                            <i class="now-ui-icons {{alert.icon}}"></i>
+                        </div>
+                    </ng-container>
+                    <strong>{{alert.strong}} </strong>{{ alert.message }}
+                </div>
+            </div>
         </div>
-    </div>
-    <div class="modal-body">
-        <p>Registration Failed. Please try later.</p>
-    </div>
-    <div class="modal-footer">
-        <button type="button" class="btn btn-link btn-neutral ml-auto mx-auto" (click)="c('Close click')">Close</button>
-    </div>
-</ng-template>
+    </ngb-alert>
+</div>

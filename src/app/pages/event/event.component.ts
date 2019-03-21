@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import * as Rellax from 'rellax';
 import { DataService } from 'app/core/services/data.service';
-
 @Component({
     selector: 'app-event',
     templateUrl: './event.component.html',
@@ -11,7 +10,10 @@ import { DataService } from 'app/core/services/data.service';
 export class EventComponent implements OnInit {
     public url: string;
     public event: any;
-    constructor(private route: ActivatedRoute, private dataService: DataService, private router: Router) { }
+    constructor(
+        private dataService: DataService,
+        private route: ActivatedRoute,
+        private router: Router) { }
 
     ngOnInit() {
         var rellaxHeader = new Rellax('.rellax-header');

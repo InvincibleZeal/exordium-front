@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import * as Rellax from 'rellax';
-import { DataService } from 'app/core/services/data.service';
 
 @Component({
     selector: 'app-events',
@@ -9,11 +8,10 @@ import { DataService } from 'app/core/services/data.service';
 })
 export class EventsComponent implements OnInit {
     public search: string;
-    public events: any[] = [];
-    constructor(private dataService: DataService) { }
+
+    constructor() { }
 
     ngOnInit() {
         var rellaxHeader = new Rellax('.rellax-header');
-        this.dataService.getEvents().subscribe(events => this.events = events);
     }
 }

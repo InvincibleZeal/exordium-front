@@ -37,6 +37,7 @@
         "moment": "^2.24.0",
         "ng2-izitoast": "^2.0.0",
         "ng2-nouislider": "1.7.7",
+        "ngx-spinner": "^7.0.0",
         "nouislider": "9.2.0",
         "popper.js": "1.12.9",
         "rellax": "1.4.0",

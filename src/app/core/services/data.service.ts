@@ -10,6 +10,12 @@ export class DataService {
 
     constructor(private http: Http) { }
 
+    /**
+    |--------------------------------------------------
+    | SERVICE METHODS
+    |--------------------------------------------------
+    */
+
     public getEvents() {
         if (this.events.length) return Observable.of(this.events);
         return this.http.get(`${this.api}/events`).map((res: any) => {
@@ -17,24 +23,33 @@ export class DataService {
             this.events.forEach((event: any) => {
                 event.url = event.name.split(' ').map(x => x.toLowerCase()).join('-');
             });
-            console.log(this.events);
-            return this.events;
+            return this.events.slice(0);
         });
     }
 
     public getEvent = (url: string) => {
         if (!this.events.length) {
             return this.getEvents().map((events: any) => {
-                return events.filter((event: any) => event.url === url)[0];
+                return this.clone(events.filter((event: any) => event.url === url)[0]);
             })
         }
-        return Observable.of(this.events.filter((event: any) => event.url === url)[0]);
+        return Observable.of(this.clone(this.events.filter((event: any) => event.url === url)[0]));
     }
 
     public getTeams = () => this.teams;
     public getPages = () => this.pages;
     public getMember = (name: string) => this.members.filter(member => member.name.includes(name))[0];
     public getMembers = () => this.members;
+
+    private clone = (obj) => {
+        console.log(typeof obj)
+        return obj;
+    }
+    /**
+    |--------------------------------------------------
+    | MOCKED DATA
+    |--------------------------------------------------
+    */
 
     private pages = [
         {

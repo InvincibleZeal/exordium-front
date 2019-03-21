@@ -1,5 +1,5 @@
 <div class="separator"></div>
-<div class="row">
+<div class="row" *ngIf="events; else loader">
     <div class="col-md-4" *ngFor="let event of events | eventFilter:tag:search:'name'">
         <div class="card" style="background: url('assets/img/background/14.jpg'); background-size: cover;">
             <div class="card-header">
@@ -18,3 +18,12 @@
         </div>
     </div>
 </div>
+
+<ng-template #loader>
+    <div class="loader">
+        <div class="la-ball-clip-rotate-pulse la-2x">
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+</ng-template>

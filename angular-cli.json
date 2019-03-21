@@ -19,6 +19,7 @@
         "prefix": "app",
         "styles": [
             "../node_modules/aos/dist/aos.css",
+            "assets/css/loader.css",
             "styles.scss",
             "assets/sass/now-ui-kit.scss",
             "assets/css/demo.css"

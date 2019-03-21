@@ -16,3 +16,14 @@
         transition: 10s background-position cubic-bezier(0.165, 0.84, 0.44, 1);
     }
 }
+
+.separator {
+    margin-top: 0px !important;
+}
+
+.loader {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: calc(100vh - 620px);
+}

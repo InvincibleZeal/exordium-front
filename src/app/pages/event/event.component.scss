@@ -6,16 +6,31 @@
 }
 
 hr {
-    border-top: 1px solid black !important;
+    border-top: 1px solid white !important;
 }
 
 .card {
-    background: transparent !important;
-    border: 2px solid #000;
-    border-radius: .25rem;
+    background: #090909 !important;
+    border-radius: inherit;
+    overflow: initial;
 
     hr {
-        border-top: 2px solid black !important;
+        border: none !important;
+        background: linear-gradient(-30deg, #ff0b6d, #fe4644, #fb9411);
+        height: 2px !important;
         margin: 5px 0px 15px !important;
     }
+}
+
+.border-wrapper {
+    padding: 2px;
+    border-radius: .25rem;
+    background: linear-gradient(-30deg, #ff0b6d, #fe4644, #fb9411);
+}
+
+.loader {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: calc(100vh - 620px);
 }

@@ -20,7 +20,7 @@
         </div>
     </div>
     <div class="section section-tabs" data-background-color="black">
-        <div class="container">
+        <div class="container" *ngIf="event; else loader">
             <h1 class="title text-center">{{event?.name}}</h1>
             <div class="row text-center">
                 <div class="col-md-4">
@@ -36,83 +36,94 @@
             <hr>
             <div class="row">
                 <div class="col-md-4">
-                    <img class="rounded img-raised my-3" src="assets/img/background/6.jpg" alt={{event?.title}}>
+                    <img class="rounded my-3" src={{event?.image}} alt={{event?.title}}>
                 </div>
                 <div class="col-md-8">
-                    <div class="card card-plain mt-3">
-                        <div class="nav-tabs-navigation" data-tabs-color="dark">
-                            <div class="nav-tabs-wrapper">
-                                <ngb-tabset [justify]="'center'" class="text-center">
-                                    <ngb-tab title="Description">
-                                        <ng-template ngbTabContent>
-                                            <hr>
-                                            <div class="container">
-                                                <h3>Description</h3>
-                                                <div class="content text-justify">
-                                                    <p>{{event?.description}}</p>
+                    <div class="border-wrapper mt-3">
+                        <div class="card card-plain my-0">
+                            <div class="nav-tabs-navigation" data-tabs-color="dark">
+                                <div class="nav-tabs-wrapper">
+                                    <ngb-tabset [justify]="'center'" class="text-center">
+                                        <ngb-tab title="Description">
+                                            <ng-template ngbTabContent>
+                                                <hr>
+                                                <div class="container">
+                                                    <h3>Description</h3>
+                                                    <div class="content text-justify">
+                                                        <p>{{event?.description}}</p>
+                                                    </div>
                                                 </div>
-                                            </div>
-                                        </ng-template>
-                                    </ngb-tab>
-                                    <ngb-tab title="Requirements">
-                                        <ng-template ngbTabContent>
-                                            <hr>
-                                            <div class="container">
-                                                <h3>Requirements</h3>
-                                                <div class="content text-justify">
-                                                    <ul>
-                                                        <li *ngFor="let requirement of event?.requirements">
-                                                            {{requirement}}
-                                                        </li>
-                                                    </ul>
+                                            </ng-template>
+                                        </ngb-tab>
+                                        <ngb-tab title="Requirements">
+                                            <ng-template ngbTabContent>
+                                                <hr>
+                                                <div class="container">
+                                                    <h3>Requirements</h3>
+                                                    <div class="content text-justify">
+                                                        <ul>
+                                                            <li *ngFor="let requirement of event?.requirements">
+                                                                {{requirement}}
+                                                            </li>
+                                                        </ul>
+                                                    </div>
                                                 </div>
-                                            </div>
-                                        </ng-template>
-                                    </ngb-tab>
-                                    <ngb-tab title="Rules">
-                                        <ng-template ngbTabContent>
-                                            <hr>
-                                            <div class="container">
-                                                <h3>Rules</h3>
-                                                <div class="content text-justify">
-                                                    <ul>
-                                                        <li *ngFor="let rule of event?.rules">{{rule}}</li>
-                                                    </ul>
+                                            </ng-template>
+                                        </ngb-tab>
+                                        <ngb-tab title="Rules">
+                                            <ng-template ngbTabContent>
+                                                <hr>
+                                                <div class="container">
+                                                    <h3>Rules</h3>
+                                                    <div class="content text-justify">
+                                                        <ul>
+                                                            <li *ngFor="let rule of event?.rules">{{rule}}</li>
+                                                        </ul>
+                                                    </div>
                                                 </div>
-                                            </div>
-                                        </ng-template>
-                                    </ngb-tab>
-                                    <ngb-tab title="Details">
-                                        <ng-template ngbTabContent>
-                                            <hr>
-                                            <div class="container">
-                                                <h3>Details</h3>
-                                                <div class="content text-justify">
-                                                    <p>Date: {{event?.timings?.date}}</p>
-                                                    <p>Time: {{event?.timings?.time}}</p>
-                                                    <p>Venue: {{event?.venue}}</p>
+                                            </ng-template>
+                                        </ngb-tab>
+                                        <ngb-tab title="Details">
+                                            <ng-template ngbTabContent>
+                                                <hr>
+                                                <div class="container">
+                                                    <h3>Details</h3>
+                                                    <div class="content text-justify">
+                                                        <p>Date: {{event?.timings?.date}}</p>
+                                                        <p>Time: {{event?.timings?.time}}</p>
+                                                        <p>Venue: {{event?.venue}}</p>
+                                                    </div>
                                                 </div>
-                                            </div>
-                                        </ng-template>
-                                    </ngb-tab>
-                                    <ngb-tab title="Contact">
-                                        <ng-template ngbTabContent>
-                                            <hr>
-                                            <div class="container">
-                                                <h3>Contact</h3>
-                                                <div class="content text-justify">
-                                                    <p>Organizer: {{event?.contact}}</p>
-                                                    <p>Contact: {{event?.organizer}}</p>
+                                            </ng-template>
+                                        </ngb-tab>
+                                        <ngb-tab title="Contact">
+                                            <ng-template ngbTabContent>
+                                                <hr>
+                                                <div class="container">
+                                                    <h3>Contact</h3>
+                                                    <div class="content text-justify">
+                                                        <p>Organizer: {{event?.contact}}</p>
+                                                        <p>Contact: {{event?.organizer}}</p>
+                                                    </div>
                                                 </div>
-                                            </div>
-                                        </ng-template>
-                                    </ngb-tab>
-                                </ngb-tabset>
+                                            </ng-template>
+                                        </ngb-tab>
+                                    </ngb-tabset>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+
+        <ng-template #loader>
+            <div class="loader">
+                <div class="la-ball-clip-rotate-pulse la-2x">
+                    <div></div>
+                    <div></div>
+                </div>
+            </div>
+        </ng-template>
     </div>
 </div>

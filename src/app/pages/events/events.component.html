@@ -35,23 +35,23 @@
                     <ngb-tabset [justify]="'center'" class="text-center">
                         <ngb-tab title="All">
                             <ng-template ngbTabContent>
-                                <app-event-cards tag="All" [search]="search" [events]="events"></app-event-cards>
+                                <app-event-cards tag="All" [search]="search"></app-event-cards>
                             </ng-template>
                         </ngb-tab>
                         <ngb-tab title="Technical">
                             <ng-template ngbTabContent>
-                                <app-event-cards tag="Technical" [search]="search" [events]="events"></app-event-cards>
+                                <app-event-cards tag="Technical" [search]="search"></app-event-cards>
                             </ng-template>
                         </ngb-tab>
                         <ngb-tab title="Non-technical">
                             <ng-template ngbTabContent>
-                                <app-event-cards tag="Non-Technical" [search]="search" [events]="events">
+                                <app-event-cards tag="Non-Technical" [search]="search">
                                 </app-event-cards>
                             </ng-template>
                         </ngb-tab>
                         <ngb-tab title="Fun">
                             <ng-template ngbTabContent>
-                                <app-event-cards tag="Fun" [search]="search" [events]="events"></app-event-cards>
+                                <app-event-cards tag="Fun" [search]="search"></app-event-cards>
                             </ng-template>
                         </ngb-tab>
                     </ngb-tabset>

@@ -1,6 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
 @import "~bootstrap/scss/bootstrap.scss";
 
+$gradient-primary: linear-gradient(150deg, #ff0b6d, #fe4644, #fb9411);
+$gradient-primary-rev: linear-gradient(-30deg, #ff0b6d, #fe4644, #fb9411);
+
 @font-face {
     font-family: Polya;
     src: url('./assets/fonts/POLYA.otf') format("opentype");
@@ -171,6 +174,13 @@
 |--------------------------------------------------
 */
 
+.separator {
+    background: $gradient-primary-rev;
+    width: 100px !important;
+    height: 3px !important;
+    border-radius: 5px !important;
+}
+
 .gradient-blue {
     background: linear-gradient(150deg, #5433FF 40%, #20BDFF 80%);
     color: white !important;
@@ -182,7 +192,7 @@
 }
 
 .gradient-primary {
-    background: linear-gradient(150deg, #ff0b6d, #fe4644, #fb9411);
+    background: $gradient-primary;
     color: white !important;
 }
 
@@ -245,7 +255,7 @@ body {
 }
 
 .registerModal .modal-content {
-    background: linear-gradient(150deg, #ff0b6d, #fe4644, #fb9411) !important;
+    background: $gradient-primary;
 }
 
 
