@@ -1,19 +1,22 @@
 <div class="separator"></div>
 <div class="row" *ngIf="events; else loader">
-    <div class="col-md-4" *ngFor="let event of events | eventFilter:tag:search:'name'">
-        <div class="card" style="background: url('assets/img/background/14.jpg'); background-size: cover;">
-            <div class="card-header">
-                <h3 class="card-title">{{event.name}}</h3>
-                <!-- <div class="card-title">{{event.name}}</div> -->
-            </div>
-            <div class="card-body text-justify">
-                <p>{{event.description}}</p>
-            </div>
-            <div class="card-footer">
-                <a [routerLink]="['/', 'event', event.url]" class="btn btn-round btn-primray gradient-primary">
-                    <span>Read More </span>
-                    <span><i class="now-ui-icons arrows-1_minimal-right"></i></span>
-                </a>
+    <div class="col-md-4 py-2" *ngFor="let event of events | eventFilter:tag:search:'name'">
+        <div class="border-wrapper h-100">
+            <div class="card h-100 my-0"
+                style="background: url('assets/img/background/14.jpg'); background-size: cover;">
+                <div class="card-header">
+                    <h3 class="card-title">{{event.name}}</h3>
+                    <!-- <div class="card-title">{{event.name}}</div> -->
+                </div>
+                <div class="card-body text-justify">
+                    <p>{{event.description}}</p>
+                </div>
+                <div class="card-footer">
+                    <a [routerLink]="['/', 'event', event.url]" class="btn btn-round btn-primray gradient-primary">
+                        <span>Read More </span>
+                        <span><i class="now-ui-icons arrows-1_minimal-right"></i></span>
+                    </a>
+                </div>
             </div>
         </div>
     </div>

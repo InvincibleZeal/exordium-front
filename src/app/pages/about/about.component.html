@@ -1,6 +1,7 @@
 <div class="wrapper">
     <div class="page-header page-header-small" filter-color="dark">
-        <div class="page-header-image rellax-header" data-rellax-speed="-8" style="background-image: url('assets/img/background/6.jpg');">
+        <div class="page-header-image rellax-header" data-rellax-speed="-8"
+            style="background-image: url('assets/img/background/6.jpg');">
         </div>
         <div class="container">
             <div class="content-center brand">
@@ -26,13 +27,17 @@
                         <div class="card card-raised">
                             <div class="card-body">
                                 <div class="team-player">
-                                    <img src={{member.avatar}} alt="Thumbnail Image" class="rounded-circle img-fluid img-raised">
+                                    <img src={{member.avatar}} alt="Thumbnail Image"
+                                        class="rounded-circle img-fluid img-raised">
                                     <h4 class="title text-dark">{{member.name}}</h4>
                                     <p class="category text-primary">{{member.designation}}</p>
-                                    <p class="description text-dark metropolis font-weight-normal">{{member.description}}</p>
-                                    <a href={{social.url}} style="margin: 0px 3px;" target="_blank" class="btn btn-primary btn-icon btn-round gradient-primary"
+                                    <p class="description text-dark metropolis font-weight-normal">
+                                        {{member.description}}</p>
+                                    <a href={{social.url}} style="margin: 0px 3px;" target="_blank"
+                                        class="btn btn-primary btn-icon btn-round gradient-primary"
                                         *ngFor="let social of member.socials">
-                                        <i class="fa fa-{{social.media}}" *ngIf="social.media !== 'facebook'; else facebook"></i>
+                                        <i class="fa fa-{{social.media}}"
+                                            *ngIf="social.media !== 'facebook'; else facebook"></i>
                                         <ng-template #facebook><i class="fa fa-facebook-square"></i></ng-template>
                                     </a>
                                 </div>
