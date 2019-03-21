@@ -57,8 +57,9 @@
                                             <i class="now-ui-icons tech_mobile"></i>
                                         </span>
                                     </div>
-                                    <input ngModel required minlength="10" type="text" class="form-control" name="phone"
-                                        placeholder="Phone" (focus)="focus2=true" (blur)="focus2=false">
+                                    <input ngModel required pattern="[+1-9]*" minlength="10" type="text"
+                                        class="form-control" name="phone" placeholder="Phone" (focus)="focus2=true"
+                                        (blur)="focus2=false">
                                 </div>
                             </div>
                             <div class="col-6">
@@ -69,9 +70,9 @@
                                             <i class="now-ui-icons business_badge"></i>
                                         </span>
                                     </div>
-                                    <input ngModel required min="1" max="8" type="number" class="form-control"
-                                        name="semester" placeholder="Semester" (focus)="focus3=true"
-                                        (blur)="focus3=false">
+                                    <input ngModel required pattern="[1-8]*" minlength="1" maxlength="1" type="text"
+                                        class="form-control" name="semester" placeholder="Semester"
+                                        (focus)="focus3=true" (blur)="focus3=false">
                                 </div>
                             </div>
                             <div class="col-12">
