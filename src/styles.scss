@@ -28,17 +28,6 @@ $gradient-primary-rev: linear-gradient(-30deg, #ff0b6d, #fe4644, #fb9411);
     font-weight: 400;
 }
 
-@font-face {
-    font-family: Metropolis;
-    src: url('./assets/fonts/Metropolis-Regular.otf') format("opentype");
-    font-weight: 400;
-}
-
-.metropolis {
-    font-family: Metropolis, 'Open Sans' !important;
-}
-
-
 .typograph {
     font-family: Typograph, 'Open Sans' !important;
     font-weight: 300;
