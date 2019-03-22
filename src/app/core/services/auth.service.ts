@@ -10,19 +10,8 @@ export class AuthService {
     constructor(private http: Http) { }
 
     register(data: any) {
-        return this.http.post(`${environment.api}/participants`, data).map((res: Response) => res.json()).pipe(catchError(this.handleError))
+        return this.http.post(`${environment.api}/participants`, data)
+            .map((res: Response) => res.json())
+            .catch((err: Response) => Observable.of(err.json()));
     }
-
-    private handleError(error: any) {
-        if (error.error instanceof ErrorEvent) {
-            console.log('An error occurred:', error.error.message);
-        } else {
-            console.log(
-                `Backend returned code ${error.status}, ` +
-                `body was: ${error.message}`);
-        }
-
-        return Observable.throw(
-            'Something bad happened; please try again later.');
-    };
 }

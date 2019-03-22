@@ -115,3 +115,17 @@
         <button type="button" class="btn btn-link btn-neutral ml-auto mx-auto" (click)="c('Close click')">Close</button>
     </div>
 </ng-template>
+
+<ng-template #duplicateEmail let-c="close" let-d="dismiss">
+    <div class="modal-header justify-content-center">
+        <div class="modal-profile">
+            <i class="now-ui-icons users_single-02"></i>
+        </div>
+    </div>
+    <div class="modal-body">
+        <p>Email Already Registered</p>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-link btn-neutral ml-auto mx-auto" (click)="c('Close click')">Close</button>
+    </div>
+</ng-template>

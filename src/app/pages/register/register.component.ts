@@ -15,7 +15,7 @@ import { NgForm } from '@angular/forms';
 export class RegisterComponent implements OnInit {
     @ViewChild('f') data;
     @ViewChild('success') successModal: any;
-    @ViewChild('failure') failureModal: any;
+    @ViewChild('duplicateEmail') duplicateEmail: any;
     public focus: boolean;
     public focus1: boolean;
     public focus2: boolean;
@@ -32,23 +32,20 @@ export class RegisterComponent implements OnInit {
     }
 
     onSubmit() {
-        console.log(this.data.value);
         this.disable = true;
 
         this.authService.register(this.data.value).subscribe((user: any) => {
-            console.log(user);
-            if (!user) {
-                console.log(user);
-                this.open(this.failureModal, 'modal_mini', 'sm', 'danger');
+            if (!user.email && user.message.toLowerCase().includes('duplicate email')) {
+                this.open(this.duplicateEmail, 'modal_mini', 'sm', 'danger');
+                this.data.controls.email.reset();
             } else {
                 this.user = user;
                 Object.keys(this.data.value).forEach(key => this.data.value[key] = undefined);
                 this.open(this.successModal, 'modal_mini', 'sm', 'success');
                 this.data.reset();
-                this.disable = false;
             }
+            this.disable = false;
         });
-        // this.open(this.failureModal, 'modal_mini', 'sm', 'success');
     }
 
     open(content, type, modalDimension, variant) {
