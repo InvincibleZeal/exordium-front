@@ -5,17 +5,6 @@ $gradient-primary: linear-gradient(150deg, #ff0b6d, #fe4644, #fb9411);
 $gradient-primary-rev: linear-gradient(-30deg, #ff0b6d, #fe4644, #fb9411);
 
 @font-face {
-    font-family: Polya;
-    src: url('./assets/fonts/POLYA.otf') format("opentype");
-}
-
-@font-face {
-    font-family: Alcubierre;
-    src: url('./assets/fonts/Alcubierre.otf') format("opentype");
-}
-
-
-@font-face {
     font-family: Typograph;
     src: url('./assets/fonts/TYPOGRAPH\ PRO\ Light.ttf') format("truetype");
     font-weight: 200;
@@ -39,107 +28,10 @@ $gradient-primary-rev: linear-gradient(-30deg, #ff0b6d, #fe4644, #fb9411);
     font-weight: 400;
 }
 
-
-@font-face {
-    font-family: Poppins;
-    src: url('./assets/fonts/Poppins-Regular.otf') format("opentype");
-    font-weight: 400;
-}
-
-@font-face {
-    font-family: Poppins;
-    src: url('./assets/fonts/Poppins-Medium.otf') format("opentype");
-    font-weight: 500;
-}
-
-@font-face {
-    font-family: Poppins;
-    src: url('./assets/fonts/Poppins-Bold.otf') format("opentype");
-    font-weight: 700;
-}
-
-@font-face {
-    font-family: Poppins;
-    src: url('./assets/fonts/Poppins-Light.otf') format("opentype");
-    font-weight: 300;
-}
-
-@font-face {
-    font-family: Poppins;
-    src: url('./assets/fonts/Poppins-SemiBold.otf') format("opentype");
-    font-weight: 600;
-}
-
-@font-face {
-    font-family: Poppins;
-    src: url('./assets/fonts/Poppins-Thin.otf') format("opentype");
-    font-weight: 200;
-}
-
-@font-face {
-    font-family: Anders;
-    src: url('./assets/fonts/Anders.ttf') format("truetype");
-}
-
-@font-face {
-    font-family: Selima;
-    src: url('./assets/fonts/Selima.ttf') format("truetype");
-}
-
 @font-face {
     font-family: Metropolis;
     src: url('./assets/fonts/Metropolis-Regular.otf') format("opentype");
     font-weight: 400;
-}
-
-@font-face {
-    font-family: Metropolis;
-    src: url('./assets/fonts/Metropolis-Medium.otf') format("opentype");
-    font-weight: 500;
-}
-
-@font-face {
-    font-family: Metropolis;
-    src: url('./assets/fonts/Metropolis-Bold.otf') format("opentype");
-    font-weight: 700;
-}
-
-@font-face {
-    font-family: Metropolis;
-    src: url('./assets/fonts/Metropolis-Thin.otf') format("opentype");
-    font-weight: 300;
-}
-
-@font-face {
-    font-family: Metropolis;
-    src: url('./assets/fonts/Metropolis-Light.otf') format("opentype");
-    font-weight: 200;
-}
-
-@font-face {
-    font-family: Metropolis;
-    src: url('./assets/fonts/Metropolis-ExtraLight.otf') format("opentype");
-    font-weight: 100;
-}
-
-.alcubierre {
-    font-family: Alcubierre, 'Open Sans' !important;
-}
-
-.anders {
-    font-family: Anders, 'Open Sans' !important;
-}
-
-.selima {
-    font-family: Selima, 'Open Sans' !important;
-}
-
-.poppins {
-    font-family: Poppins, 'Open Sans' !important;
-}
-
-.polya {
-    font-family: Polya, 'Open Sans' !important;
 }
 
 .metropolis {
