@@ -40,6 +40,7 @@ export class DataService {
     public getPages = () => this.pages;
     public getMember = (name: string) => this.members.filter(member => member.name.includes(name))[0];
     public getMembers = () => this.members;
+    // public mockEvents = () => this.mockedEvents.slice(0);
 
     private clone = (obj) => {
         console.log(typeof obj)
@@ -159,7 +160,7 @@ export class DataService {
         //     url: '#',
         // },
     ];
-    // private events = [
+    // private mockedEvents = [
     //     {
     //         name: 'Technolix DHhh dhdh',
     //         description: 'I think that’s a responsibility that I have, to push possibilities, to show people, this is the level that things could be at. So when you get something',
@@ -183,11 +184,11 @@ export class DataService {
     //         requirements: ['Brain'],
     //         contact: 879766879704,
     //         organizer: 'Ritesh Ganjewala',
-    //         date: 1554265800000,
+    //         date: 1554280800000,
     //         duration: 2,
     //         timings: {
     //             date: "April 4, 2019",
-    //             time: "10:00 AM"
+    //             time: "12:30 PM"
     //         },
     //         venue: "Hi-Tech 2",
     //         tags: ['Non-Technical', 'Fun']
@@ -199,11 +200,11 @@ export class DataService {
     //         requirements: ['Brain'],
     //         contact: 879766879704,
     //         organizer: 'Ritesh Ganjewala',
-    //         date: 1554265800000,
+    //         date: 1554277800000,
     //         duration: 2,
     //         timings: {
     //             date: "April 4, 2019",
-    //             time: "10:00 AM"
+    //             time: "12:00 PM"
     //         },
     //         venue: "Hi-Tech 2",
     //         tags: ['Fun']
@@ -215,11 +216,11 @@ export class DataService {
     //         requirements: ['Brain'],
     //         contact: 879766879704,
     //         organizer: 'Ritesh Ganjewala',
-    //         date: 1554265800000,
+    //         date: 1554274800000,
     //         duration: 2,
     //         timings: {
     //             date: "April 4, 2019",
-    //             time: "10:00 AM"
+    //             time: "11:30 AM"
     //         },
     //         venue: "Hi-Tech 2",
     //         tags: ['Non-Technical']
@@ -231,11 +232,11 @@ export class DataService {
     //         requirements: ['Brain'],
     //         contact: 879766879704,
     //         organizer: 'Ritesh Ganjewala',
-    //         date: 1554265800000,
+    //         date: 1554271800000,
     //         duration: 2,
     //         timings: {
     //             date: "April 4, 2019",
-    //             time: "10:00 AM"
+    //             time: "11:00 AM"
     //         },
     //         venue: "Hi-Tech 2",
     //         tags: ['Technical']
@@ -247,11 +248,11 @@ export class DataService {
     //         requirements: ['Brain'],
     //         contact: 879766879704,
     //         organizer: 'Ritesh Ganjewala',
-    //         date: 1554265800000,
+    //         date: 1554268800000,
     //         duration: 2,
     //         timings: {
     //             date: "April 4, 2019",
-    //             time: "10:00 AM"
+    //             time: "10:30 AM"
     //         },
     //         venue: "Hi-Tech 2",
     //         tags: ['Non-Technical', 'Fun']

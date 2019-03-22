@@ -1,0 +1,93 @@
+.container {
+    position: relative;
+}
+
+.timeline {
+    width: 8px;
+    height: 96%;
+    border-radius: 20px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    background: linear-gradient(150deg, #ff0b6d, #fe4644, #fb9411);
+    z-index: 1;
+}
+
+.border-wrapper {
+    padding: 3px;
+    border-radius: .25rem;
+    background: linear-gradient(-30deg, #ff0b6d, #fe4644, #fb9411);
+    position: relative;
+    z-index: 1;
+
+    &.left::after {
+        content: '';
+        width: 30px;
+        height: 30px;
+        background: linear-gradient(-30deg, #ff0b6d, #fe4644, #fb9411);
+        position: absolute;
+        right: 0px;
+        top: 50%;
+        transform: translate(15px, -50%) rotateZ(45deg);
+        z-index: 0;
+    }
+
+    &.right::after {
+        content: '';
+        width: 30px;
+        height: 30px;
+        background: linear-gradient(-30deg, #ff0b6d, #fe4644, #fb9411);
+        position: absolute;
+        left: 0px;
+        top: 50%;
+        transform: translate(-15px, -50%) rotateZ(45deg);
+        z-index: 0;
+    }
+}
+
+.card {
+    filter: brightness(0.8);
+    transition: 500ms;
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+    overflow: initial;
+    margin: 0;
+    background-color: #090909 !important;
+    z-index: 1;
+
+    .card-header,
+    .card-footer {
+        background: rgba(0, 0, 0, 0.4) !important;
+    }
+
+    &:hover {
+        background-size: initial !important;
+        background-position: center !important;
+        filter: brightness(1);
+        transition: 300ms filter linear;
+        transition: 10s background-position cubic-bezier(0.165, 0.84, 0.44, 1);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .timeline {
+        left: 100%;
+    }
+
+    .border-wrapper {
+        margin-right: 2rem;
+
+        &.right::after {
+            left: initial;
+            right: 0px;
+            transform: translate(15px, -50%) rotateZ(45deg);
+        }
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .timeline {
+        left: 95%;
+    }
+}

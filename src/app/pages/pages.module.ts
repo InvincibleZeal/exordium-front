@@ -7,6 +7,7 @@ import { RegisterComponent } from './register/register.component';
 import { EventsComponent } from './events/events.component';
 import { EventComponent } from './event/event.component';
 import { EventCardsComponent } from './events/event-cards/event-cards.component';
+import { TimelineComponent } from './home/timeline/timeline.component';
 
 @NgModule({
     imports: [
@@ -18,7 +19,8 @@ import { EventCardsComponent } from './events/event-cards/event-cards.component'
         RegisterComponent,
         EventsComponent,
         EventComponent,
-        EventCardsComponent
+        EventCardsComponent,
+        TimelineComponent
     ],
     exports: [
         HomeComponent,

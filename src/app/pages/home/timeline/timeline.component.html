@@ -1,0 +1,32 @@
+<div class="section" data-background-color="black">
+    <div class="container text-center">
+        <h1 class="title mb-5 pb-5">Timeline</h1>
+        <div class="timeline"></div>
+        <div class="space-50"></div>
+        <div class="row" *ngFor="let event of events; let even=even">
+            <div class="col-md-6" [ngClass]="{'offset-md-6': !even}" data-aos="zoom-in" data-aos-offset="300">
+                <div class="border-wrapper my-2"
+                    [ngClass]="{'mr-md-3': even, 'ml-md-3': !even, 'left': even, 'right': !even}">
+                    <div class="card" data-background-color="black"
+                        style="background: url('assets/img/background/14.jpg'); background-size: cover;">
+                        <div class="card-header">
+                            <h3 class="card-title">{{event.name}}</h3>
+                        </div>
+                        <div class="card-body text-justify">
+                            <p>Date: {{event.timings.date}}</p>
+                            <p>Time: {{event.timings.time}}</p>
+                            <p>Venue: {{event.venue}}</p>
+                        </div>
+                        <div class="card-footer">
+                            <a [routerLink]="['/', 'event', event.url]"
+                                class="btn btn-round btn-primary gradient-primary">
+                                READ MORE
+                                <i class="now-ui-icons arrows-1_minimal-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
