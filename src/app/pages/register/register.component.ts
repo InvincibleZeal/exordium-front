@@ -16,14 +16,15 @@ export class RegisterComponent implements OnInit {
     @ViewChild('f') data;
     @ViewChild('success') successModal: any;
     @ViewChild('duplicateEmail') duplicateEmail: any;
+    @ViewChild('error') error: any;
     public focus: boolean;
     public focus1: boolean;
     public focus2: boolean;
     public focus3: boolean;
     public focus4: boolean;
-    private closeResult: string;
-    public disable: boolean = false;
+    public loading: boolean = false;
     public user: User;
+    private closeResult: string;
 
     constructor(private authService: AuthService, private modalService: NgbModal) { }
 
@@ -32,19 +33,22 @@ export class RegisterComponent implements OnInit {
     }
 
     onSubmit() {
-        this.disable = true;
+        this.loading = true;
 
         this.authService.register(this.data.value).subscribe((user: any) => {
-            if (!user.email && user.message.toLowerCase().includes('duplicate email')) {
-                this.open(this.duplicateEmail, 'modal_mini', 'sm', 'danger');
-                this.data.controls.email.reset();
-            } else {
+            if (user.email) {
                 this.user = user;
                 Object.keys(this.data.value).forEach(key => this.data.value[key] = undefined);
                 this.open(this.successModal, 'modal_mini', 'sm', 'success');
                 this.data.reset();
+
+            } else if (!user.email && user.message.toLowerCase().includes('duplicate email')) {
+                this.open(this.duplicateEmail, 'modal_mini', 'sm', 'danger');
+                this.data.controls.email.reset();
+            } else {
+                this.open(this.error, 'modal_mini', 'sm', 'danger')
             }
-            this.disable = false;
+            this.loading = false;
         });
     }
 

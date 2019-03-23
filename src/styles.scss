@@ -92,6 +92,18 @@ $gradient-primary-rev: linear-gradient(-30deg, #ff0b6d, #fe4644, #fb9411);
 }
 
 
+.form-control-success {
+    border-color: #1beb11 !important;
+}
+
+.has-success::after {
+    color: #1beb11 !important;
+}
+
+.modal.modal-mini .modal-footer button:first-child {
+    opacity: 1 !important;
+}
+
 /**
 |--------------------------------------------------
 | BODY CONFIGURATION

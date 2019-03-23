@@ -20,7 +20,7 @@
         </div>
     </div>
     <div class="section section-tabs" data-background-color="black">
-        <div class="container" *ngIf="event; else loader">
+        <div class="container" *ngIf="event; else loader2x">
             <h1 class="title text-center">{{event?.name}}</h1>
             <div class="row text-center">
                 <div class="col-md-4">
@@ -35,10 +35,42 @@
             </div>
             <hr>
             <div class="row">
-                <div class="col-md-4">
-                    <img class="rounded my-3" src={{event?.image}} alt={{event?.title}}>
+                <div class="col-lg-4">
+                    <form (ngSubmit)="onSubmit()" #f="ngForm">
+                        <div class="input-group input-lg my-3"
+                            [ngClass]="{'input-group-focus':focus1===true, 'has-success': f.controls.email?.valid}">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">
+                                    <i class="now-ui-icons ui-1_email-85"></i>
+                                </span>
+                            </div>
+                            <input ngModel required type="text" pattern="[^ @]*@[^ @]*" class="form-control"
+                                name="email" placeholder="Email" (focus)="focus1=true" (blur)="focus1=false">
+                        </div>
+                        <div class="input-group input-lg my-3"
+                            [ngClass]="{'input-group-focus':focus2===true, 'has-success': f.controls.uid?.valid}">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">
+                                    <i class="now-ui-icons users_single-02"></i>
+                                </span>
+                            </div>
+                            <input ngModel required type="text" pattern="[Ee][Xx][Oo]-2019[0-9]{4}" class="form-control"
+                                name="uid" placeholder="Exordium ID" (focus)="focus2=true" (blur)="focus2=false">
+                        </div>
+                        <div class="small text-center font-weight-bold mb-2"><a class="text-center text-primary"
+                                [routerLink]="['/','register']">Don't
+                                have an Exordium
+                                ID? Click Here.</a></div>
+                        <div class="form-group text-center" *ngIf="!loading; else loader1x">
+                            <input type="submit" class="btn btn-round btn-lg btn-primary gradient-primary"
+                                [disabled]="!f.valid" value="Participate">
+                        </div>
+                    </form>
                 </div>
-                <div class="col-md-8">
+                <!-- <div class="col-md-4">
+                    <img class="rounded my-3" src={{event?.image}} alt={{event?.title}}>
+                </div> -->
+                <div class="col-lg-8">
                     <div class="border-wrapper mt-3">
                         <div class="card card-plain my-0">
                             <div class="nav-tabs-navigation" data-tabs-color="dark">
@@ -116,14 +148,100 @@
                 </div>
             </div>
         </div>
-
-        <ng-template #loader>
-            <div class="loader">
-                <div class="la-ball-clip-rotate-pulse la-2x">
-                    <div></div>
-                    <div></div>
-                </div>
-            </div>
-        </ng-template>
     </div>
 </div>
+
+
+<ng-template #loader1x>
+    <div class="loader1x">
+        <div class="la-ball-clip-rotate-pulse">
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+</ng-template>
+
+<ng-template #loader2x>
+    <div class="loader2x">
+        <div class="la-ball-clip-rotate-pulse la-2x">
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+</ng-template>
+
+
+<ng-template #success let-c="close" let-d="dismiss">
+    <div class="modal-header justify-content-center">
+        <div class="modal-profile">
+            <i class="now-ui-icons users_single-02"></i>
+        </div>
+    </div>
+    <div class="modal-body">
+        <p>Participation Successful</p>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-simple btn-round ml-auto mx-auto text-white"
+            style="border-color: #fff !important;" (click)="c('Close click')">Close</button>
+    </div>
+</ng-template>
+
+<ng-template #invalidId let-c="close" let-d="dismiss">
+    <div class="modal-header justify-content-center">
+        <div class="modal-profile">
+            <i class="now-ui-icons users_single-02"></i>
+        </div>
+    </div>
+    <div class="modal-body">
+        <p>Exordium ID is Invalid</p>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-simple btn-round ml-auto mx-auto text-white"
+            style="border-color: #fff !important;" (click)="c('Close click')">Close</button>
+    </div>
+</ng-template>
+
+<ng-template #invalidEmail let-c="close" let-d="dismiss">
+    <div class="modal-header justify-content-center">
+        <div class="modal-profile">
+            <i class="now-ui-icons users_single-02"></i>
+        </div>
+    </div>
+    <div class="modal-body">
+        <p>Please enter the email you used to register for Exordium ID</p>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-simple btn-round ml-auto mx-auto text-white"
+            style="border-color: #fff !important;" (click)="c('Close click')">Close</button>
+    </div>
+</ng-template>
+
+<ng-template #alreadyRegistered let-c="close" let-d="dismiss">
+    <div class="modal-header justify-content-center">
+        <div class="modal-profile">
+            <i class="now-ui-icons users_single-02"></i>
+        </div>
+    </div>
+    <div class="modal-body">
+        <p>You have already participated in this event</p>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-simple btn-round ml-auto mx-auto text-white"
+            style="border-color: #fff !important;" (click)="c('Close click')">Close</button>
+    </div>
+</ng-template>
+
+<ng-template #error let-c="close" let-d="dismiss">
+    <div class="modal-header justify-content-center">
+        <div class="modal-profile">
+            <i class="now-ui-icons users_single-02"></i>
+        </div>
+    </div>
+    <div class="modal-body">
+        <p>Unable to participate right now. Please try again later.</p>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-simple btn-round ml-auto mx-auto text-white"
+            style="border-color: #fff !important;" (click)="c('Close click')">Close</button>
+    </div>
+</ng-template>

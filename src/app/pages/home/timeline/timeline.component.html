@@ -1,7 +1,7 @@
 <div class="section" data-background-color="black">
     <div class="container text-center">
         <h1 class="title mb-5 pb-5">Timeline</h1>
-        <div class="timeline" *ngIf="events.length; else loader;"></div>
+        <div class="timeline" *ngIf="events.length; else loader2x;"></div>
         <div class="space-50"></div>
         <div class="row" *ngFor="let event of events; let even=even">
             <div class="col-md-6" [ngClass]="{'offset-md-6': !even}" data-aos="zoom-in" data-aos-offset="300">
@@ -31,8 +31,8 @@
     </div>
 </div>
 
-<ng-template #loader>
-    <div class="loader">
+<ng-template #loader2x>
+    <div class="loader2x">
         <div class="la-ball-clip-rotate-pulse la-2x">
             <div></div>
             <div></div>

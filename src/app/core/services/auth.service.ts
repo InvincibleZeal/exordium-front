@@ -14,4 +14,10 @@ export class AuthService {
             .map((res: Response) => res.json())
             .catch((err: Response) => Observable.of(err.json()));
     }
+
+    participate(data: any) {
+        return this.http.post(`${environment.api}/events/participate`, data)
+            .map((res: Response) => res.json())
+            .catch((err: Response) => Observable.of(err.json()));
+    }
 }

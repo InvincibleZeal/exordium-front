@@ -1,0 +1,38 @@
+.input-group.has-success {
+    .input-group .input-group-prepend .input-group-text {
+        border-color: #1beb11 !important;
+        border-left: 1px solid #1beb11 !important;
+        color: #1beb11 !important;
+    }
+
+
+
+    input {
+        border-color: #1beb11 !important;
+    }
+}
+
+.input-group .input-group-prepend .input-group-text {
+    border-left: 1px solid rgba(255, 255, 255, 0.5) !important;
+}
+
+[data-background-color] .input-group-focus .input-group-text {
+    border-color: rgba(255, 255, 255, 0.5) !important;
+}
+
+[data-background-color] .input-group-focus .input-group-text {
+    border-color: #ffffff !important;
+}
+
+[data-background-color] .has-success .input-group-text {
+    border-color: #1beb11 !important;
+    color: #1beb11 !important;
+}
+
+
+.loader {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80px;
+}

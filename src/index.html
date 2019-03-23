@@ -13,48 +13,48 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700,200|Open+Sans+Condensed:700"
         rel="stylesheet" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" />
-    <style>
-        body {
-            padding: 0;
-            margin: 0;
-            height: 100vh;
-            width: 100vw;
-        }
-
-        .app-loading {
-            height: 100%;
-            width: 100%;
-            padding: 0;
-            margin: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background: radial-gradient(circle, #222, #01060e);
-        }
-
-        .app-loading .logo img {
-            animation: logo 1000ms infinite;
-            filter: drop-shadow(0px 20px 50px 50px rgba(0, 0, 0, 0.5))
-        }
-
-        @keyframes logo {
-            0% {
-                transform: translateY(0px);
-            }
-
-            50% {
-                transform: translateY(20px);
-            }
-
-            100% {
-                transform: translateY(0px);
-            }
-        }
-    </style>
 </head>
 
 <body class="sidebar-collapse">
     <app-root>
+        <style>
+            body {
+                padding: 0;
+                margin: 0;
+                height: 100vh;
+                width: 100vw;
+            }
+
+            .app-loading {
+                height: 100%;
+                width: 100%;
+                padding: 0;
+                margin: 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background: radial-gradient(circle, #222, #01060e);
+            }
+
+            .app-loading .logo img {
+                animation: logo 1000ms infinite;
+                filter: drop-shadow(0px 20px 50px 50px rgba(0, 0, 0, 0.5))
+            }
+
+            @keyframes logo {
+                0% {
+                    transform: translateY(0px);
+                }
+
+                50% {
+                    transform: translateY(20px);
+                }
+
+                100% {
+                    transform: translateY(0px);
+                }
+            }
+        </style>
         <div class="app-loading">
             <div class="logo">
                 <img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+Cjx

@@ -1,5 +1,5 @@
 <div class="separator"></div>
-<div class="row" *ngIf="events; else loader">
+<div class="row" *ngIf="events; else loader2x">
     <div class="col-md-4 py-2" *ngFor="let event of events | eventFilter:tag:search:'name'">
         <div class="border-wrapper h-100">
             <div class="card h-100 my-0"
@@ -22,8 +22,8 @@
     </div>
 </div>
 
-<ng-template #loader>
-    <div class="loader">
+<ng-template #loader2x>
+    <div class="loader2x">
         <div class="la-ball-clip-rotate-pulse la-2x">
             <div></div>
             <div></div>

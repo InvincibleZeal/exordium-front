@@ -30,10 +30,10 @@ export class DataService {
     public getEvent = (url: string) => {
         if (!this.events.length) {
             return this.getEvents().map((events: any) => {
-                return this.clone(events.filter((event: any) => event.url === url)[0]);
+                return events.filter((event: any) => event.url === url)[0];
             })
         }
-        return Observable.of(this.clone(this.events.filter((event: any) => event.url === url)[0]));
+        return Observable.of(this.events.filter((event: any) => event.url === url)[0]);
     }
 
     public getTeams = () => this.teams;
@@ -42,10 +42,6 @@ export class DataService {
     public getMembers = () => this.members;
     // public mockEvents = () => this.mockedEvents.slice(0);
 
-    private clone = (obj) => {
-        console.log(typeof obj)
-        return obj;
-    }
     /**
     |--------------------------------------------------
     | MOCKED DATA

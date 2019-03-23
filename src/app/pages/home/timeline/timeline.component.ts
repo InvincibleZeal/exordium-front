@@ -14,8 +14,6 @@ export class TimelineComponent implements OnInit {
         this.dataService.getEvents().subscribe(events => {
             this.events = events;
             this.events = this.events.sort((a, b) => a.date - b.date);
-            console.log(this.events);
         })
     }
-
 }

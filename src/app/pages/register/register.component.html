@@ -89,8 +89,8 @@
                                 </div>
                             </div>
                             <div class="col-12">
-                                <div class="send-button my-3">
-                                    <input required [disabled]="!f.valid || disable" type="submit" value="REGISTER"
+                                <div class="send-button my-3" *ngIf="!loading; else loader1x">
+                                    <input required [disabled]="!f.valid" type="submit" value="REGISTER"
                                         class="btn btn-primary btn-round btn-block btn-lg gradient-primary">
                                 </div>
                             </div>
@@ -101,6 +101,16 @@
         </div>
     </div>
 </div>
+
+<ng-template #loader1x>
+    <div class="loader">
+        <div class="la-ball-clip-rotate-pulse">
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+</ng-template>
+
 <ng-template #success let-c="close" let-d="dismiss">
     <div class="modal-header justify-content-center">
         <div class="modal-profile">
@@ -126,6 +136,22 @@
         <p>Email Already Registered</p>
     </div>
     <div class="modal-footer">
-        <button type="button" class="btn btn-link btn-neutral ml-auto mx-auto" (click)="c('Close click')">Close</button>
+        <button type="button" class="btn btn-link btn-neutral ml-auto mx-auto text-white"
+            (click)="c('Close click')">Close</button>
+    </div>
+</ng-template>
+
+<ng-template #error let-c="close" let-d="dismiss">
+    <div class="modal-header justify-content-center">
+        <div class="modal-profile">
+            <i class="now-ui-icons users_single-02"></i>
+        </div>
+    </div>
+    <div class="modal-body">
+        <p>Unable to register right now. Please try again later</p>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-link btn-neutral ml-auto mx-auto text-white"
+            (click)="c('Close click')">Close</button>
     </div>
 </ng-template>
