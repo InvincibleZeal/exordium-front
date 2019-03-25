@@ -197,12 +197,19 @@ body {
 
 
 @media screen and (min-width: 768px) {
-    .h1-seo:hover>span {
-        transform: rotateX(180deg);
-    }
 
-    .h1-seo:hover>span.full {
-        transform: rotateX(360deg) !important;
+    .brand:hover {
+        .n-logo {
+            animation: animate-logo 1.5s linear;
+        }
+
+        .h1-seo>span {
+            transform: rotateX(180deg);
+        }
+
+        .h1-seo>span.full {
+            transform: rotateX(360deg) !important;
+        }
     }
 }
 
@@ -218,5 +225,31 @@ body {
     .h1-seo {
         letter-spacing: 10px !important;
         font-size: 1.2rem !important;
+    }
+}
+
+@keyframes animate-logo {
+    0% {
+        transform: translateY(0px) rotateY(0deg) rotateX(0deg);
+    }
+
+    20% {
+        transform: translateY(-15px) rotateY(180deg) rotateX(0deg);
+    }
+
+    40% {
+        transform: translateY(-15px) rotateY(180deg) rotateX(180deg);
+    }
+
+    60% {
+        transform: translateY(-15px) rotateY(360deg) rotateX(180deg);
+    }
+
+    80% {
+        transform: translateY(-15px) rotateY(360deg) rotateX(360deg);
+    }
+
+    100% {
+        transform: translateY(0px) rotateY(360deg) rotateX(360deg);
     }
 }

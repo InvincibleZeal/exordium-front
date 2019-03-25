@@ -1,7 +1,7 @@
 <div class="separator"></div>
 <div class="row" *ngIf="events; else loader2x">
     <div class="col-md-4 py-2" *ngFor="let event of events | eventFilter:tag:search:'name'; let i = index;">
-        <div class="border-wrapper h-100" data-aos="fade-up" data-aos-once="true" data-aos-offset="0">
+        <div class="border-wrapper h-100" data-aos="fade-up" data-aos-offset="0">
             <div class="card h-100 my-0"
                 style="background: url('assets/img/background/14.jpg'); background-size: cover;">
                 <div class="card-header">

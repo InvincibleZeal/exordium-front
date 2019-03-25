@@ -10,13 +10,17 @@ import { NavbarComponent } from './shared/navbar/navbar.component';
     selector: 'app-root',
     template: `
         <app-navbar></app-navbar>
-        <router-outlet></router-outlet>
+        <router-outlet (activate)="onActivate($event)"></router-outlet>
         <app-footer></app-footer>
     `,
 })
 export class AppComponent implements OnInit {
     private _router: Subscription;
     @ViewChild(NavbarComponent) navbar: NavbarComponent;
+
+    onActivate(event: any) {
+        window.scroll(0, 0);
+    }
 
     constructor(private renderer: Renderer, private router: Router, @Inject(DOCUMENT) private document: any, private element: ElementRef, public location: Location) { }
     ngOnInit() {

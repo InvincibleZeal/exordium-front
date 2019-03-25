@@ -22,6 +22,7 @@ export class RegisterComponent implements OnInit {
     public focus2: boolean;
     public focus3: boolean;
     public focus4: boolean;
+    public focus5: boolean;
     public loading: boolean = false;
     public user: User;
     private closeResult: string;

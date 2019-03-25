@@ -6,6 +6,7 @@
         </div>
         <div class="container">
             <div class="content-center brand">
+                <img class="n-logo" src="assets/img/icons/logo_white.png" alt="">
                 <h1 class="h1-seo typograph">
                     <span>E</span>
                     <span>X</span>
@@ -16,10 +17,14 @@
                     <span class="full">U</span>
                     <span class="full">M</span>
                 </h1>
-                <button class="btn btn-lg btn-round btn-primary gradient-primary" (click)="open(classic,'' , '')">
+                <button class="btn btn-lg btn-round btn-primary gradient-primary mx-2" (click)="open(classic,'' , '')">
                     VIEW TEASER
                     <i class="now-ui-icons tech_headphones"></i>
                 </button>
+                <a class="btn btn-lg btn-round btn-primary gradient-primary mx-2" [routerLink]="['/', 'register']">
+                    REGISTER
+                    <i class="now-ui-icons ui-1_send"></i>
+                </a>
             </div>
         </div>
     </div>
@@ -99,7 +104,7 @@
 
 <ng-template #classic let-c="close" let-d="dismiss">
     <iframe frameborder="0" allowfullscreen="1" id="ytplayer"
-        src="https://www.youtube.com/embed/id?autoplay=1&rel=0"></iframe>
+        src="https://www.youtube.com/embed/OtjbgrjGobc?autoplay=1&rel=0"></iframe>
     <button type="button" class="btn btn-primary gradient-primary m-0" (click)="c('Close click')">
         GO BACK
     </button>
