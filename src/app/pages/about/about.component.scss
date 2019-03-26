@@ -2,8 +2,16 @@
     width: 40% !important;
 }
 
+.team {
+    .col-md-4 {
+        padding: 15px !important;
+    }
+}
+
 .card {
     transition: 600ms;
+    margin-top: 10px !important;
+    margin-bottom: 10px !important;
 }
 
 .card-raised {

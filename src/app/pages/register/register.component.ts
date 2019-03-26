@@ -35,7 +35,11 @@ export class RegisterComponent implements OnInit {
 
     onSubmit() {
         this.loading = true;
+        if (this.data.controls.college.value === 'Other') {
+            this.data.value.college = this.data.value['other-college'];
+        }
 
+        console.log(this.data.value);
         this.authService.register(this.data.value).subscribe((user: any) => {
             if (user.email) {
                 this.user = user;

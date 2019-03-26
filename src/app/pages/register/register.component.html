@@ -76,19 +76,71 @@
                                         (focus)="focus3=true" (blur)="focus3=false">
                                 </div>
                             </div>
-                            <div class="col-12">
+                            <div class="col-12 text-left">
+                                <p class="mt-2 mb-0 text-center">College</p>
                                 <div class="input-group input-lg my-2"
                                     [ngClass]="{'input-group-focus':focus4===true, 'has-success': f.controls.college?.valid}">
                                     <div class="input-group-prepend">
                                         <span class="input-group-text">
-                                            <i class="now-ui-icons education_glasses"></i>
+                                            <i class="now-ui-icons education_hat"></i>
                                         </span>
                                     </div>
-                                    <input ngModel required minlength="3" type="text" class="form-control"
-                                        name="college" placeholder="College" (focus)="focus4=true"
-                                        (blur)="focus4=false">
+                                    <select ngModel required minlength="3" type="text"
+                                        class="form-control form-control-lg" name="college" placeholder="College"
+                                        (focus)="focus4=true" (blur)="focus4=false">
+                                        <option
+                                            value="National Institute of Technology, Hazratbal, Srinagar – (NIT, Srinagar)">
+                                            National Institute of Technology, Hazratbal, Srinagar – (NIT, Srinagar)
+                                        </option>
+                                        <option
+                                            value="Islamic University of Science and Technology, Awantipora – (IUST, Awantipora) ">
+                                            Islamic University of Science and Technology, Awantipora – (IUST,
+                                            Awantipora) </option>
+                                        <option
+                                            value="Institute of Technology, University of Kashmir, Zakura (IoT, KU)">
+                                            Institute of Technology, University of Kashmir, Zakura (IoT, KU)</option>
+                                        <option value="SSM College of Engineering, Baramulla (SSM, Baramulla)">SSM
+                                            College of Engineering, Baramulla (SSM, Baramulla)</option>
+                                        <option
+                                            value="Government College of Engineering & Technology, Ganderbal (GCET, Ganderbal)">
+                                            Government College of Engineering & Technology, Ganderbal (GCET, Ganderbal)
+                                        </option>
+                                        <option value="Other">Other</option>
+                                    </select>
                                 </div>
                             </div>
+                            <div class="col-12">
+                                <div class="input-group input-lg my-2"
+                                    [ngClass]="{'input-group-focus':focus5===true, 'has-success': f.controls['other-college']?.valid}"
+                                    *ngIf="f.controls.college?.value === 'Other'">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">
+                                            <i class="now-ui-icons education_hat"></i>
+                                        </span>
+                                    </div>
+                                    <input ngModel required minlength="2" type="text" class="form-control"
+                                        name="other-college" placeholder="College Name" (focus)="focus5=true"
+                                        (blur)="focus5=false">
+                                </div>
+                            </div>
+                            <!-- <p>College Name</p>
+                                <div class="form-check form-check-radio d">
+                                    <label class="form-check-label">
+                                        <input class="form-check-input" type="radio" name="exampleRadios"
+                                            id="exampleRadios1" value="option1">
+                                        <span class="form-check-sign"></span>
+                                        Radio is off
+                                    </label>
+                                    <label class="form-check-label">
+                                        <input class="form-check-input" type="radio" name="exampleRadios"
+                                            id="exampleRadios1" value="option2" checked>
+                                        <span class="form-check-sign"></span>
+                                        Radio is on
+                                    </label>
+                                </div>
+                                <div class="form-check form-check-radio">
+
+                                </div> -->
                             <div class="col-12">
                                 <div class="send-button my-3" *ngIf="!loading; else loader1x">
                                     <input required [disabled]="!f.valid" type="submit" value="REGISTER"

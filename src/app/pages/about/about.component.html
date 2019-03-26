@@ -25,15 +25,17 @@
                 <h2 class="title">{{team.name}}</h2>
                 <div class="row">
                     <div class="col-md-4" *ngFor="let member of team.members">
-                        <div class="card card-raised">
+                        <div class="card card-raised h-100">
                             <div class="card-body">
                                 <div class="team-player">
                                     <img src={{member.avatar}} alt="Thumbnail Image"
                                         class="rounded-circle img-fluid img-raised">
                                     <h4 class="title text-dark">{{member.name}}</h4>
                                     <p class="category text-primary">{{member.designation}}</p>
-                                    <p class="description text-dark metropolis font-weight-normal">
-                                        {{member.description}}</p>
+                                    <p class="description text-dark font-weight-normal">
+                                        {{member.organized}}</p>
+                                    <!-- <p class="description text-dark metropolis font-weight-normal">
+                                        {{member.description}}</p> -->
                                     <a href={{social.url}} style="margin: 0px 3px;" target="_blank"
                                         class="btn btn-primary btn-icon btn-round gradient-primary"
                                         *ngFor="let social of member.socials">

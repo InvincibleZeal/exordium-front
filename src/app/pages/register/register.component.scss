@@ -12,6 +12,25 @@
     }
 }
 
+select.form-control {
+    border: 1px solid rgba(255, 255, 255, 0.5) !important;
+
+    option {
+        color: black !important;
+        font-size: .9rem !important;
+        padding: 5px 0px !important;
+    }
+}
+
+select.form-control-lg {
+    border-left: none !important;
+}
+
+.has-success select.form-control {
+    border: 1px solid #1beb11 !important;
+    border-left: none !important;
+}
+
 .input-group .input-group-prepend .input-group-text {
     border-left: 1px solid rgba(255, 255, 255, 0.5) !important;
 }
