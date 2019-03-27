@@ -8,12 +8,12 @@
             <div class="content-center brand">
                 <img class="n-logo" src="assets/img/icons/logo_white.png" alt="">
                 <h1 class="h1-seo typograph">
-                    <span>E</span>
-                    <span>X</span>
-                    <span>O</span>
+                    <span class="half">E</span>
+                    <span class="half">X</span>
+                    <span class="half">O</span>
                     <span class="full">R</span>
-                    <span>D</span>
-                    <span>I</span>
+                    <span class="half">D</span>
+                    <span class="half">I</span>
                     <span class="full">U</span>
                     <span class="full">M</span>
                 </h1>
@@ -65,29 +65,32 @@
                 <div class="row">
                     <div class="col-8  ml-auto mr-auto text-center">
                         <h1 class="title" data-aos="zoom-in">Some Heading Here</h1>
-                        <ngb-carousel data-aos="fade-up">
-                            <ng-template ngbSlide>
-                                <img class="d-block" src="assets/img/background/6.jpg" alt="First slide">
-                                <div class="carousel-caption d-none d-md-block">
-                                    <h5>Some Heading Here</h5>
-                                </div>
-                            </ng-template>
-                            <ng-template ngbSlide>
-                                <img class="d-block" src="assets/img/background/6.jpg" alt="Second slide">
-                                <div class="carousel-caption d-none d-md-block">
-                                    <h5>Some Heading Here</h5>
-                                </div>
-                            </ng-template>
-                            <ng-template ngbSlide>
-                                <img class="d-block" src="assets/img/background/6.jpg" alt="Third slide">
-                                <div class="carousel-caption d-none d-md-block">
-                                    <h5>Some Heading Here</h5>
-                                </div>
-                            </ng-template>
-                        </ngb-carousel>
+                        <div class="carousel" data-aos="fade-up">
+                            <ngb-carousel>
+                                <ng-template ngbSlide>
+                                    <img class="d-block" src="assets/img/background/6.jpg" alt="First slide">
+                                    <div class="carousel-caption d-none d-md-block">
+                                        <h5>Some Heading Here</h5>
+                                    </div>
+                                </ng-template>
+                                <ng-template ngbSlide>
+                                    <img class="d-block" src="assets/img/background/6.jpg" alt="Second slide">
+                                    <div class="carousel-caption d-none d-md-block">
+                                        <h5>Some Heading Here</h5>
+                                    </div>
+                                </ng-template>
+                                <ng-template ngbSlide>
+                                    <img class="d-block" src="assets/img/background/6.jpg" alt="Third slide">
+                                    <div class="carousel-caption d-none d-md-block">
+                                        <h5>Some Heading Here</h5>
+                                    </div>
+                                </ng-template>
+                            </ngb-carousel>
+                            <div class="separator separator-primary"></div>
+                        </div>
+
                     </div>
                 </div>
-                <div class="separator separator-primary"></div>
                 <app-timeline></app-timeline>
             </div>
         </div>

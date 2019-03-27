@@ -9,7 +9,7 @@
                 <h1 class="h1-seo typograph" style="letter-spacing: 15px;">
                     <span class="full">A</span>
                     <span class="full">B</span>
-                    <span>O</span>
+                    <span class="half">O</span>
                     <span class="full">U</span>
                     <span class="full">T</span>
                     <span> </span>
@@ -21,35 +21,57 @@
     </div>
     <div class="section section-team text-center" data-background-color="black">
         <div class="container">
-            <div class="team" *ngFor="let team of teams">
-                <h2 class="title">{{team.name}}</h2>
-                <div class="row">
-                    <div class="col-md-4" *ngFor="let member of team.members">
-                        <div class="card card-raised h-100">
-                            <div class="card-body">
-                                <div class="team-player">
-                                    <img src={{member.avatar}} alt="Thumbnail Image"
-                                        class="rounded-circle img-fluid img-raised">
-                                    <h4 class="title text-dark">{{member.name}}</h4>
-                                    <p class="category text-primary">{{member.designation}}</p>
-                                    <p class="description text-dark" style="font-weight:500 !important;">
-                                        {{member.organized}}</p>
-                                    <!-- <p class="description text-dark metropolis font-weight-normal">
+            <h2 class="title text-center">Organizers</h2>
+            <div class="row justify-content-center">
+                <div class="col-md-4" *ngFor="let member of teams.organizers">
+                    <div class="card card-raised h-100">
+                        <div class="card-body">
+                            <div class="team-player">
+                                <img src={{member.avatar}} class="rounded-circle img-fluid img-raised">
+                                <h4 class="title text-dark">{{member.name}}</h4>
+                                <p class="category text-primary">{{member.designation}}</p>
+                                <p class="description text-dark" style="font-weight:500 !important;">
+                                    {{member.organized}}</p>
+                                <!-- <p class="description text-dark metropolis font-weight-normal">
                                         {{member.description}}</p> -->
-                                    <a href={{social.url}} style="margin: 0px 3px;" target="_blank"
-                                        class="btn btn-primary btn-icon btn-round gradient-primary"
-                                        *ngFor="let social of member.socials">
-                                        <i class="fa fa-{{social.media}}"
-                                            *ngIf="social.media !== 'facebook'; else facebook"></i>
-                                        <ng-template #facebook><i class="fa fa-facebook-square"></i></ng-template>
-                                    </a>
-                                </div>
+                                <a href={{social.url}} style="margin: 0px 3px;" target="_blank"
+                                    class="btn btn-primary btn-icon btn-round gradient-primary"
+                                    *ngFor="let social of member.socials">
+                                    <i class="fa fa-{{social.media}}"
+                                        *ngIf="social.media !== 'facebook'; else facebook"></i>
+                                    <ng-template #facebook><i class="fa fa-facebook-square"></i></ng-template>
+                                </a>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="separator separator-primary"></div>
             </div>
+            <div class="separator separator-primary"></div>
+            <h2 class="title text-center">Web Development Team</h2>
+            <div class="row justify-content-center">
+                <div class="col-md-4" *ngFor="let member of teams.webd">
+                    <div class="card card-raised h-100">
+                        <div class="card-body">
+                            <div class="team-player">
+                                <img src={{member.avatar}} class="rounded-circle img-fluid img-raised">
+                                <h4 class="title text-dark">{{member.name}}</h4>
+                                <p class="category text-primary">{{member.designation}}</p>
+                                <p class="category text-primary">{{member.specialization}}</p>
+                                <!-- <p class="description text-dark metropolis font-weight-normal">
+                                            {{member.description}}</p> -->
+                                <a href={{social.url}} style="margin: 0px 3px;" target="_blank"
+                                    class="btn btn-primary btn-icon btn-round gradient-primary"
+                                    *ngFor="let social of member.socials">
+                                    <i class="fa fa-{{social.media}}"
+                                        *ngIf="social.media !== 'facebook'; else facebook"></i>
+                                    <ng-template #facebook><i class="fa fa-facebook-square"></i></ng-template>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="separator separator-primary"></div>
         </div>
     </div>
 </div>

@@ -141,8 +141,6 @@ body {
 }
 
 .registerModal>.modal-dialog {
-    top: 50%;
-    transform: translateY(50%);
     max-width: initial !important;
     width: 300px !important;
 }
@@ -196,14 +194,17 @@ body {
 */
 
 
+.brand:hover {
+    .n-logo {
+        animation: animate-logo 1.5s linear;
+    }
+}
+
+
 @media screen and (min-width: 768px) {
 
     .brand:hover {
-        .n-logo {
-            animation: animate-logo 1.5s linear;
-        }
-
-        .h1-seo>span {
+        .h1-seo>span.half {
             transform: rotateX(180deg);
         }
 

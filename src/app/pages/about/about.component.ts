@@ -9,7 +9,7 @@ import { DataService } from 'app/core/services/data.service';
 })
 export class AboutComponent implements OnInit {
 
-    teams = []
+    public teams: any = {}
     constructor(private dataService: DataService) { }
 
     ngOnInit() {

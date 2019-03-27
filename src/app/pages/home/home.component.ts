@@ -18,7 +18,7 @@ export class HomeComponent implements OnInit {
 
     open(content, type, modalDimension) {
         if (modalDimension === 'sm' && type === 'modal_mini') {
-            this.modalService.open(content, { windowClass: 'modal-mini modal-primary', size: 'sm' }).result.then((result) => {
+            this.modalService.open(content, { windowClass: 'modal-mini modal-primary', size: 'sm', backdrop: 'static', keyboard: false }).result.then((result) => {
                 this.closeResult = `Closed with: ${result}`;
             }, (reason) => {
                 this.closeResult = `Dismissed ${this.getDismissReason(reason)}`;

@@ -15,11 +15,8 @@ export class EventCardsComponent implements OnInit {
     ngOnInit() {
         this.dataService.getEvents().subscribe(events => {
             this.events = events;
-            this.events.forEach(event => {
-                if (event.description.length > 150) {
-                    event.description = event.description.slice(0, 150) + '...';
-                }
-            });
+            this.events = this.events.sort((a, b) => a.rounds[0].date.from - b.rounds[0].date.from);
+            console.log(this.events);
         });
     }
 }

@@ -14,7 +14,6 @@ export class TimelineComponent implements OnInit {
     ngOnInit() {
         this.dataService.getEvents().subscribe(events => {
             this.events = events;
-            console.log('TL', this.events);
             this.events.forEach(event => {
                 event.rounds.forEach(round => {
                     this.timeline.push({
@@ -24,9 +23,7 @@ export class TimelineComponent implements OnInit {
                     })
                 })
             })
-            console.log(this.timeline, this.timeline.length);
             this.timeline = this.timeline.sort((a, b) => a.date.from - b.date.from);
-            console.log(this.timeline);
             // this.events = this.events.sort((a, b) => a.date - b.date);
         })
     }

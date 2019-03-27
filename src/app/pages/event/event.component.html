@@ -7,9 +7,9 @@
             <div class="content-center brand">
                 <img class="n-logo" src="assets/img/icons/logo_white.png" alt="">
                 <h1 class="h1-seo typograph" style="letter-spacing: 15px;">
-                    <span>E</span>
+                    <span class="half">E</span>
                     <span class="full">V</span>
-                    <span>E</span>
+                    <span class="half">E</span>
                     <span class="full">N</span>
                     <span class="full">T</span>
                 </h1>
@@ -97,9 +97,9 @@
                                                     <div class="content text-justify"
                                                         *ngFor="let round of event?.rounds">
                                                         <h6 class="text-center my-4">
-                                                            <span *ngIf="round?.round">Round
+                                                            <span *ngIf="round?.round">Round -
                                                                 {{round.round | number:'2.0-0'}}</span>
-                                                            <span *ngIf="round?.name">- {{round.name}}</span></h6>
+                                                            <span *ngIf="round?.name">| {{round.name}}</span></h6>
                                                         <p *ngFor="let detail of round?.details">{{detail}}</p>
                                                         <div class="row">
                                                             <div class=" col-4 col-md-3">
@@ -140,8 +140,8 @@
                                         </ngb-tab>
                                         <ngb-tab title="Rules">
                                             <ng-template ngbTabContent>
+                                                <hr>
                                                 <div class="container">
-                                                    <hr>
                                                     <h3>Rules</h3>
                                                     <div class="content text-justify">
                                                         <p class="mb-1"
