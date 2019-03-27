@@ -39,7 +39,11 @@ export class DataService {
 
     public getTeams = () => this.teams;
     public getPages = () => this.pages;
-    public getMember = (name: string) => this.members.filter(member => member.name.includes(name))[0];
+    public getMember = (name: string) => {
+        let member = this.members.filter(member => member.name.includes(name))[0];
+        if (!member) return this.getMember('Name');
+        return member;
+    };
     public getMembers = () => this.members;
     // public mockEvents = () => this.mockedEvents.slice(0);
 
@@ -73,71 +77,74 @@ export class DataService {
             avatar: 'assets/img/members/Tabish Mir.jpeg',
             name: 'Tabish Mir',
             designation: 'General Coordinator',
+            organized: 'Cipher',
             description: 'Some Description Here',
             socials: [
                 {
                     media: 'instagram',
-                    url: 'https://instagram.com/taabishm2'
+                    url: 'https://www.instagram.com/taabishm2'
                 },
             ]
         },
         {
             avatar: 'assets/img/members/Raisa Arief.jpeg',
             name: 'Raisa Arief',
+            organized: 'Cipher',
             designation: 'General Event Organizer',
             description: 'Some Description Here',
             socials: [
                 {
                     media: 'instagram',
-                    url: 'https://instagram.com/raisaarief'
+                    url: 'https://www.instagram.com/raisaarief'
                 },
             ]
         },
         {
             avatar: 'assets/img/members/Niharika Sharma.jpeg',
             name: 'Niharika Sharma',
-            organized: 'Organizer - In-quiz-tors | Whiplash',
+            organized: 'In-quiz-tors | Whiplash',
             description: 'Some Description Here',
             socials: [
                 {
                     media: 'instagram',
-                    url: 'https://instagram.com/niharika_3110'
+                    url: 'https://www.instagram.com/niharika_3110'
                 },
             ]
         },
         {
             avatar: 'assets/img/members/Baseerat Afshan.jpeg',
             name: 'Baseerat Afshan',
-            organized: 'Organizer - Shutterbug | Treasure Hunt',
+            organized: 'Shutterbug | Treasure Hunt',
             description: 'Some Description Here',
             socials: [
                 {
                     media: 'instagram',
-                    url: 'https://instagram.com/baseerat_afshan'
+                    url: 'https://www.instagram.com/baseerat_afshan'
                 },
             ]
         },
         {
             avatar: 'assets/img/members/Rohit Kumar Gupta.jpeg',
             name: 'Rohit Kumar Gupta',
-            organized: 'Organizer - Treasure Hunt | Dubsmash',
+            designation: 'Event Analyzer',
+            organized: 'Treasure Hunt | Dubsmash',
             description: 'Some Description Here',
             socials: [
                 {
                     media: 'instagram',
-                    url: 'https://instagram.com/rohit_kr_gupta'
+                    url: 'https://www.instagram.com/rohit_kr_gupta'
                 },
             ]
         },
         {
             avatar: 'assets/img/placeholder-guy.jpeg',
             name: 'Ateeb Ahmad',
-            organized: 'Organizer - CADDuel',
+            organized: 'CADDuel',
             description: 'Some Description Here',
             socials: [
                 {
                     media: 'instagram',
-                    url: 'https://instagram.com/ateebahmad532'
+                    url: 'https://www.instagram.com/ateebahmad532'
                 },
             ]
         },
@@ -145,86 +152,86 @@ export class DataService {
             avatar: 'assets/img/members/Apurv Thakur.jpeg',
             name: 'Apurv Thakur',
             designation: 'Treasurer',
-            organized: 'Organizer - Code Relay',
+            organized: 'Code Relay',
             description: 'Some Description Here',
             socials: [
                 {
                     media: 'instagram',
-                    url: 'https://instagram.com/apurvthakur_'
+                    url: 'https://www.instagram.com/apurvthakur_'
                 },
             ]
         },
         {
             avatar: 'assets/img/members/Vipasha Sharma.jpeg',
             name: 'Vipasha Sharma',
-            organized: 'Organizer - Shutterbug',
+            organized: 'Shutterbug',
             description: 'Some Description Here',
             socials: [
                 {
                     media: 'instagram',
-                    url: 'https://instagram.com/vipasha.11'
+                    url: 'https://www.instagram.com/vipasha.11'
                 },
             ]
         },
         {
             avatar: 'assets/img/members/Ankur Goswami.jpeg',
             name: 'Ankur Goswami',
-            organized: 'Organizer - 405 Found',
+            organized: '405 Found',
             description: 'Some Description Here',
             socials: [
                 {
                     media: 'instagram',
-                    url: 'https://instagram.com/the_ankur_goswami'
+                    url: 'https://www.instagram.com/the_ankur_goswami'
                 },
             ]
         },
         {
             avatar: 'assets/img/members/Saurabh Jain.jpeg',
             name: 'Saurabh Jain',
-            organized: 'Organizer - Code Jumble | Code Relay',
+            organized: 'Code Jumble | Code Relay',
             description: 'Some Description Here',
             socials: [
                 {
                     media: 'instagram',
-                    url: ' https://instagram.com/thejainsahab'
+                    url: ' https://www.instagram.com/thejainsahab'
                 },
             ]
         },
         {
             avatar: 'assets/img/members/Padma Lhamo.jpeg',
             name: 'Padma Lhamo',
-            organized: 'Organizer - Shutterbug | Cipher',
+            organized: 'Shutterbug | Cipher',
             description: 'Some Description Here',
             socials: [
                 {
                     media: 'instagram',
-                    url: ' https://instagram.com/lhamo_28'
+                    url: ' https://www.instagram.com/lhamo_28'
                 },
             ]
         },
         {
-            avatar: 'assets/img/members/ryan.jpg',
+            avatar: 'assets/img/placeholder-guy.jpg',
             name: 'Name',
             designation: 'Designation',
-            organized: 'Organizer - Event Name',
+            organized: 'Event Name',
             description: 'Some Description Here',
             socials: [
-                {
-                    media: 'github',
-                    url: 'https://github.com/dfdfdf'
-                },
-                {
-                    media: 'instagram',
-                    url: 'https://instagram.com/dfdfdf'
-                },
-                {
-                    media: 'facebook',
-                    url: 'https://www.facebook.com/dfdfdf',
-                },
-                {
-                    media: 'linkedin',
-                    url: 'https://www.linkedin.com/in/dfdfdf',
-                },
+                // {
+                //     media: 'github',
+                //     url: 'https://www.github.com/invinciblezeal'
+                // },
+                // {
+                //     media: 'instagram',
+                //     url: 'https://www.instagram.com/_ganjewala_'
+                // },
+                // {
+                //     media: 'facebook',
+                //     url: 'https://www.facebook.com/invinciblezeal',
+                // },
+                // {
+                //     media: 'linkedin',
+                //     url: 'https://www.linkedin.com/in/invinciblezeal',
+                // },
             ]
         },
         {
@@ -232,12 +239,12 @@ export class DataService {
             name: 'Ritesh Ganjewala',
             designation: 'General Secretary',
             specialization: 'Web Developer',
-            organized: 'Organizer - Twisted Turns',
+            organized: 'Twisted Turns',
             description: 'Some description here',
             socials: [
                 {
                     media: 'github',
-                    url: 'https://github.com/InvincibleZeal'
+                    url: 'https://www.github.com/InvincibleZeal'
                 },
 
                 {
@@ -251,9 +258,21 @@ export class DataService {
             ]
         },
         {
+            avatar: 'assets/img/members/Mobshshir Nayeem.jpeg',
+            name: 'Mobshshir Nayeem',
+            organized: 'Twisted Turns',
+            description: 'Some description here',
+            socials: [
+                {
+                    media: 'instagram',
+                    url: 'https://www.instagram.com/md_mobshshir'
+                },
+            ]
+        },
+        {
             avatar: 'assets/img/members/Ankit.jpeg',
             name: 'Ankit',
-            organized: 'Organizer - Code Relay',
+            organized: 'Code Relay',
             description: 'Some description here',
             socials: [
                 {
@@ -265,7 +284,7 @@ export class DataService {
         {
             avatar: 'assets/img/members/Edgar Monis.jpeg',
             name: 'Edgar Monis',
-            organized: 'Organizer - In-Quiz-Tors',
+            organized: 'In-Quiz-Tors',
             description: 'Some description here',
             socials: [
                 {
@@ -277,7 +296,7 @@ export class DataService {
         {
             avatar: 'assets/img/members/Kshitij Raj.jpeg',
             name: 'Kshitij Raj',
-            organized: 'Organizer - Whiplash',
+            organized: 'Whiplash',
             description: 'Some description here',
             socials: [
                 {
@@ -289,7 +308,7 @@ export class DataService {
         {
             avatar: 'assets/img/members/Hujat Masood Kirmani.jpeg',
             name: 'Hujat Masood Kirmani',
-            organized: 'Organizer - Shutterbug | Treasure Hunt',
+            organized: 'Shutterbug | Treasure Hunt',
             description: 'Some description here',
             socials: [
                 {
@@ -301,7 +320,7 @@ export class DataService {
         {
             avatar: 'assets/img/placeholder-girl.jpeg',
             name: 'Ananta',
-            organized: 'Organizer - In-Quiz-Tors',
+            organized: 'In-Quiz-Tors',
             description: 'Some description here',
             socials: [
                 {
@@ -313,7 +332,7 @@ export class DataService {
         {
             avatar: 'assets/img/placeholder-girl.jpeg',
             name: 'Iqra Jahan',
-            organized: 'Organizer - Whiplash',
+            organized: 'Whiplash',
             description: 'Some description here',
             socials: [
                 {
@@ -325,7 +344,7 @@ export class DataService {
         {
             avatar: 'assets/img/members/Shikhar Jaiswal.jpeg',
             name: 'Shikhar Jaiswal',
-            organized: 'Organizer - Art now',
+            organized: 'Art now',
             description: 'Some description here',
             socials: [
                 {
@@ -337,7 +356,7 @@ export class DataService {
         {
             avatar: 'assets/img/members/Riya Baranwal.jpeg',
             name: 'Riya Baranwal',
-            organized: 'Organizer - Art now',
+            organized: 'Art now',
             description: 'Some description here',
             socials: [
                 {
@@ -349,7 +368,7 @@ export class DataService {
         {
             avatar: 'assets/img/members/Raj Bullu.jpeg',
             name: 'Raj Bullu',
-            organized: 'Organizer - Painting',
+            organized: 'Painting',
             description: 'Some description here',
             socials: [
                 {
@@ -361,14 +380,19 @@ export class DataService {
         {
             avatar: 'assets/img/members/Shah Siamoon.jpeg',
             name: 'Shah Siamoon',
-            organized: 'Organizer - Treasure Hunt',
+            organized: 'Treasure Hunt',
             description: 'Some description here',
-            socials: []
+            socials: [
+                {
+                    media: 'linkedin',
+                    url: 'https://www.linkedin.com/in/shah-siamoon'
+                },
+            ]
         },
         {
             avatar: 'assets/img/members/Roman Wani.jpeg',
             name: 'Roman Wani',
-            organized: 'Organizer - Whiplash',
+            organized: 'Whiplash',
             description: 'Some description here',
             socials: [
                 {
@@ -380,7 +404,7 @@ export class DataService {
         {
             avatar: 'assets/img/members/Jasafa Showket.jpeg',
             name: 'Jasafa Showket',
-            organized: 'Organizer - CADduel',
+            organized: 'CADduel',
             description: 'Some description here',
             socials: [
                 {
@@ -392,7 +416,7 @@ export class DataService {
         {
             avatar: 'assets/img/members/Swati Srivastava.jpeg',
             name: 'Swati Srivastava',
-            organized: 'Organizer - In-Quiz-Tors',
+            organized: 'In-Quiz-Tors',
             description: 'Some description here',
             socials: [
                 {
@@ -404,7 +428,7 @@ export class DataService {
         {
             avatar: 'assets/img/members/Gyanendra Tiwari.jpeg',
             name: 'Gyanendra Tiwari',
-            organized: 'Organizer - 405 Found',
+            organized: '405 Found',
             description: 'Some description here',
             socials: [
                 {
@@ -416,46 +440,73 @@ export class DataService {
         {
             avatar: 'assets/img/members/Vikas Kumar.jpeg',
             name: 'Vikas Kumar',
-            organized: 'Organizer - 405 Found',
+            organized: 'Code Jumble | Cipher',
             description: 'Some description here',
             socials: [
                 {
                     media: 'linkedin',
-                    url: 'https://www.linkedin.com/vikas8nitsri'
+                    url: 'https://www.linkedin.com/in/vikas8nitsri'
                 },
             ]
         },
+        {
+            avatar: 'assets/img/members/Shivang Khajuria.jpeg',
+            name: 'Shivang Khajuria',
+            organized: 'Code Jumble',
+            description: 'Some description here',
+            socials: [
+                {
+                    media: 'instagram',
+                    url: 'https://www.instagram.com/_s.h.i.v.a.n.g'
+                },
+            ]
+        },
+        {
+            avatar: 'assets/img/members/Shivang Khajuria.jpeg',
+            name: 'Shivang Khajuria',
+            organized: 'Code Jumble',
+            description: 'Some description here',
+            socials: [
+                {
+                    media: 'instagram',
+                    url: 'https://www.instagram.com/_s.h.i.v.a.n.g'
+                },
+            ]
+        }
     ]
 
     private teams = {
         organizers: [
             this.getMember('Tabish'),
             this.getMember('Raisa'),
-            this.getMember('Niharika'),
-            this.getMember('Baseerat'),
-            this.getMember('Vipasha'),
-            this.getMember('Padma'),
-            this.getMember('Rohit'),
-            this.getMember('Ritesh'),
-            this.getMember('Apurv'),
-            this.getMember('Ankur'),
+            this.getMember('Siamoon'),
             this.getMember('Saurabh Jain'),
+            this.getMember('Shivang'),
+            this.getMember('Edgar'),
+            this.getMember('Ananta'),
+            this.getMember('Iqra'),
+            this.getMember('Hujat'),
             this.getMember('Ateeb'),
             this.getMember('Ankit'),
-            this.getMember('Edgar'),
-            this.getMember('Kshitij'),
-            this.getMember('Iqra'),
-            this.getMember('Ananta'),
-            this.getMember('Hujat'),
+            this.getMember('Rohit'),
+            this.getMember('Apurv'),
+            this.getMember('Ritesh'),
+            this.getMember('Mobshshir'),
             this.getMember('Shikhar'),
+            this.getMember('Roman'),
+            this.getMember('Niharika'),
+            this.getMember('Baseerat'),
+            this.getMember('Padma'),
+            this.getMember('Jasafa'),
             this.getMember('Riya'),
             this.getMember('Bullu'),
-            this.getMember('Siamoon'),
-            this.getMember('Roman'),
-            this.getMember('Jasafa'),
+            this.getMember('Vikas'),
+            this.getMember('Ankur'),
+            this.getMember('Kshitij'),
+            this.getMember('Vipasha'),
             this.getMember('Swati'),
             this.getMember('Gyanendra'),
-            this.getMember('Vikas'),
+            // this.getMember('Dawood'),
         ],
         webd: [
             this.getMember('Ritesh'),

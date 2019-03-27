@@ -15,6 +15,7 @@ export class AboutComponent implements OnInit {
     ngOnInit() {
         var rellaxHeader = new Rellax('.rellax-header');
         this.teams = this.dataService.getTeams();
+        console.log(this.teams);
     }
 
 }
