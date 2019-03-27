@@ -9,7 +9,8 @@
                     <!-- <div class="card-title">{{event.name}}</div> -->
                 </div>
                 <div class="card-body text-justify">
-                    <p>{{event.description}}</p>
+                    <p>{{ (event.description.join(' ').length>200) ? (event.description.join(' ') | slice:0:200)+'...':(event.description) }}
+                    </p>
                 </div>
                 <div class="card-footer">
                     <a [routerLink]="['/', 'event', event.url]" class="btn btn-round btn-primray gradient-primary">

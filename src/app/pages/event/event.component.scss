@@ -9,10 +9,11 @@ hr {
     border-top: 1px solid white !important;
 }
 
-.card {
+.border-wrapper .card {
     background: #090909 !important;
     border-radius: inherit;
     overflow: initial;
+    min-height: 500px;
 
     hr {
         border: none !important;
@@ -26,6 +27,15 @@ hr {
     padding: 2px;
     border-radius: .25rem;
     background: linear-gradient(-30deg, #ff0b6d, #fe4644, #fb9411);
+}
+
+.poster img {
+    transition: 800ms;
+    transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    position: relative;
+    z-index: 5;
+    display: block;
+    transform-origin: left top;
 }
 
 .loader1x {

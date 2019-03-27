@@ -2,23 +2,51 @@
     <div class="container text-center">
         <h1 class="title mb-5 pb-5" data-aos="zoom-in">Timeline</h1>
         <div class="timeline" *ngIf="events.length; else loader2x;"></div>
-        <div class="space-50"></div>
-        <div class="row" *ngFor="let event of events; let even=even">
+        <div class="row" *ngFor="let event of timeline; let even=even">
             <div class="col-md-6" [ngClass]="{'offset-md-6': !even}" data-aos="zoom-in">
                 <div class="border-wrapper my-2"
                     [ngClass]="{'mr-md-3': even, 'ml-md-3': !even, 'left': even, 'right': !even}">
                     <div class="card" data-background-color="black"
                         style="background: url('assets/img/background/14.jpg'); background-size: cover;">
                         <div class="card-header">
-                            <h3 class="card-title">{{event.name}}</h3>
+                            <h3 class="card-title">{{event?.title}}</h3>
                         </div>
                         <div class="card-body text-justify">
-                            <p>Date: {{event.timings.date}}</p>
-                            <p>Time: {{event.timings.time}}</p>
-                            <p>Venue: {{event.venue}}</p>
+                            <p class="category text-center" *ngIf="event?.round">Round -
+                                {{event?.round | number:'2.0-0'}}
+                                <span *ngIf="event?.name">| {{event?.name}}</span>
+                            </p>
+                            <div class="row">
+                                <div class="col-4">
+                                    <p>Date: </p>
+                                </div>
+                                <div class="col-8">
+                                    <p>{{event?.timings?.date}}</p>
+                                </div>
+                                <div class="col-4">
+                                    <p>Timing: </p>
+                                </div>
+                                <div class="col-8">
+                                    <p>{{event?.timings?.from}} - <span
+                                            *ngIf="event?.timings?.to !== '-'">{{event?.timings?.to}}</span></p>
+                                </div>
+                                <div class="col-4">
+                                    <p>Duration: </p>
+                                </div>
+                                <div class="col-8">
+                                    <p>{{event?.timings?.duration}} <span
+                                            *ngIf="event?.timings?.duration !== '-'">minutes</span></p>
+                                </div>
+                                <div class="col-4">
+                                    <p>Venue: </p>
+                                </div>
+                                <div class="col-8">
+                                    <p>{{event?.venue}}</p>
+                                </div>
+                            </div>
                         </div>
                         <div class="card-footer">
-                            <a [routerLink]="['/', 'event', event.url]"
+                            <a [routerLink]="['/', 'event', event?.url]"
                                 class="btn btn-round btn-primary gradient-primary">
                                 READ MORE
                                 <i class="now-ui-icons arrows-1_minimal-right"></i>

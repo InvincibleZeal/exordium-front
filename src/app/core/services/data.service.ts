@@ -23,6 +23,7 @@ export class DataService {
             this.events.forEach((event: any) => {
                 event.url = event.name.split(' ').map(x => x.toLowerCase()).join('-');
             });
+            console.log(this.events);
             return this.events.slice(0);
         });
     }

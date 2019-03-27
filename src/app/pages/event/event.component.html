@@ -23,7 +23,7 @@
     <div class="section section-tabs" data-background-color="black">
         <div class="container" *ngIf="event; else loader2x">
             <h1 class="title text-center">{{event?.name}}</h1>
-            <div class="row text-center">
+            <!-- <div class="row text-center">
                 <div class="col-md-4">
                     <p>Date: {{event?.timings?.date}}</p>
                 </div>
@@ -33,10 +33,14 @@
                 <div class="col-md-4">
                     <p>Venue: {{event?.venue}}</p>
                 </div>
-            </div>
+            </div> -->
             <hr>
             <div class="row">
                 <div class="col-lg-4">
+                    <div class="poster">
+                        <div class="poster"></div>
+                        <img class="rounded my-3 poster" src={{event?.image}} alt={{event?.title}}>
+                    </div>
                     <form (ngSubmit)="onSubmit()" #f="ngForm">
                         <div class="input-group input-lg my-3"
                             [ngClass]="{'input-group-focus':focus1===true, 'has-success': f.controls.email?.valid}">
@@ -68,9 +72,6 @@
                         </div>
                     </form>
                 </div>
-                <!-- <div class="col-md-4">
-                    <img class="rounded my-3" src={{event?.image}} alt={{event?.title}}>
-                </div> -->
                 <div class="col-lg-8">
                     <div class="border-wrapper mt-3">
                         <div class="card card-plain my-0">
@@ -88,43 +89,78 @@
                                                 </div>
                                             </ng-template>
                                         </ngb-tab>
-                                        <ngb-tab title="Requirements">
+                                        <ngb-tab title="Details">
                                             <ng-template ngbTabContent>
                                                 <hr>
                                                 <div class="container">
-                                                    <h3>Requirements</h3>
-                                                    <div class="content text-justify">
-                                                        <ul>
-                                                            <li *ngFor="let requirement of event?.requirements">
-                                                                {{requirement}}
-                                                            </li>
-                                                        </ul>
+                                                    <h3>Details</h3>
+                                                    <div class="content text-justify"
+                                                        *ngFor="let round of event?.rounds">
+                                                        <h6 class="text-center my-4">
+                                                            <span *ngIf="round?.round">Round
+                                                                {{round.round | number:'2.0-0'}}</span>
+                                                            <span *ngIf="round?.name">- {{round.name}}</span></h6>
+                                                        <p *ngFor="let detail of round?.details">{{detail}}</p>
+                                                        <div class="row">
+                                                            <div class=" col-4 col-md-3">
+                                                                <p class="m-0">Duration:</p>
+                                                            </div>
+                                                            <div class="col-8 col-md-9">
+                                                                <p class="m-0">
+                                                                    {{round?.timings?.duration}}
+                                                                    <span *ngIf="round?.timings?.duration !== '-'">
+                                                                        minutes</span>
+                                                                </p>
+                                                            </div>
+                                                            <div class="col-4 col-md-3">
+                                                                <p class="m-0">Date: </p>
+                                                            </div>
+                                                            <div class="col-8 col-md-9">
+                                                                <p class="m-0">{{round?.timings?.date}}</p>
+                                                            </div>
+                                                            <div class="col-4 col-md-3">
+                                                                <p class="m-0">Timing: </p>
+                                                            </div>
+                                                            <div class="col-8 col-md-9">
+                                                                <p class="m-0">{{round?.timings?.from}} - <span
+                                                                        *ngIf="round?.timings?.to !== '-'">{{round?.timings?.to}}</span>
+                                                                </p>
+                                                            </div>
+                                                            <div class="col-4 col-md-3">
+                                                                <p class="m-0">Venue: </p>
+                                                            </div>
+                                                            <div class="col-8 col-md-9">
+                                                                <p class="m-0">{{round?.venue}}</p>
+                                                            </div>
+                                                        </div>
+                                                        <div class="separator"></div>
                                                     </div>
                                                 </div>
                                             </ng-template>
                                         </ngb-tab>
                                         <ngb-tab title="Rules">
                                             <ng-template ngbTabContent>
-                                                <hr>
                                                 <div class="container">
+                                                    <hr>
                                                     <h3>Rules</h3>
                                                     <div class="content text-justify">
-                                                        <ul>
-                                                            <li *ngFor="let rule of event?.rules">{{rule}}</li>
-                                                        </ul>
+                                                        <p class="mb-1"
+                                                            *ngFor="let rule of event?.rules; let i = index">{{i + 1}}.
+                                                            {{rule}}</p>
                                                     </div>
                                                 </div>
                                             </ng-template>
                                         </ngb-tab>
-                                        <ngb-tab title="Details">
+                                        <ngb-tab title="Requirements">
                                             <ng-template ngbTabContent>
                                                 <hr>
                                                 <div class="container">
-                                                    <h3>Details</h3>
+                                                    <h3>Requirements</h3>
                                                     <div class="content text-justify">
-                                                        <p>Date: {{event?.timings?.date}}</p>
-                                                        <p>Time: {{event?.timings?.time}}</p>
-                                                        <p>Venue: {{event?.venue}}</p>
+                                                        <p class="mb-1"
+                                                            *ngFor="let requirement of event?.requirements; let i = index">
+                                                            {{i + 1}}.
+                                                            {{requirement}}</p>
                                                     </div>
                                                 </div>
                                             </ng-template>
@@ -134,9 +170,21 @@
                                                 <hr>
                                                 <div class="container">
                                                     <h3>Contact</h3>
-                                                    <div class="content text-justify">
-                                                        <p>Organizer: {{event?.contact}}</p>
-                                                        <p>Contact: {{event?.organizer}}</p>
+                                                    <div class="content text-justify my-2"
+                                                        *ngFor="let organizer of event?.organizers">
+                                                        <div class="col-4 col-md-3">
+                                                            <p class="mb-0">Organizer: </p>
+                                                        </div>
+                                                        <div class="col-8 col-md-9">
+                                                            <p class="mb-0">{{event?.contact}}</p>
+                                                        </div>
+                                                        <div class="col-4 col-md-3">
+                                                            <p class="mb-0">Contact: </p>
+                                                        </div>
+                                                        <div class="col-8 col-md-9">
+                                                            <p class="mb-0">{{event?.organizer}}</p>
+
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </ng-template>

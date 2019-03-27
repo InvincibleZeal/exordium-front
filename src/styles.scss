@@ -211,6 +211,14 @@ body {
             transform: rotateX(360deg) !important;
         }
     }
+
+
+    .poster:hover {
+        img {
+            transform: scale(2);
+            cursor: pointer;
+        }
+    }
 }
 
 
