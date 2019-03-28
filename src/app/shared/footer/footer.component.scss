@@ -1,7 +1,21 @@
-.footer .slide span {
-    transition: 300ms;
+.footer {
+    .slide span {
+        transition: 300ms;
+    }
+
+    .logo {
+        display: inline-block;
+        transition: 600ms;
+        transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
 }
 
-.footer:hover .slide span {
-    transform: translateY(-15px);
+.footer:hover {
+    .slide span {
+        transform: translateY(-15px);
+    }
+
+    .logo {
+        transform: rotateZ(360deg);
+    }
 }

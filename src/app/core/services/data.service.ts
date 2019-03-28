@@ -2,13 +2,14 @@ import { environment } from '../../../environments/environment';
 import { Injectable } from "@angular/core";
 import { Http } from '@angular/http';
 import { Observable } from 'rxjs';
+import { DomSanitizer } from '@angular/platform-browser';
 
 @Injectable()
 export class DataService {
     private api = environment.api;
     private events = [];
 
-    constructor(private http: Http) { }
+    constructor(private http: Http, private sanitizer: DomSanitizer) { }
 
     /**
     |--------------------------------------------------
@@ -23,7 +24,7 @@ export class DataService {
             this.events.forEach((event: any) => {
                 event.url = event.name.split(' ').map(x => x.toLowerCase()).join('-');
             });
-            console.log(this.events);
+            // console.log(this.events);
             return this.events.slice(0);
         });
     }
@@ -44,7 +45,7 @@ export class DataService {
         if (!member) return this.getMember('Name');
         return member;
     };
-    public getMembers = () => this.members;
+    public getMembers = () => this.members.forEach(member => member.socials.forEach((social: any) => social.url = this.sanitizer.bypassSecurityTrustUrl(social.url)));
     // public mockEvents = () => this.mockedEvents.slice(0);
 
     /**
@@ -492,6 +493,18 @@ export class DataService {
                     url: 'https://www.instagram.com/_s.h.i.v.a.n.g'
                 },
             ]
+        },
+        {
+            avatar: 'assets/img/members/Abhishek Rathore.jpeg',
+            name: 'Abhishek Rathore',
+            organized: 'Twisted Turns',
+            description: 'Some description here',
+            socials: [
+                {
+                    media: 'linkedin',
+                    url: 'https://www.linkedin.com/in/abhiarrathore'
+                },
+            ]
         }
     ]
 
@@ -513,6 +526,7 @@ export class DataService {
             this.getMember('Apurv'),
             this.getMember('Ritesh'),
             this.getMember('Mobshshir'),
+            this.getMember('Abhishek'),
             this.getMember('Dawood'),
             this.getMember('Shikhar'),
             this.getMember('Riya'),

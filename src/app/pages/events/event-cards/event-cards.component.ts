@@ -16,7 +16,6 @@ export class EventCardsComponent implements OnInit {
         this.dataService.getEvents().subscribe(events => {
             this.events = events;
             this.events = this.events.sort((a, b) => a.rounds[0].date.from - b.rounds[0].date.from);
-            console.log(this.events);
         });
     }
 }

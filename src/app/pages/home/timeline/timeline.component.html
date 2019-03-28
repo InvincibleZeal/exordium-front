@@ -3,7 +3,7 @@
         <h1 class="title mb-5 pb-5" data-aos="zoom-in">Timeline</h1>
         <div class="timeline" *ngIf="events.length; else loader2x;"></div>
         <div class="row" *ngFor="let event of timeline; let even=even">
-            <div class="col-md-6" [ngClass]="{'offset-md-6': !even}" data-aos="zoom-in">
+            <div class="col-md-6" [ngClass]="{'offset-md-6': !even}" data-aos="zoom-in" data-aos-offset="200">
                 <div class="border-wrapper my-2"
                     [ngClass]="{'mr-md-3': even, 'ml-md-3': !even, 'left': even, 'right': !even}">
                     <div class="card" data-background-color="black"
