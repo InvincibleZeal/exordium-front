@@ -8,6 +8,7 @@ import { EventsComponent } from './events/events.component';
 import { EventComponent } from './event/event.component';
 import { EventCardsComponent } from './events/event-cards/event-cards.component';
 import { TimelineComponent } from './home/timeline/timeline.component';
+import { StepsToRegisterComponent } from './steps-to-register/steps-to-register.component';
 
 @NgModule({
     imports: [
@@ -20,7 +21,8 @@ import { TimelineComponent } from './home/timeline/timeline.component';
         EventsComponent,
         EventComponent,
         EventCardsComponent,
-        TimelineComponent
+        TimelineComponent,
+        StepsToRegisterComponent
     ],
     exports: [
         HomeComponent,

@@ -39,7 +39,8 @@
                                                         <h4 class="title text-dark">{{member?.name}}</h4>
                                                         <p class="category text-primary">{{member?.designation}}</p>
                                                         <p class="description text-dark mb-0"
-                                                            style="font-weight:500 !important; font-size: .9rem !important;">
+                                                            style="font-weight:500 !important; font-size: .9rem !important;"
+                                                            *ngIf="member.organized">
                                                             Organizer -</p>
                                                         <p class="description text-dark"
                                                             style="font-weight:500 !important; font-size: .9rem !important;">

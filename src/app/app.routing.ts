@@ -8,6 +8,7 @@ import { AboutComponent } from './pages/about/about.component';
 import { RegisterComponent } from './pages/register/register.component';
 import { EventsComponent } from './pages/events/events.component';
 import { EventComponent } from './pages/event/event.component';
+import { StepsToRegisterComponent } from './pages/steps-to-register/steps-to-register.component';
 
 const routes: Routes = [
     { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -15,6 +16,7 @@ const routes: Routes = [
     { path: 'about', component: AboutComponent },
     { path: 'events', component: EventsComponent },
     { path: 'register', component: RegisterComponent },
+    { path: 'steps-to-register', component: StepsToRegisterComponent },
     { path: 'event', redirectTo: 'events', pathMatch: 'full' },
     { path: 'event/:id', component: EventComponent },
     { path: '**', redirectTo: 'home' },

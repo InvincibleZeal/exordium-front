@@ -116,6 +116,7 @@ export class DataService {
         {
             avatar: 'assets/img/members/Baseerat Afshan.jpeg',
             name: 'Baseerat Afshan',
+            designation: 'Creative Team Organizer',
             organized: 'Shutterbug | Treasure Hunt',
             description: 'Some Description Here',
             socials: [
@@ -194,8 +195,12 @@ export class DataService {
             description: 'Some Description Here',
             socials: [
                 {
+                    media: 'github',
+                    url: 'https://www.github.com/thejainsahab'
+                },
+                {
                     media: 'instagram',
-                    url: ' https://www.instagram.com/thejainsahab'
+                    url: 'https://www.instagram.com/thejainsahab'
                 },
             ]
         },
@@ -207,7 +212,7 @@ export class DataService {
             socials: [
                 {
                     media: 'instagram',
-                    url: ' https://www.instagram.com/lhamo_28'
+                    url: 'https://www.instagram.com/lhamo_28'
                 },
             ]
         },
@@ -485,6 +490,7 @@ export class DataService {
         {
             avatar: 'assets/img/members/Varun Dev.jpeg',
             name: 'Varun Dev',
+            designation: 'Advisor',
             // organized: '405 Found',
             description: 'Some description here',
             socials: [
@@ -505,29 +511,120 @@ export class DataService {
                     url: 'https://www.linkedin.com/in/abhiarrathore'
                 },
             ]
-        }
+        },
+        {
+            avatar: 'assets/img/members/Barha Khan.jpeg',
+            name: 'Barha Khan',
+            organized: 'Treasure Hunt',
+            description: 'Some description here',
+            socials: [
+                {
+                    media: 'instagram',
+                    url: 'https://www.instagram.com/barhakhan02'
+                },
+            ]
+        },
+        {
+            avatar: 'assets/img/members/Ibrahim Lahrwal.jpeg',
+            name: 'Ibrahim Lahrwal',
+            organized: 'Crossfire\'19',
+            description: 'Some description here',
+            socials: [
+                {
+                    media: 'instagram',
+                    url: 'https://www.instagram.com/ibrahimlaharwal'
+                },
+            ]
+        },
+        {
+            avatar: 'assets/img/members/Ubaid Bashir Wani.jpeg',
+            name: 'Ubaid Bashir Wani',
+            organized: 'FIFA-19 eTournament',
+            description: 'Some description here',
+            socials: [
+                {
+                    media: 'instagram',
+                    url: 'https://www.instagram.com/UbaidBashir04'
+                },
+            ]
+        },
+        {
+            avatar: 'assets/img/members/Mohd Ubaid Nazir.jpeg',
+            name: 'Mohd Ubaid Nazir',
+            organized: 'Treasure Hunt',
+            description: 'Some description here',
+            socials: [
+                {
+                    media: 'instagram',
+                    url: 'https://www.instagram.com/mohd.ubi'
+                },
+            ]
+        },
+        {
+            avatar: 'assets/img/members/Rehana Samad.jpeg',
+            name: 'Rehana Samad',
+            organized: 'Treasure hunt',
+            description: 'Some description here',
+            socials: [
+                {
+                    media: 'instagram',
+                    url: 'https://www.instagram.com/rehanamir_'
+                },
+            ]
+        },
+        {
+            avatar: 'assets/img/members/Shah Mustafeez.jpeg',
+            name: 'Shah Mustafeez',
+            organized: 'PUBG Warriors',
+            description: 'Some description here',
+            socials: [
+                {
+                    media: 'instagram',
+                    url: 'https://www.instagram.com/shah_mustafeez'
+                },
+            ]
+        },
+        {
+            avatar: 'assets/img/members/Hazim Bashir.jpeg',
+            name: 'Hazim Bashir',
+            organized: 'PUBG Warriors',
+            description: 'Some description here',
+            socials: [
+                {
+                    media: 'instagram',
+                    url: 'https://www.instagram.com/hazimbashir'
+                },
+            ]
+        },
+        {
+            avatar: 'assets/img/members/Gyan Pratipat.jpeg',
+            name: 'Gyan Pratipat',
+            organized: 'Treasure Hunt',
+            description: 'Some description here',
+            socials: []
+        },
     ]
 
     private teams = {
         organizers: [
+            this.getMember('Varun Dev'),
             this.getMember('Tabish'),
             this.getMember('Raisa'),
             this.getMember('Shivang'),
             this.getMember('Saurabh Jain'),
             this.getMember('Edgar'),
-            this.getMember('Hujat'),
             this.getMember('Ananta'),
             this.getMember('Iqra'),
             this.getMember('Siamoon'),
-            this.getMember('Ateeb'),
+            this.getMember('Hujat'),
             this.getMember('Ankit'),
-            this.getMember('Roman'),
             this.getMember('Rohit'),
             this.getMember('Apurv'),
             this.getMember('Ritesh'),
+            this.getMember('Roman'),
+            this.getMember('Dawood'),
             this.getMember('Mobshshir'),
             this.getMember('Abhishek'),
-            this.getMember('Dawood'),
             this.getMember('Shikhar'),
             this.getMember('Riya'),
             this.getMember('Jasafa'),
@@ -541,7 +638,15 @@ export class DataService {
             this.getMember('Vipasha'),
             this.getMember('Swati'),
             this.getMember('Gyanendra'),
-            // this.getMember('Varun Dev'),
+            this.getMember('Barha'),
+            this.getMember('Ateeb'),
+            this.getMember('Ibrahim'),
+            this.getMember('Ubaid Bashir'),
+            this.getMember('Ubaid Nazir'),
+            this.getMember('Rehana'),
+            this.getMember('Mustafeez'),
+            this.getMember('Hazim'),
+            this.getMember('Pratipat'),
         ],
         webd: [
             this.getMember('Ritesh'),

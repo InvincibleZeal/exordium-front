@@ -41,6 +41,7 @@
                         <div class="poster"></div>
                         <img class="rounded my-3 poster" src={{event?.image}} alt={{event?.title}}>
                     </div>
+                    <h3 class="title text-center mb-0">Participate</h3>
                     <form (ngSubmit)="onSubmit()" #f="ngForm">
                         <div class="input-group input-lg my-3"
                             [ngClass]="{'input-group-focus':focus1===true, 'has-success': f.controls.email?.valid}">
@@ -85,7 +86,7 @@
                                                 <div class="container">
                                                     <h3>Description</h3>
                                                     <div class="content text-justify">
-                                                        <p>{{event?.description}}</p>
+                                                        <p *ngFor="let desc of event?.description">{{desc}}</p>
                                                     </div>
                                                 </div>
                                             </ng-template>
