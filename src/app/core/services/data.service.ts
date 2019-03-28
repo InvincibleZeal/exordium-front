@@ -319,7 +319,7 @@ export class DataService {
             ]
         },
         {
-            avatar: 'assets/img/placeholder-girl.jpeg',
+            avatar: 'assets/img/members/Ananta.jpeg',
             name: 'Ananta',
             organized: 'In-Quiz-Tors',
             description: 'Some description here',
@@ -473,6 +473,25 @@ export class DataService {
                     url: 'https://www.instagram.com/_s.h.i.v.a.n.g'
                 },
             ]
+        },
+        {
+            avatar: 'assets/img/members/Sahib Dawood.jpeg',
+            name: 'Sahib Dawood',
+            organized: '405 Found',
+            description: 'Some description here',
+            socials: []
+        },
+        {
+            avatar: 'assets/img/members/Varun Dev.jpeg',
+            name: 'Varun Dev',
+            // organized: '405 Found',
+            description: 'Some description here',
+            socials: [
+                {
+                    media: 'instagram',
+                    url: 'https://www.instagram.com/_s.h.i.v.a.n.g'
+                },
+            ]
         }
     ]
 
@@ -494,6 +513,7 @@ export class DataService {
             this.getMember('Apurv'),
             this.getMember('Ritesh'),
             this.getMember('Mobshshir'),
+            this.getMember('Dawood'),
             this.getMember('Shikhar'),
             this.getMember('Riya'),
             this.getMember('Niharika'),
@@ -507,7 +527,7 @@ export class DataService {
             this.getMember('Vipasha'),
             this.getMember('Swati'),
             this.getMember('Gyanendra'),
-            // this.getMember('Dawood'),
+            // this.getMember('Varun Dev'),
         ],
         webd: [
             this.getMember('Ritesh'),
