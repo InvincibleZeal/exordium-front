@@ -37,10 +37,7 @@
             <hr>
             <div class="row">
                 <div class="col-lg-4">
-                    <div class="poster">
-                        <div class="poster"></div>
-                        <img class="rounded my-3 poster" src={{event?.image}} alt={{event?.title}}>
-                    </div>
+
                     <h3 class="title text-center mb-0">Participate</h3>
                     <form (ngSubmit)="onSubmit()" #f="ngForm">
                         <div class="input-group input-lg my-3"
@@ -73,6 +70,9 @@
                                 [disabled]="!f.valid" value="Participate">
                         </div>
                     </form>
+                    <div class="poster">
+                        <img class="rounded my-3 poster" src={{event?.image}} alt={{event?.title}}>
+                    </div>
                 </div>
                 <div class="col-lg-8">
                     <div class="border-wrapper mt-3">
@@ -174,18 +174,19 @@
                                                     <h3>Contact</h3>
                                                     <div class="content text-justify my-2"
                                                         *ngFor="let organizer of event?.organizers">
-                                                        <div class="col-4 col-md-3">
-                                                            <p class="mb-0">Organizer: </p>
-                                                        </div>
-                                                        <div class="col-8 col-md-9">
-                                                            <p class="mb-0">{{event?.contact}}</p>
-                                                        </div>
-                                                        <div class="col-4 col-md-3">
-                                                            <p class="mb-0">Contact: </p>
-                                                        </div>
-                                                        <div class="col-8 col-md-9">
-                                                            <p class="mb-0">{{event?.organizer}}</p>
-
+                                                        <div class="row">
+                                                            <div class="col-4 col-md-3">
+                                                                <p class="mb-0">Organizer: </p>
+                                                            </div>
+                                                            <div class="col-8 col-md-9">
+                                                                <p class="mb-0">{{organizer?.name}}</p>
+                                                            </div>
+                                                            <div class="col-4 col-md-3">
+                                                                <p class="mb-0">Contact: </p>
+                                                            </div>
+                                                            <div class="col-8 col-md-9">
+                                                                <p class="mb-0">{{organizer?.phone}}</p>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
