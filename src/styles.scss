@@ -116,8 +116,14 @@ body {
 }
 
 ::-webkit-scrollbar {
-    width: 0px;
     background: transparent;
+    width: 5px;
+}
+
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(-30deg, #ff0b6d, #fe4644, #fb9411);
+    border-radius: 5px;
 }
 
 .no-padding {
