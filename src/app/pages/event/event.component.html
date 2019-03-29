@@ -118,7 +118,9 @@
                                                                 <p class="m-0">Date: </p>
                                                             </div>
                                                             <div class="col-8 col-md-9">
-                                                                <p class="m-0">{{round?.timings?.date}}</p>
+                                                                <p class="m-0">{{round?.timings?.date}} <span
+                                                                        *ngIf="round?.timings?.date !== round?.timings?.todate && round?.timings.todate !== '-'">-
+                                                                        {{round?.timings?.todate}}</span></p>
                                                             </div>
                                                             <div class="col-4 col-md-3">
                                                                 <p class="m-0">Timing: </p>

@@ -21,7 +21,9 @@
                                     <p>Date: </p>
                                 </div>
                                 <div class="col-8">
-                                    <p>{{event?.timings?.date}}</p>
+                                    <p>{{event?.timings?.date}} <span
+                                            *ngIf="event?.timings?.date !== event?.timings?.todate && event?.timings.todate !== '-'">-
+                                            {{event?.timings?.todate}}</span></p>
                                 </div>
                                 <div class="col-4">
                                     <p>Timing: </p>
