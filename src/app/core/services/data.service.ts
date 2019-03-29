@@ -603,6 +603,26 @@ export class DataService {
             description: 'Some description here',
             socials: []
         },
+        {
+            avatar: 'assets/img/members/Tafheem Javed Qadri.jpeg',
+            name: 'Tafheem Javed Qadri',
+            organized: 'Crossfire\'19',
+            description: 'Some description here',
+            socials: [{
+                media: 'instagram',
+                url: 'https://www.instagram.com/itoffie'
+            },]
+        },
+        {
+            avatar: 'assets/img/placeholder-guy.jpeg',
+            name: 'Hindaal Mustafa',
+            organized: 'FIFA19 eTournament',
+            description: 'Some description here',
+            socials: [{
+                media: 'instagram',
+                url: 'https://www.instagram.com/hhhazlu'
+            },]
+        },
     ]
 
     private teams = {
@@ -647,6 +667,8 @@ export class DataService {
             this.getMember('Mustafeez'),
             this.getMember('Hazim'),
             this.getMember('Pratipat'),
+            this.getMember('Tafheem'),
+            this.getMember('Hindaal'),
         ],
         webd: [
             this.getMember('Ritesh'),
