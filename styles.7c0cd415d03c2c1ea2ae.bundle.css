@@ -23,7 +23,7 @@
 |--------------------------------------------------
 | BODY CONFIGURATION
 |--------------------------------------------------
-*/body{width:100vw;overflow-x:hidden}::-webkit-scrollbar{width:0;background:transparent}.no-padding{padding:0!important;margin:0!important}
+*/body{width:100vw;overflow-x:hidden}::-webkit-scrollbar{background:transparent;width:5px}::-webkit-scrollbar-thumb{background:linear-gradient(-30deg,#ff0b6d,#fe4644,#fb9411);border-radius:5px}.no-padding{padding:0!important;margin:0!important}
 /**
 |--------------------------------------------------
 | TEASER MODAL
