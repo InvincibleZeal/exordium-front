@@ -135,7 +135,7 @@ export class DataService {
             socials: [
                 {
                     media: 'instagram',
-                    url: 'https://www.instagram.com/rohit_kr_gupta'
+                    url: 'https://www.instagram.com/rohit__kr__gupta'
                 },
             ]
         },
@@ -207,6 +207,7 @@ export class DataService {
         {
             avatar: 'assets/img/members/Padma Lhamo.jpeg',
             name: 'Padma Lhamo',
+            designation: 'Marketing & Publicity Head',
             organized: 'Shutterbug | Cipher',
             description: 'Some Description Here',
             socials: [
@@ -483,6 +484,7 @@ export class DataService {
         {
             avatar: 'assets/img/members/Sahib Dawood.jpeg',
             name: 'Sahib Dawood',
+            designation: 'Marketing & Publicity Head',
             organized: '405 Found',
             description: 'Some description here',
             socials: []
