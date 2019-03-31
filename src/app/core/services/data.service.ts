@@ -245,8 +245,7 @@ export class DataService {
         {
             avatar: 'assets/img/members/Ritesh Ganjewala.jpeg',
             name: 'Ritesh Ganjewala',
-            designation: 'General Secretary',
-            specialization: 'Web Developer',
+            designation: 'Web Manager',
             organized: 'Twisted Turns',
             description: 'Some description here',
             socials: [
@@ -625,6 +624,17 @@ export class DataService {
                 url: 'https://www.instagram.com/hhhazlu'
             },]
         },
+        {
+            avatar: 'assets/img/members/Ashish Kumar.jpeg',
+            name: 'Ashish Kumar',
+            designation: 'Advisor',
+            organized: '405 Found',
+            description: 'Some description here',
+            socials: [{
+                media: 'instagram',
+                url: 'https://www.instagram.com/ashish.kumar.97'
+            },]
+        },
     ]
 
     private teams = {
@@ -632,6 +642,7 @@ export class DataService {
             this.getMember('Varun Dev'),
             this.getMember('Tabish'),
             this.getMember('Raisa'),
+            this.getMember('Ashish'),
             this.getMember('Shivang'),
             this.getMember('Saurabh Jain'),
             this.getMember('Edgar'),
@@ -641,12 +652,12 @@ export class DataService {
             this.getMember('Hujat'),
             this.getMember('Ankit'),
             this.getMember('Rohit'),
-            this.getMember('Apurv'),
             this.getMember('Ritesh'),
+            this.getMember('Apurv'),
             this.getMember('Roman'),
-            this.getMember('Dawood'),
             this.getMember('Mobshshir'),
             this.getMember('Abhishek'),
+            this.getMember('Dawood'),
             this.getMember('Shikhar'),
             this.getMember('Riya'),
             this.getMember('Jasafa'),
