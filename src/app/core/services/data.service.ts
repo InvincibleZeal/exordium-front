@@ -7,7 +7,7 @@ import * as moment from 'moment';
 
 @Injectable()
 export class DataService {
-    public closingTime = moment('2019-04-04T12:30:00.000Z').valueOf()
+    public closingTime = moment('2019-04-04T18:30:00.000Z').valueOf()
     public isClosed = moment.now().valueOf() > this.closingTime;
     private api = environment.api;
     private events = [];
