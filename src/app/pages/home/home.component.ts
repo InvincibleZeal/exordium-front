@@ -11,7 +11,7 @@ import { DataService } from 'app/core/services/data.service';
 })
 export class HomeComponent implements OnInit {
     closeResult: string;
-    constructor(private modalService: NgbModal, public dataService: DataService) { }
+    constructor(private modalService: NgbModal) { }
     ngOnInit() {
         var rellaxHeader = new Rellax('.rellax-header');
     }
