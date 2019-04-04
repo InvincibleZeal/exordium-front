@@ -37,39 +37,42 @@
             <hr>
             <div class="row">
                 <div class="col-lg-4">
-
-                    <h3 class="title text-center mb-0">Participate</h3>
-                    <form (ngSubmit)="onSubmit()" #f="ngForm">
-                        <div class="input-group input-lg my-3"
-                            [ngClass]="{'input-group-focus':focus1===true, 'has-success': f.controls.email?.valid}">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text">
-                                    <i class="now-ui-icons ui-1_email-85"></i>
-                                </span>
+                    <h3 class="title text-center my-5 text-danger" *ngIf="isClosed; else open">Participations Closed!
+                    </h3>
+                    <ng-template #open>
+                        <h3 class="title text-center mb-0">Participate</h3>
+                        <form (ngSubmit)="onSubmit()" #f="ngForm">
+                            <div class="input-group input-lg my-3"
+                                [ngClass]="{'input-group-focus':focus1===true, 'has-success': f.controls.email?.valid}">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text">
+                                        <i class="now-ui-icons ui-1_email-85"></i>
+                                    </span>
+                                </div>
+                                <input ngModel required type="text" pattern="[^ @]*@[^ @]*" class="form-control"
+                                    name="email" placeholder="Email" (focus)="focus1=true" (blur)="focus1=false">
                             </div>
-                            <input ngModel required type="text" pattern="[^ @]*@[^ @]*" class="form-control"
-                                name="email" placeholder="Email" (focus)="focus1=true" (blur)="focus1=false">
-                        </div>
-                        <div class="input-group input-lg my-3"
-                            [ngClass]="{'input-group-focus':focus2===true, 'has-success': f.controls.uid?.valid}">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text">
-                                    <i class="now-ui-icons users_single-02"></i>
-                                </span>
+                            <div class="input-group input-lg my-3"
+                                [ngClass]="{'input-group-focus':focus2===true, 'has-success': f.controls.uid?.valid}">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text">
+                                        <i class="now-ui-icons users_single-02"></i>
+                                    </span>
+                                </div>
+                                <input ngModel required type="text" pattern="[Ee][Xx][Oo]-2019[0-9]{4}"
+                                    class="form-control" name="uid" placeholder="Exordium ID Format: EXO-XXXXXXXX"
+                                    (focus)="focus2=true" (blur)="focus2=false">
                             </div>
-                            <input ngModel required type="text" pattern="[Ee][Xx][Oo]-2019[0-9]{4}" class="form-control"
-                                name="uid" placeholder="Exordium ID Format: EXO-XXXXXXXX" (focus)="focus2=true"
-                                (blur)="focus2=false">
-                        </div>
-                        <div class="small text-center font-weight-bold mb-2"><a class="text-center text-primary"
-                                [routerLink]="['/','register']">Don't
-                                have an Exordium
-                                ID? Click Here.</a></div>
-                        <div class="form-group text-center" *ngIf="!loading; else loader1x">
-                            <input type="submit" class="btn btn-round btn-lg btn-primary gradient-primary"
-                                [disabled]="!f.valid" value="Participate">
-                        </div>
-                    </form>
+                            <div class="small text-center font-weight-bold mb-2"><a class="text-center text-primary"
+                                    [routerLink]="['/','register']">Don't
+                                    have an Exordium
+                                    ID? Click Here.</a></div>
+                            <div class="form-group text-center" *ngIf="!loading; else loader1x">
+                                <input type="submit" class="btn btn-round btn-lg btn-primary gradient-primary"
+                                    [disabled]="!f.valid || isClosed" value="Participate">
+                            </div>
+                        </form>
+                    </ng-template>
                     <div class="poster">
                         <img class="rounded my-3 poster" src={{event?.image}} alt={{event?.title}}>
                     </div>

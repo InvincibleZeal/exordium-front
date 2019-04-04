@@ -18,6 +18,7 @@ export class EventComponent implements OnInit {
     public focus1;
     public focus2;
     public loading;
+    public isClosed: boolean;
     private closeResult: string;
     @ViewChild('f') data: NgForm;
     @ViewChild('success') success: any;
@@ -40,6 +41,8 @@ export class EventComponent implements OnInit {
             this.event = event;
             if (!this.event) this.router.navigate(['/events'])
         });
+
+        this.isClosed = this.dataService.isClosed;
     }
 
     onSubmit() {

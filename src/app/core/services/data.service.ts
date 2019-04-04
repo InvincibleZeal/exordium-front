@@ -3,9 +3,12 @@ import { Injectable } from "@angular/core";
 import { Http } from '@angular/http';
 import { Observable } from 'rxjs';
 import { DomSanitizer } from '@angular/platform-browser';
+import * as moment from 'moment';
 
 @Injectable()
 export class DataService {
+    public closingTime = moment('2019-04-04T18:30:00.000Z').valueOf()
+    public isClosed = moment.now().valueOf() > this.closingTime;
     private api = environment.api;
     private events = [];
 

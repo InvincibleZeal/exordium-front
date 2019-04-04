@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import * as Rellax from 'rellax';
+
 import { NgbModal, ModalDismissReasons } from '@ng-bootstrap/ng-bootstrap';
+import { DataService } from 'app/core/services/data.service';
 
 @Component({
     selector: 'app-home',
@@ -9,9 +11,7 @@ import { NgbModal, ModalDismissReasons } from '@ng-bootstrap/ng-bootstrap';
 })
 export class HomeComponent implements OnInit {
     closeResult: string;
-
-    constructor(private modalService: NgbModal) { }
-
+    constructor(private modalService: NgbModal, public dataService: DataService) { }
     ngOnInit() {
         var rellaxHeader = new Rellax('.rellax-header');
     }

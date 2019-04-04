@@ -1,11 +1,12 @@
 import { catchError } from 'rxjs/operators';
 import { Component, OnInit, ViewChild } from '@angular/core';
+import { NgForm } from '@angular/forms';
 import * as Rellax from 'rellax';
 
 import { User } from './../../core/interfaces/user';
 import { AuthService } from 'app/core/services/auth.service';
+import { DataService } from 'app/core/services/data.service';
 import { NgbModal, ModalDismissReasons } from '@ng-bootstrap/ng-bootstrap';
-import { NgForm } from '@angular/forms';
 
 @Component({
     selector: 'app-register',
@@ -17,6 +18,7 @@ export class RegisterComponent implements OnInit {
     @ViewChild('success') successModal: any;
     @ViewChild('duplicateEmail') duplicateEmail: any;
     @ViewChild('error') error: any;
+    public isClosed: boolean;
     public focus: boolean;
     public focus1: boolean;
     public focus2: boolean;
@@ -27,10 +29,11 @@ export class RegisterComponent implements OnInit {
     public user: User;
     private closeResult: string;
 
-    constructor(private authService: AuthService, private modalService: NgbModal) { }
+    constructor(private authService: AuthService, private modalService: NgbModal, private dataService: DataService) { }
 
     ngOnInit() {
         var rellaxHeader = new Rellax('.rellax-header');
+        this.isClosed = this.dataService.isClosed;
     }
 
     onSubmit() {
