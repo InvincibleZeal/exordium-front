@@ -1,8 +1,12 @@
-# [Exordium Demo](https://invinciblezeal.github.io/exordium-front)
+# <center> [Exordium](https://invinciblezeal.github.io/exordium-front) </center>
 
-<!-- ![alt text](/src/assets/img/ngx-input-loader-demo-screenshot-rounded.png? "Ngx Input Loader Demo") -->
+Official website for Exordium fest organized by the [Semicolon](https://instagram.com/semicolon_nitsgr) club
+
+<p align="middle">
+  <img src="https://i.imgur.com/qz07yPf.png" alt="" />
+  <img src="https://i.imgur.com/hshSOAY.gif" style="border-radius:30px;" alt="" />
+</p>
 
 ## Useful Links
 
-[Live Demo](https://invinciblezeal.github.io/exordium-front)
-
+You can check out the website [here](https://invinciblezeal.github.io/exordium-front)
