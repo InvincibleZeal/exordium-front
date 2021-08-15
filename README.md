@@ -4,7 +4,7 @@ Official website for Exordium fest organized by the [Semicolon](https://instagra
 
 <p align="middle">
   <img src="https://i.imgur.com/qz07yPf.png" alt="" />
-  <img src="https://i.imgur.com/hshSOAY.gif" style="border-radius:30px;" alt="" />
+  <img src="./src/assets/img/website.gif" style="border-radius:30px;" alt="" />
 </p>
 
 ## Useful Links
